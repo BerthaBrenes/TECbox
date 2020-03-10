@@ -1,0 +1,12 @@
+
+<div>
+    <form [formGroup]="ComponentLoginForm">
+        <ion-input  clearInput=true formControlName="email" type="email" placeholder="Email Address"  [ngClass]="{ 'invalid': invalidEmail }"></ion-input>
+        <p *ngIf='!ComponentLoginForm.controls.email.valid'>Please enter a valid email.</p>
+        <ion-input  clearInput=true formControlName="password" type="password" placeholder="Password" [ngClass]="{ 'invalid': invalidPassword }"></ion-input>
+        <p *ngIf='!ComponentLoginForm.controls.password.valid'>A password is required.</p>
+
+        
+    </form>
+    <ion-button [disabled]="!ComponentLoginForm.valid" expand="block" shape="round" (click)="summit()">Summit!!</ion-button>
+</div>

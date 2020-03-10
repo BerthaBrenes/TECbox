@@ -1,0 +1,27 @@
+div{
+    background-color:  #f2f2f2;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    
+    .invalid {
+        size: 80%;
+        border: 1px solid #ea6153;
+        border-radius: 20px;
+    }
+    form{
+        p {
+            margin: 2px;
+            font-size: 10px;
+            color: grayscale($color: #595959);
+        }
+        ion-input{
+            border-radius: 20px;
+            background-color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    
+}
