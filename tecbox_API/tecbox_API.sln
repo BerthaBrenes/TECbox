@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tecbox_API", "tecbox_API\tecbox_API.csproj", "{55E7FF26-A2D4-4B23-B9DB-2259F7F38B78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55E7FF26-A2D4-4B23-B9DB-2259F7F38B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E7FF26-A2D4-4B23-B9DB-2259F7F38B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E7FF26-A2D4-4B23-B9DB-2259F7F38B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E7FF26-A2D4-4B23-B9DB-2259F7F38B78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
