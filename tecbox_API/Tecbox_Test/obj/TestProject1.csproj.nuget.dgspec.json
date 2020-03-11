@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj": {}
+    "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/TestProject1/TestProject1.csproj": {}
   },
   "projects": {
-    "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj": {
+    "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/TestProject1/TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
-        "projectName": "tecbox_API",
-        "projectPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
+        "projectUniqueName": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/TestProject1/TestProject1.csproj",
+        "projectName": "TestProject1",
+        "projectPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/TestProject1/TestProject1.csproj",
         "packagesPath": "/home/estalvgs1999/.nuget/packages/",
-        "outputPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/",
+        "outputPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/TestProject1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/estalvgs1999/.config/NuGet/NuGet.Config"
@@ -36,17 +36,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNet.WebApi": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[5.2.7, )"
+              "version": "[16.4.0, )"
             },
-            "Microsoft.AspNet.WebApi.Core": {
+            "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[5.2.7, )"
+              "version": "[3.15.1, )"
             },
-            "Newtonsoft.Json": {
+            "nunit": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[3.12.0, )"
             }
           },
           "imports": [
@@ -60,9 +60,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

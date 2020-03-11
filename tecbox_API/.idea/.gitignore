@@ -1,2 +1,4 @@
 # Default ignored files
 /.idea.tecbox_API/.idea/workspace.xml
+# Editor-based HTTP Client requests
+/.idea.tecbox_API/.idea/httpRequests/
