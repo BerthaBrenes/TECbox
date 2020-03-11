@@ -1,9 +1,14 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button id="main"></ion-menu-button>
+      </ion-buttons>
     <ion-title>
       Vista Administración
     </ion-title>
   </ion-toolbar>
+ 
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -12,6 +17,6 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <app-add-data></app-add-data>
+  <app-table></app-table>
 </ion-content>

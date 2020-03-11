@@ -9,10 +9,40 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {TableComponent} from './components/table/table.component';
+import {AddDataComponent} from './components/add-data/add-data.component';
+import {ComponentsModule} from './components/components.module';
+import { ArticulosComponent } from './pages/articulos/articulos.component';
+import { ClienteComponent } from './pages/cliente/cliente.component';
+import { PaquetesComponent } from './pages/paquetes/paquetes.component';
+import { RastrePaquetesComponent } from './pages/rastre-paquetes/rastre-paquetes.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { RutasComponent } from './pages/rutas/rutas.component';
+import { SucursalesComponent } from './pages/sucursales/sucursales.component';
+import { TrabajadoresComponent } from './pages/trabajadores/trabajadores.component';
+import { VendedoresComponent } from './pages/vendedores/vendedores.component';
+import {PagesModule} from './pages/pages.module';
+
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  entryComponents: [
+    TableComponent,
+    AddDataComponent,
+    ArticulosComponent,
+    ClienteComponent,
+    PaquetesComponent,
+    RastrePaquetesComponent,
+    ProductosComponent,
+    RutasComponent,
+    SucursalesComponent,
+    TrabajadoresComponent,
+    VendedoresComponent],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    ComponentsModule,
+    PagesModule],
   providers: [
     StatusBar,
     SplashScreen,
