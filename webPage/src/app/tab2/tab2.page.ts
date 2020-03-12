@@ -6,7 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+navigate2:any;
   constructor() {}
+  sideMenu2(){
+    this.navigate2=[{
+      title : "Gestion de Paquetes",
+      url   : "/paquetes",
+      icon  : "home"
+    },
+    {
+      title : "Gestion de Rastreo de Paquetes",
+      url   : "/rastre",
+      icon  : "home"
+    }
+  ]
+  }
 
 }

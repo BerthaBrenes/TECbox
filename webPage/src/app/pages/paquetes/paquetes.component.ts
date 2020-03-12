@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-paquetes',
@@ -6,9 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paquetes.component.scss'],
 })
 export class PaquetesComponent implements OnInit {
-
+  data:any;
+  enterEnable:boolean=false;
   constructor() { }
 
+  @Input() set src(val:any){
+    this.data = val;
+    console.log('data',this.data)
+  }
+
   ngOnInit() {}
+  
+  clickEnter(){
+    this.enterEnable=true;
+  }
 
 }

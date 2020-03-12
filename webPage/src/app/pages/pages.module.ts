@@ -10,6 +10,7 @@ import { RutasComponent } from './rutas/rutas.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { TrabajadoresComponent } from './trabajadores/trabajadores.component';
 import { VendedoresComponent } from './vendedores/vendedores.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -26,6 +27,7 @@ import { VendedoresComponent } from './vendedores/vendedores.component';
     VendedoresComponent],
   imports: [
     CommonModule,
+    ComponentsModule,
     IonicModule
   ],
   exports:[

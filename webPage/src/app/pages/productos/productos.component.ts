@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-productos',
@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productos.component.scss'],
 })
 export class ProductosComponent implements OnInit {
-
+  enterEnable:boolean=false;
+  data:any;
   constructor() { }
-
+  @Input() set src(val:any){
+    this.data = val;
+    console.log('data',this.data)
+  }
   ngOnInit() {}
+
+  clickEnter(){
+    this.enterEnable=true;
+  }
 
 }

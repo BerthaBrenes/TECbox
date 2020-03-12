@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-articulos',
@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articulos.component.scss'],
 })
 export class ArticulosComponent implements OnInit {
-
+  data:any;
   constructor() { }
 
+  @Input() set src(val:any){
+    this.data = val;
+    console.log('data',this.data)
+  }
   ngOnInit() {}
+
 
 }
