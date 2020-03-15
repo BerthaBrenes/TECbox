@@ -5,5 +5,15 @@
 </ion-header>
 
 <ion-content>
-
+   Articulos
+   <div> </div>
+  <div>
+      <ion-button (click)="enableCliente()" color="primary">Primary</ion-button>
+      <app-cliente *ngIf="ClienteEnable"></app-cliente>
+  </div>
+  <div>
+      <ion-button (click)="enablePaquete()" color="primary">Primary</ion-button>
+      <app-rastre-paquetes *ngIf="PaquetesEnable"></app-rastre-paquetes>
+  </div>
+    
 </ion-content>

@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
+  ClienteEnable:boolean=false;
+  PaquetesEnable:boolean=false;
   constructor() { }
 
   ngOnInit() {
+  }
+  enableCliente(){
+    this.ClienteEnable=true;
+
+  }
+  enablePaquete(){
+    this.PaquetesEnable=true;
   }
 
 }
