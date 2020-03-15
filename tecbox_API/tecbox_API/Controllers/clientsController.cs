@@ -11,26 +11,45 @@
  * --------------------------------------------*/
 
 using System;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace tecbox_API.Controllers
 {
-    public class clientsController : Controller
+    public class ClientsController : Controller
     {
         // How to pass parameters by route? route/{id1}/{id2}...etc
-        [Route("client/info")]
+        [Route("client/getClient/{id}")]
         [HttpGet] //Always explicitly state the accepted HTTP method
-        public ActionResult<string> GetClientInfo()
+        public ActionResult<string> GetClient(int id)
         {;
-         
-            Client c1 = new Client("Esteban", "2018108336", "es_josh1989@gmail.com");
-            c1.SetAddress("San José","Desamparados", "Gravilias");
-            c1.Cellphone = "(+506) 8359-7161";
-            c1.Phone = "(+506) 2241-7456";
-            c1.SetFullName("Esteban", "Alvarado");
-            string msg = c1.GetJson();
+            // TODO Selector de clientes por el id, retornar solo el cliente que cumpla con la restricción 
+            Client c1 = new Client();
+            string msg = "Nice";
             return Ok(msg);
         }
+
+        [Route("client/getClient/All")]
+        [HttpGet]
+        public ActionResult<string> GetAllClients()
+        {
+            // TODO Retornar todos los clientes al cliente
+            return Ok();
+        }
+
+        [Route("client/addClient")]
+        [HttpPost]
+        public ActionResult AddNewClient([FromBody] Client newClient)
+        {
+            string json = JsonConvert.SerializeObject(newClient, Formatting.Indented);
+            System.IO.File.WriteAllText("/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/DB/_clients.json", json);
+            return Ok("Client added succesfully!");
+            
+        }
+        
     }
 }
+
