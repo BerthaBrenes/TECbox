@@ -46,3 +46,4 @@ D:\Universidad\Semestre_I_2020\DB\Tareas_Cortas\Tarea_Corta_1\TECbox\tecbox_API\
 D:\Universidad\Semestre_I_2020\DB\Tareas_Cortas\Tarea_Corta_1\TECbox\tecbox_API\tecbox_API\obj\Debug\netcoreapp3.1\staticwebassets\tecbox_API.StaticWebAssets.xml
 D:\Universidad\Semestre_I_2020\DB\Tareas_Cortas\Tarea_Corta_1\TECbox\tecbox_API\tecbox_API\obj\Debug\netcoreapp3.1\tecbox_API.dll
 D:\Universidad\Semestre_I_2020\DB\Tareas_Cortas\Tarea_Corta_1\TECbox\tecbox_API\tecbox_API\obj\Debug\netcoreapp3.1\tecbox_API.pdb
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/DB/_clients.json
