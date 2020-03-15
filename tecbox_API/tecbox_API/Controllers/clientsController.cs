@@ -35,7 +35,10 @@ namespace tecbox_API.Controllers
             c1.Phone = "(+506) 2241-7456";
             c1.SetFullName("Esteban", "Alvarado");
             string msg = c1.GetJson();
+            
             return Ok(msg);
+            
+            
         }
     }
 }

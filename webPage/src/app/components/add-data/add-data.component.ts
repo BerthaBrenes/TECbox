@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AddDataComponent implements OnInit {
   data:any;
+  idEntity:string = "sucursal";
   constructor() { }
   @Input() set src(val:any){
     this.data = val;
