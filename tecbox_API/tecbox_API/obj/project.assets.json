@@ -4637,19 +4637,19 @@
     ]
   },
   "packageFolders": {
-    "/home/berthabb/.nuget/packages/": {}
+    "/home/estalvgs1999/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/tecbox_API.csproj",
+      "projectUniqueName": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
       "projectName": "tecbox_API",
-      "projectPath": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/tecbox_API.csproj",
-      "packagesPath": "/home/berthabb/.nuget/packages/",
-      "outputPath": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/",
+      "projectPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
+      "packagesPath": "/home/estalvgs1999/.nuget/packages/",
+      "outputPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/berthabb/.config/NuGet/NuGet.Config"
+        "/home/estalvgs1999/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4702,7 +4702,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,3 +1,0 @@
-/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/Tecbox_Test/obj/Debug/netcoreapp3.1/Tecbox_Test.csprojAssemblyReference.cache
-/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/Tecbox_Test/obj/Debug/netcoreapp3.1/Tecbox_Test.AssemblyInfoInputs.cache
-/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/Tecbox_Test/obj/Debug/netcoreapp3.1/Tecbox_Test.AssemblyInfo.cs
