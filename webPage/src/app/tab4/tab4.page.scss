@@ -1,0 +1,13 @@
+ion-toolbar{
+    --background: #2575e1;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+div{
+    &.content{
+        margin: 20px;
+        padding:18px;
+    }
+}

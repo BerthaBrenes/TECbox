@@ -14,6 +14,7 @@ export class Tab4Page implements OnInit {
   }
   enableCliente(){
     this.ClienteEnable=true;
+    console.log('cliente',this.ClienteEnable)
 
   }
   enablePaquete(){

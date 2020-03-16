@@ -1,3 +1,11 @@
-ion-content ion-toolbar {
-  --background: translucent;
+ion-toolbar {
+  --background: #2575e1;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+div{
+  margin: 20px;
+  padding: 18px;
 }
