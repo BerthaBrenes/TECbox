@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PaquetesComponent implements OnInit {
   data:any;
+  id:string='paquetes';
   enterEnable:boolean=false;
   constructor() { }
 

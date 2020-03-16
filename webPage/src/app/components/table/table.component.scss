@@ -1,0 +1,17 @@
+ion-grid{
+   ion-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+       
+    }
+}
+ion-col{
+    border: 2px solid black;
+    &.header{
+        font-weight: bold;
+        background: #99b3ff;
+    }
+}

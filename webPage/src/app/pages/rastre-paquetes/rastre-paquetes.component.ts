@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RastrePaquetesComponent implements OnInit {
   data:any;
+  id:string='rastreo';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;

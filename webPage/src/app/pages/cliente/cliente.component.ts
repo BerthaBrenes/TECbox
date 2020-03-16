@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 data:any;
+id:string='cliente';
   constructor() { }
 
   @Input() set src(val:any){

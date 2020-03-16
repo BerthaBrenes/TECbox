@@ -8,6 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class SucursalesComponent implements OnInit {
   data:any;
+  id:string='sucursal';
   enterEnable:boolean=false;
   constructor() { }
 
