@@ -34,5 +34,17 @@
     "Province": "Alajuela",
     "City": "Alajuela",
     "District": "La Agonía"
+  },
+  {
+    "Name": "Felipe",
+    "LastName": "Monge",
+    "IdCard": "2014308336",
+    "Email": "elFeli@gmail.com",
+    "Locker": 784,
+    "Cellphone": "(+506) 7059-7161",
+    "Phone": "(+506) 2355-7456",
+    "Province": "Cartago",
+    "City": "Cartago",
+    "District": "María Auxiliadora"
   }
 ]
