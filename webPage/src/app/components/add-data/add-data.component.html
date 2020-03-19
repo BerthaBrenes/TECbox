@@ -109,4 +109,90 @@
     </ion-grid>
 </div>
 
+<div *ngIf='idEntity == "vendedor"'>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Nombre:</ion-label>
+                    <ion-input #N type=text></ion-input>
+                </ion-item>
+            </ion-col> 
+            <ion-col>
+                <ion-item>
+                    <ion-label>Apellido 1:</ion-label>
+                    <ion-input #A1 type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Apellido 2:</ion-label>
+                    <ion-input #A2 type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Cédula:</ion-label>
+                    <ion-input #C type=text></ion-input>
+                </ion-item>
+            </ion-col>  
+            <ion-col>
+                <ion-button  (click)="guardarVendedor(N.value, A1.value, A2.value)" color="primary">Guardar</ion-button>
+            </ion-col> 
+        </ion-row>                    
+    </ion-grid>
+</div>
+
+<div *ngIf='idEntity == "producto"'>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Nombre:</ion-label>
+                    <ion-input #N type=text></ion-input>
+                </ion-item>
+            </ion-col> 
+            <ion-col>
+                <ion-item>
+                    <ion-label>Descripción:</ion-label>
+                    <ion-input #D type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Código Barras:</ion-label>
+                    <ion-input #C type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Vendedor:</ion-label>
+                    <ion-input #V type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Precio de compra:</ion-label>
+                    <ion-input #PC type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Impuesto:</ion-label>
+                    <ion-input #I type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Descuento:</ion-label>
+                    <ion-input #DES type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-button  (click)="guardarProducto(N.value, D.value, C.value, V.value, PC.value, I.value, DES.value)" color="primary">Guardar</ion-button>
+            </ion-col>                     
+        </ion-row>
+    </ion-grid>
+</div>
+
       
