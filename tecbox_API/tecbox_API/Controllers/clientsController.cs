@@ -2,8 +2,8 @@
  * File: clientsController.cs
  * Dev by: @estalvgs1999
  * Project: TECbox Web Service
- * version: 0.4
- * last edited by: @estalvgs1999 [15/03/2020]
+ * version: 0.5
+ * last edited by: @estalvgs1999 [17/03/2020]
  *
  * Description: 
  *
@@ -35,22 +35,18 @@ namespace tecbox_API.Controllers
         // How to pass parameters by route? route/{id1}/{id2}...etc
         [Route("client/getClient/{id}")]
         [HttpGet] //Always explicitly state the accepted HTTP method
-        public ActionResult<string> GetClient(int id)
-        {;
-             
-            Client c1 = new Client();
-            
-            string msg = "Nice";
-            return Ok(msg);
+        public ActionResult<string> GetClient(string id)
+        {
+            return Ok(GetClientById(id));
         }
 
         
         [Route("client/getClient/All")]
         [HttpGet]
-        public ActionResult<string> GetAllClients()
+        public ActionResult<List<Client>> GetAllClients()
         {
-            // TODO Retornar todos los clientes al cliente
-            return Ok();
+            List<Client> allClients = this.ReadListFromFile();
+            return Ok(allClients);
         }
 
         
@@ -64,7 +60,12 @@ namespace tecbox_API.Controllers
             return Ok("Client already exists!");
 
         }
-
+        
+        
+        /* ---------------------------------------------
+         * Operations on the DB
+         * By @estalvgs1999 
+         * --------------------------------------------- */
         private bool AddClientToDb(Client newClient)
         {
             // Obtener Lista de clientes
@@ -79,6 +80,19 @@ namespace tecbox_API.Controllers
                 return true;
             }
             return false; 
+            
+        }
+        
+        private Client GetClientById(string id)
+        {
+            List<Client> clientsGlosary = ReadListFromFile();
+
+            foreach (Client client in clientsGlosary)
+            {
+                if (client.IdCard == id)
+                    return client;
+            }
+            return new Client(); 
             
         }
         
