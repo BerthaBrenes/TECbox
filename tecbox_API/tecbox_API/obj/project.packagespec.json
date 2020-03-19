@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
+    "projectUniqueName": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/tecbox_API.csproj",
     "projectName": "tecbox_API",
-    "projectPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/tecbox_API.csproj",
-    "outputPath": "/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/",
+    "projectPath": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/tecbox_API.csproj",
+    "outputPath": "/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -57,7 +57,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
     }
   }
 }
