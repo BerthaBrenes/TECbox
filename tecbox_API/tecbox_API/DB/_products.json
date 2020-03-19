@@ -7,7 +7,7 @@
     "Price": 32,
     "Discount": false,
     "Taxes": true,
-    "Image": null
+    "Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
     "Name": "Microfono",
@@ -17,6 +17,16 @@
     "Price": 80,
     "Discount": true,
     "Taxes": true,
-    "Image": null
+    "Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
+  },
+  {
+    "Name": "Microfono",
+    "Description": "Microfono 8mg",
+    "BarCode": "1381",
+    "Seller": "Juan Barnes",
+    "Price": 80,
+    "Discount": true,
+    "Taxes": true,
+    "Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
   }
 ]

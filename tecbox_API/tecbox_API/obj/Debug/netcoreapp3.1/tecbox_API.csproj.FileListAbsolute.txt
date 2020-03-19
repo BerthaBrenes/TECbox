@@ -74,3 +74,4 @@ D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/
 /home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.pdb
 /home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csproj.CoreCompileInputs.cache
 /home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.genruntimeconfig.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/DB/_products.json
