@@ -23,6 +23,8 @@ import { TrabajadoresComponent } from './pages/trabajadores/trabajadores.compone
 import { VendedoresComponent } from './pages/vendedores/vendedores.component';
 import {PagesModule} from './pages/pages.module';
 
+import { HttpClientModule } from '@angular/common/http'; 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [
@@ -42,7 +44,8 @@ import {PagesModule} from './pages/pages.module';
     IonicModule.forRoot(), 
     AppRoutingModule,
     ComponentsModule,
-    PagesModule],
+    PagesModule,
+    HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

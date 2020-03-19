@@ -8,8 +8,6 @@
       <e p="tecbox_API" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
-        <e p="Basae.json" t="Include" />
-        <e p="Base.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Client.cs" t="Include" />
         <e p="Controllers" t="Include">

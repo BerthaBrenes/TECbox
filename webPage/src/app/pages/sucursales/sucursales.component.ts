@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
+
+
 @Component({
   selector: 'app-sucursales',
   templateUrl: './sucursales.component.html',
