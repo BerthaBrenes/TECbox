@@ -14,9 +14,10 @@
         </e>
         <e p="DB" t="Include">
           <e p="_clients.json" t="Include" />
+          <e p="_products.json" t="Include" />
         </e>
         <e p="Paquetes.cs" t="Include" />
-        <e p="Productos.cs" t="Include" />
+        <e p="Products.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />

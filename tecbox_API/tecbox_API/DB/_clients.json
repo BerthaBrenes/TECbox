@@ -46,5 +46,17 @@
     "Province": "Cartago",
     "City": "Cartago",
     "District": "María Auxiliadora"
+  },
+  {
+    "Name": "Alberto",
+    "LastName": "Barnes",
+    "IdCard": "584",
+    "Email": "my@mail.com",
+    "Locker": 32,
+    "Cellphone": "8222-2222",
+    "Phone": "2222-2222",
+    "Province": "Cartago",
+    "City": "Jimenez",
+    "District": "Tucurrique"
   }
 ]
