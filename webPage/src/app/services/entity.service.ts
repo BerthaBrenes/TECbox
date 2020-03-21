@@ -43,4 +43,20 @@ export class EntityService {
       catchError(this.handleError)
     )
   }
+  getClientes() {
+    console.log("Service Get")
+    return this.https.get(`${this.url}/client/getClient/All`);
+  }
+  getPackages() {
+    console.log("Service Get")
+    return this.https.get(`${this.url}/products/getProducts/All`);
+  }
+  getWorkers() {
+    console.log("Service Get")
+    return this.https.get(`${this.url}/products/getProducts/All`);
+  }
+  getSeller() {
+    console.log("Service Get")
+    return this.https.get(`${this.url}/products/getProducts/All`);
+  }
 }

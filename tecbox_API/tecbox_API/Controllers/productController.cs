@@ -42,6 +42,7 @@ namespace tecbox_API.Controllers
 
             return false;
         }
+        
         [EnableCors(policyName:"AllowOriginal")]
         [Route("products/postProducts/")]
         [HttpPost]
@@ -53,6 +54,7 @@ namespace tecbox_API.Controllers
             return Ok("Product already exists!");
 
         }
+        
         private Products GetProductByCode(string id)
         {
             List<Products> productGlosary = ReadListFromFile();

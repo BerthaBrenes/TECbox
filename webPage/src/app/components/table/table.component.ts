@@ -49,7 +49,7 @@ export class TableComponent implements OnInit {
   constructor() { }
   @Input() set src(val:any){
     this.data = val;
-    console.log('data',this.data)
+    console.log('data Table',this.data)
   }
   @Input() set type(val:any){
     this.id = val;

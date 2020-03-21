@@ -10,8 +10,10 @@ ion-grid{
 }
 ion-col{
     border: 2px solid black;
+    font-size: small;
     &.header{
         font-weight: bold;
+        font-size: medium;
         background: #99b3ff;
     }
 }

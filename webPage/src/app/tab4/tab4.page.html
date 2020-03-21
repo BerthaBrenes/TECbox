@@ -9,7 +9,7 @@
       Articulos
       <app-articulos [src]='inputArticle'></app-articulos>
       <ion-button (click)="enableCliente()" color="primary">Clientes</ion-button>
-      <app-cliente *ngIf="ClienteEnable"></app-cliente>
+      <app-cliente *ngIf="ClienteEnable" [src]="inputClients"></app-cliente>
 
       <ion-button (click)="enablePaquete()" color="primary">Rastreo Paquetes</ion-button>
       <app-rastre-paquetes *ngIf="PaquetesEnable"></app-rastre-paquetes>

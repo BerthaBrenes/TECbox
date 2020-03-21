@@ -137,27 +137,27 @@
         Descuento
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let item of prueba">
+    <ion-row *ngFor="let item of data">
       <ion-col size=1.5>
-          {{item.Name}}
+          {{item.name}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.Province}}
+        {{item.description}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.City}}
+        {{item.barCode}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.District}}
+        {{item.seller}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.City}}
+        {{item.price}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.Phone}}
+        {{item.discount}}
       </ion-col>
       <ion-col size=1.5>
-        {{item.Name}}
+        {{item.taxes}}
       </ion-col>
       </ion-row>
 </ion-grid>
@@ -218,42 +218,42 @@
         Otras señas
       </ion-col>
       <ion-col class="header" size=1.2>
-        Usuario
+        Email
       </ion-col>
       <ion-col class="header" size=1.2>
-        Password
+        Locker
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let item of prueba">
+    <ion-row *ngFor="let item of data">
       <ion-col size=1.2>
-          {{item.Name}}
+          {{item.name}}{{item.lastName}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.Province}}
+        {{item.idCard}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.City}}
+        {{item.phone}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.District}}
+        {{item.cellphone}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.City}}
+        {{item.province}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.Phone}}
+        {{item.city}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.Name}}
+        {{item.district}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.Name}}
+        {{item.city}}
       </ion-col>
       <ion-col size=1.2>
-        {{item.Name}}
+        {{item.email}}
       </ion-col>
       <ion-col size=1.2>
-          {{item.Name}}
+          {{item.locker}}
        </ion-col>
       </ion-row>
 </ion-grid>
