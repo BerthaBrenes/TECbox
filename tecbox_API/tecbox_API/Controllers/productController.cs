@@ -4,6 +4,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 namespace tecbox_API.Controllers
@@ -41,6 +42,7 @@ namespace tecbox_API.Controllers
 
             return false;
         }
+        [EnableCors(policyName:"AllowOriginal")]
         [Route("products/postProducts/")]
         [HttpPost]
         public ActionResult PostProduct([FromBody] Products newProduct)
