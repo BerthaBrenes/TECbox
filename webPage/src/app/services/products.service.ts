@@ -7,11 +7,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductsService {
-  url = 'https://localhost:5000';
+  url = 'https://localhost:5001';
 
   constructor(private https:HttpClient) { }
 
-  getDetails() {
+  getProducts() {
     console.log("Service Get")
     return this.https.get(`${this.url}/products/getProducts/All`);
   }

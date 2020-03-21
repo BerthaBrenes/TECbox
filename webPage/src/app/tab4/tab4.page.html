@@ -7,7 +7,7 @@
 <ion-content>
   <div class="content">
       Articulos
-      <app-articulos></app-articulos>
+      <app-articulos [src]='inputArticle'></app-articulos>
       <ion-button (click)="enableCliente()" color="primary">Clientes</ion-button>
       <app-cliente *ngIf="ClienteEnable"></app-cliente>
 
