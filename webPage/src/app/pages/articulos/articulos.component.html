@@ -1,16 +1,15 @@
 <ion-grid>
     <ion-row >
       <ion-col *ngFor='let product of data' >
-       
         <div>
           <img src="{{product.image}}" alt="">
-        <p>{{product.name}}</p>
-        <p>{{product.barCode}}</p>
+        <p class="name">{{product.name}} ({{product.barCode}})</p>
         <p>{{product.description}}</p>
-        <p>{{product.discount}}</p>
-        <p>{{product.price}}</p>
-        <p>{{product.seller}}</p>
-        <p>{{product.taxes}}</p>
+        <p class="price">${{product.price}}</p>
+        <ion-chip *ngIf="product.discount">
+          <ion-icon name="trending-down"></ion-icon>
+          <ion-label>Discount</ion-label>
+        </ion-chip>
         </div>
       </ion-col>
     </ion-row>

@@ -15,11 +15,25 @@ ion-grid{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                padding-top: 15px;
                 p{
                     align-self: flex-start;
                     margin: 0px;
                     padding-left: 15px;
+                    font-size: small;
+                    &.name{
+                        font-size: medium;
+                        color: darkcyan;
+                        font-weight: bold;
+                    }
+                    &.price{
+                        font-weight: bold;
+                    }
 
+                }
+                ion-chip{
+                    align-self: flex-start;
+                    color: darkgrey;
                 }
             }
         }
