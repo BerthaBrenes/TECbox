@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductsService} from '../services/products.service'
 
 @Component({
   selector: 'app-tab4',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class Tab4Page implements OnInit {
   ClienteEnable:boolean=false;
   PaquetesEnable:boolean=false;
-  constructor() { }
+  constructor(
+    private productService:ProductsService
+  ) { 
+    console.log(this.productService.getDetails().subscribe());
+  }
 
   ngOnInit() {
+    
   }
   enableCliente(){
     this.ClienteEnable=true;
