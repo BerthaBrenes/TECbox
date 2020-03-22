@@ -6,7 +6,8 @@
  * last edited by: @estalvgs1999 [21/03/2020]
  *
  * Description: Implementation of a tecbox 
- * product.
+ * product. Products represent what tecbox 
+ * sells or buys.
  * 
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/

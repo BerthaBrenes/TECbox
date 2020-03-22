@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EntityService {
-  url = 'https://localhost:5001';
+  url = 'https://localhost:44332';
 
   constructor(private https:HttpClient) { }
   httpOptions = {
@@ -33,7 +33,7 @@ export class EntityService {
   };
   getProducts() {
     console.log("Service Get")
-    return this.https.get(`${this.url}/products/getProducts/All`);
+    return this.https.get(`${this.url}/api/Product`);
   }
   addProducts(data:any){
     console.log(data);
