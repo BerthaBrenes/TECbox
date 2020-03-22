@@ -35,12 +35,20 @@ namespace tecbox_API.Controllers
         List<Product> productList = ReadListFromFile();
 
         // GET api/products
+        /// <summary>
+        /// Returns all Products in stock.
+        /// </summary>
         public List<Product> Get()
         {
             return productList;
         }
 
         // GET api/products/5
+        /// <summary>
+        /// Returns an individual Product.
+        /// </summary>
+        /// <param name="id">The Product id.</param>
+        /// <returns></returns>
         public string Get(int id)
         {
             return "value";
