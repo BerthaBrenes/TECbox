@@ -12,7 +12,7 @@ export class SucursalesComponent implements OnInit {
   data:any;
   enterEnable:boolean=false;
   constructor() { }
-
+  id:string = 'sucursal';
   @Input() set src(val:any){
     this.data = val;
     console.log('data',this.data)

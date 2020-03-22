@@ -40,7 +40,7 @@
                 </ion-item>
             </ion-col>  
             <ion-col>
-                <ion-button  (click)="guardarDatos(N.value, T.value, E.value,P.value, C.value, D.value)" color="primary">Guardar</ion-button>
+                <ion-button  (click)="guardarSucursal(N.value, T.value, E.value,P.value, C.value, D.value)" color="primary">Guardar</ion-button>
             </ion-col> 
         </ion-row>  
     </ion-grid>
@@ -194,5 +194,40 @@
         </ion-row>
     </ion-grid>
 </div>
+<div *ngIf='idEntity == "ruta"'>
+    <ion-grid>
+        <ion-row>
+            <ion-col>                
+                <ion-item>
+                    <ion-label>Provincia</ion-label>
+                    <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One">
+                        <ion-select-option *ngFor="let p of provincias">{{p}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Cantón</ion-label> 
+                    <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Select One"> 
+                        <ion-select-option *ngFor="let c of cantones">{{c}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Distrito</ion-label>
+                    <ion-select #D placeholder="Select One">
+                        <ion-select-option *ngFor="let d of distritos">{{d}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>  
+            <ion-col>
+                <ion-button  (click)="addDistritoTemp(D.value)" color="primary">Añadir Distrito</ion-button>
+            </ion-col>  
+            <ion-col>
+                <ion-button  (click)="guardarRuta()" color="primary">Guardar</ion-button>
+            </ion-col>  
+            <ion-label>Ruta actual: </ion-label>
+            <ion-label *ngFor="let d of distritosRutas">{{d}}-></ion-label>       
+                       
+        </ion-row>
+    </ion-grid>
+</div>
 
-      
+        

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VendedoresComponent implements OnInit {
   enterEnable:boolean=false;
   data:any;
+  id:string = 'vendedor';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;
