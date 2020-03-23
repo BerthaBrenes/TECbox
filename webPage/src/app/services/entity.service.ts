@@ -37,7 +37,7 @@ export class EntityService {
   }
   addProducts(data:any){
     console.log(data);
-    return this.https.post(`${this.url}/products/postProducts/"`,data,this.httpOptions)
+    return this.https.post(`${this.url}/api/Product"`,data,this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -58,5 +58,8 @@ export class EntityService {
   getSeller() {
     console.log("Service Get")
     return this.https.get(`${this.url}/products/getProducts/All`);
+  }
+  postProduct(Obj:any){
+    return this.https.post<any>(`${this.url}/api/Product`,Obj)
   }
 }
