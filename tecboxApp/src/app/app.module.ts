@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {ComponentsModule} from './components/components.module';
 import {LoginComponent} from './components/login/login.component';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [LoginComponent],

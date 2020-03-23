@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef,Input } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Validators,FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,17 @@ import { Validators,FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+/**Boolean for the valid email */
 invalidEmail:boolean= false;
+/**Boolean for the valid password */
 invalidPassword:boolean=false;
-
+/**Data of all the clients */
+data:any;
+/**Input of the correct clients  */
+@Input() set src(val:any){
+  this.data = val;
+  console.log('data Table',this.data)
+}
 /**
  * Is a Form Group that will valid the entry of the credentials
  */
@@ -25,7 +34,7 @@ public ComponentLoginForm: FormGroup;
     private cdr:ChangeDetectorRef,
     public toastController:ToastController,
     public formBuilder:FormBuilder,
-
+    private router:Router
   ) { 
      /**
        * Funtion that valid the password as an input required and the email with an especific patter
@@ -52,14 +61,19 @@ public ComponentLoginForm: FormGroup;
         console.log('password invalid')
         this.invalidPassword=true;
       }
-      else{
-        console.log('else')
-      }
 
     }
     else{
-      console.log('good')
-      this.presentToast();
+      console.log('email',this.ComponentLoginForm.value.email,'password',this.ComponentLoginForm.value.password)
+      for( var credential in this.data){
+        if((this.data[credential]['email']== this.ComponentLoginForm.value.email) && (this.data[credential]['idCard'] == this.ComponentLoginForm.value.password)){
+          this.presentToast();
+          this.router.navigate(['/tracking'],this.ComponentLoginForm.value.password);
+          break;
+        }else{
+          this.presentToastInvalidCrendential();
+        }
+      }
       console.log(this.ComponentLoginForm.value);
     }
   }
@@ -85,6 +99,13 @@ public ComponentLoginForm: FormGroup;
     });
     toast.present();
   }
-
+async presentToastInvalidCrendential() {
+    const toast = await this.toastController.create({
+      message: 'Invalid Credentials, user or password not found',
+      color:"success",
+      duration: 2000
+    });
+    toast.present();
+  }
 
 }

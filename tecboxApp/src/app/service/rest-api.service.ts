@@ -8,13 +8,11 @@ import { forkJoin } from 'rxjs';
 })
 
 export class RestApiService {
-apiUrl = "http://api.zippopotam.us/";
+  apiUrl = 'https://localhost:5001';
   constructor(private http: HttpClient) { }
-  getData(): Observable<any> {
-    let response1 = this.http.get(this.apiUrl+'US/00210');
-    let response2= this.http.get(this.apiUrl+'IN/110001');
-    let response3 = this.http.get(this.apiUrl+'BR/01000-000');
-    let response4 = this.http.get(this.apiUrl+'FR/01000');
-    return forkJoin([response1, response2, response3, response4]);
+
+  getClientes(){
+    console.log("Service Get")
+    return this.http.get(`${this.apiUrl}/client/getClient/All`);
   }
 }
