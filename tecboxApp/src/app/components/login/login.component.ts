@@ -30,7 +30,7 @@ data:any;
  */
 @Input() set src(val:any){
   this.data = val;
-  console.log('data Table',this.data)
+  console.log('data Login',this.data)
 }
 /**
  * Is a Form Group that will valid the entry of the credentials
@@ -84,7 +84,12 @@ public ComponentLoginForm: FormGroup;
       for( var credential in this.data){
         if((this.data[credential]['email']== this.ComponentLoginForm.value.email) && (this.data[credential]['idCard'] == this.ComponentLoginForm.value.password)){
           this.presentToast();
-          this.router.navigate(['/tracking'],this.ComponentLoginForm.value.password);
+          let navigationExtras = {
+            queryParams: {
+              special: JSON.stringify(this.ComponentLoginForm.value.password)
+            }
+          }
+          this.router.navigate(['/tracking'],navigationExtras);
           break;
         }else{
           this.presentToastInvalidCrendential();
