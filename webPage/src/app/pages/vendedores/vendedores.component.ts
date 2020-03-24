@@ -9,6 +9,7 @@ export class VendedoresComponent implements OnInit {
   enterEnable:boolean=false;
   id:string='vendedores';
   data:any;
+  id:string = 'vendedor';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;

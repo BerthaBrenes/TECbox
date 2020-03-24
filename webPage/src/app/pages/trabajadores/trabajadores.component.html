@@ -1,6 +1,5 @@
 <div>
-    <h2>Gestion de trabajadores</h2>
-    <ion-button (click)="clickEnter()" color="primary">Agregar</ion-button>
-    <app-add-data *ngIf='enterEnable'></app-add-data>
-    <app-table [type]='id'></app-table>
+    <ion-button (click)="clickEnter()" color="primary">Añadir Trabajador</ion-button>
+    <app-add-data [type] = 'id' *ngIf='enterEnable'></app-add-data>
+    <app-table></app-table>
 </div>
