@@ -483,15 +483,16 @@
         </member>
         <member name="M:tecbox_API.Controllers.ProductController.Get">
             <summary>
-            Returns all Products in stock.
+            Endpoint that allows consulting all the products registered in the application
             </summary>
+            <returns></returns>
         </member>
         <member name="M:tecbox_API.Controllers.ProductController.Get(System.Int32)">
-            <summary>
-            Returns an individual Product.
-            </summary>
-            <param name="id">The Product id.</param>
-            <returns></returns>
+             <summary>
+            Endpoint that allows consulting a product registered in the application.
+             </summary>
+             <param name="id">Id of the product that you want to consult.</param>
+             <returns></returns>
         </member>
     </members>
 </doc>

@@ -98,3 +98,4 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Swashbuckle.Core.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\WebActivatorEx.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.xml
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csprojAssemblyReference.cache

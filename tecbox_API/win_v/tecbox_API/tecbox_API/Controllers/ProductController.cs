@@ -36,8 +36,9 @@ namespace tecbox_API.Controllers
 
         // GET api/products
         /// <summary>
-        /// Returns all Products in stock.
+        /// Endpoint that allows consulting all the products registered in the application
         /// </summary>
+        /// <returns></returns>
         public List<Product> Get()
         {
             return productList;
@@ -45,9 +46,9 @@ namespace tecbox_API.Controllers
 
         // GET api/products/5
         /// <summary>
-        /// Returns an individual Product.
+        ///Endpoint that allows consulting a product registered in the application.
         /// </summary>
-        /// <param name="id">The Product id.</param>
+        /// <param name="id">Id of the product that you want to consult.</param>
         /// <returns></returns>
         public string Get(int id)
         {
@@ -57,6 +58,17 @@ namespace tecbox_API.Controllers
         // POST api/products
         public void Post([FromBody]string value)
         {
+        }
+
+        /*
+         * Es mejor trabajarlo de esta manera así tengo el control de los urls
+         */
+        // PUT api/products/5/image/5
+        [HttpPut]
+        [Route("api/Product/{id}/image/{url}")]
+        public void alter(int id, string url)
+        {
+
         }
 
         // PUT api/products/5
