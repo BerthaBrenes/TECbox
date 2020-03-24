@@ -8,5 +8,23 @@
 </ion-header>
 
 <ion-content>
-
+  <div><p>
+    Ingrese porfavor del paquete que esta entregando
+  </p></div>
+  <ion-label>Estado del Paquete</ion-label>
+  <div class="selection">
+    <ion-select [(ngModel)]="productStatus" okText="Okay" cancelText="Dismiss" (ionChange)="packageStatusAction($event)" mode="ios" placeholder="Selecion Estado">
+      <ion-select-option value="Entregado">Entregado al cliente</ion-select-option>
+      <ion-select-option value="Failed">Intento de entrega fallido</ion-select-option>
+      <ion-select-option value="Return">Devuelto a sucursal</ion-select-option>
+    </ion-select>
+  </div>
+  
+  <div>
+    <ion-button expand="block" (click)="summitStatus()">Enviar Estado</ion-button>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <img src="../../assets/icon/logoApp.png" alt="">
+</ion-footer>
