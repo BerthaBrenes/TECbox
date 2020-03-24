@@ -9,7 +9,6 @@ export class TrabajadoresComponent implements OnInit {
   enterEnable:boolean=false;
   id:string='trabajadores';
   data:any;
-  id:string = 'trabajador';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;

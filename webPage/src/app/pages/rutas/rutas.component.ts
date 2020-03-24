@@ -9,7 +9,6 @@ export class RutasComponent implements OnInit {
   enterEnable:boolean=false;
   id:string='rutas';
   data:any;
-  id:string = 'ruta';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;

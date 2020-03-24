@@ -9,7 +9,6 @@ export class ProductosComponent implements OnInit {
   enterEnable:boolean=false;
   id:string='producto';
   data:any;
-  id:string = 'producto';
   constructor() { }
   @Input() set src(val:any){
     this.data = val;
