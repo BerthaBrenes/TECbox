@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {APIService} from '../services/api.service';
-
+import {EntityService} from '../../services/entity.service'
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 @Component({
   selector: 'app-add-data',
   templateUrl: './add-data.component.html',
@@ -24,7 +24,7 @@ export class AddDataComponent implements OnInit {
   clientes:Array<any>;
 
 
-  constructor(private service: APIService) { 
+  constructor(private entityService:EntityService) { 
     
 
   }
@@ -63,6 +63,17 @@ export class AddDataComponent implements OnInit {
 
   }
   guardarProducto(Nombre:any, Descripcion:any, CodigoBarras:any, Vendedor:any, PrecioCompra:any, Impuesto:any, Descuento:any){
+    var producto = {
+      "Name": "Memoria",
+      "Description": "Memoria",
+      "BarCode": "8484",
+      "Seller": "Cris Azofeifa",
+      "Price": 32,
+      "Discount": false,
+      "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+  };
+    
+    this.entityService.addProducts(producto);
 
   }
 

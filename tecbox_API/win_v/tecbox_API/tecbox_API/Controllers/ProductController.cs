@@ -30,7 +30,7 @@ namespace tecbox_API.Controllers
     public class ProductController : ApiController
     {
 
-        private static readonly string _path = "C:/Users/Esteban Alvarado/Documents/TEC/1S 2020/TECbox/tecbox_API/win_v/tecbox_API/tecbox_API/App_Data/_products.json";
+        private static readonly string _path = "tecbox_API/App_Data/_products.json";
 
         List<Product> productList = ReadListFromFile();
 
