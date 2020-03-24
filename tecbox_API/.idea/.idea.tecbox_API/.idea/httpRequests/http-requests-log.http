@@ -1,0 +1,6 @@
+GET https://localhost:5001/client/info
+Accept: */*
+Cache-Control: no-cache
+
+###
+

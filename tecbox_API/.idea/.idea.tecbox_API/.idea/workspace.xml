@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3434edca-2a6a-478a-a1ff-ceea4736adb1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/home/home.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tecboxApp/src/app/tracking/tracking.page.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Sucursales.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Products.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/DB/_clients.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Paquetes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Controllers/productController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/DB/_products.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tecbox_API/Controllers/clientsController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/paquetes.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/Paquete.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/Controllers/product.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/Productos.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/Products.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/Controllers/clientsController.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/DB/_products.json" />
+        <option value="$PROJECT_DIR$/tecbox_API/Startup.cs" />
+        <option value="$PROJECT_DIR$/tecbox_API/Controllers/productController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZBAmkTlMKbP0FB11aM1gmPloI4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="C#" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://localhost:5001" />
+          <option name="urlPath" value="/client/info" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.tecbox_API">
+    <configuration name="tecbox_API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/tecbox_API/tecbox_API.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="tecbox_API" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tecbox_API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/tecbox_API/tecbox_API.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3434edca-2a6a-478a-a1ff-ceea4736adb1" name="Default Changelist" comment="" />
+      <created>1584302276163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584302276163</updated>
+      <workItem from="1584302283312" duration="1583000" />
+      <workItem from="1584303948463" duration="194000" />
+      <workItem from="1584304260071" duration="29000" />
+      <workItem from="1584304601361" duration="498000" />
+      <workItem from="1584313640018" duration="1251000" />
+      <workItem from="1584574161110" duration="13018000" />
+      <workItem from="1584747226193" duration="2773000" />
+      <workItem from="1584758631264" duration="968000" />
+      <workItem from="1584760060017" duration="2357000" />
+      <workItem from="1584766906711" duration="1502000" />
+      <workItem from="1584934622755" duration="733000" />
+      <workItem from="1585019485032" duration="1235000" />
+      <workItem from="1585021835170" duration="631000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/DB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584304072735">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1584304072735" />
+    <state x="743" y="310" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584304140703">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="310" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1584304140702" />
+    <state width="1872" height="258" key="GridCell.Tab.0.bottom" timestamp="1585022962078">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1585022962078" />
+    <state width="1872" height="258" key="GridCell.Tab.0.center" timestamp="1585022962077">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1585022962077" />
+    <state width="1872" height="258" key="GridCell.Tab.0.left" timestamp="1585022962076">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585022962076" />
+    <state width="1872" height="258" key="GridCell.Tab.0.right" timestamp="1585022962077">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585022962077" />
+    <state x="555" y="287" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1584304129639">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="287" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/0.27.1920.1053@0.27.1920.1053" timestamp="1584304129639" />
+    <state x="456" y="188" width="1007" height="737" key="SettingsEditor" timestamp="1584755832986">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="456" y="188" width="1007" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1584755832986" />
+    <state x="624" y="252" key="run.anything.popup" timestamp="1584591825077">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1584591825077" />
+  </component>
+</project>
