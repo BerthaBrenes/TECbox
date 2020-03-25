@@ -2,8 +2,8 @@
  * File: Product.cs
  * Dev by: @estalvgs1999
  * Project: TECbox API
- * version: 3.1
- * last edited by: @estalvgs1999 [24/03/2020]
+ * version: 3.0
+ * last edited by: @estalvgs1999 [25/03/2020]
  *
  * Description: Implementation of a tecbox 
  * product. Products represent what tecbox 
@@ -14,10 +14,6 @@
 
 namespace tecbox_API.Models
 {
-    /// <summary>
-    /// Implementation of a tecbox product. 
-    /// Products represent what tecbox sells.
-    /// </summary>
     public class Product
     {
 

@@ -1,5 +1,4 @@
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll.config
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.pdb
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\csc.exe

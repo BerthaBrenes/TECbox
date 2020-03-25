@@ -3,7 +3,7 @@
  * Dev by: @BerthaBrenes @estalvgs1999
  * Project: TECbox API
  * version: 3.0
- * last edited by: @estalvgs1999 [24/03/2020]
+ * last edited by: @estalvgs1999 [25/03/2020]
  *
  * Description: Rest API to control product 
  * services. Products represent what tecbox 
@@ -12,14 +12,15 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
-    /// <summary>
-    /// 
-    /// 
-    /// </summary>
     public class ClientController : ApiController
     {
     }
