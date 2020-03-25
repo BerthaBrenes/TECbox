@@ -25,6 +25,8 @@ namespace tecbox_API.Models
     /// </summary>
     public class Employee
     {
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
         public Identification Id { get; set; }
         public string Role { get; set; }

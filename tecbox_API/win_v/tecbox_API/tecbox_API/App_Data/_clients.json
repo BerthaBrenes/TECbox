@@ -1,0 +1,74 @@
+[
+  {
+    "Username": "estalvgs1999",
+    "Password": "admin",
+    "Name": "Esteban Alvarado Vargas",
+    "Id": {
+      "Type": "CF",
+      "Number": "123-345-567"
+    },
+    "Email": "esteban@mail.com",
+    "Phone": "+(99)(999) 9999-9999",
+    "Mobile": "8888-8888",
+    "Address": {
+      "Department": "San José",
+      "City": "Desamparados",
+      "District": "Gravilias",
+      "Others": "El Porvenir, Urb Marianela Casa 8F"
+    }
+  },
+  {
+    "Username": "Jose_Alfaro",
+    "Password": "Cv567_99hv",
+    "Name": "Jose Antonio Alfaro Amador",
+    "Id": {
+      "Type": "CF",
+      "Number": "753-905-261"
+    },
+    "Email": "josealfaro@mail.com",
+    "Phone": "+(99)(999) 9999-9999",
+    "Mobile": "8888-8888",
+    "Address": {
+      "Department": "Alajuela",
+      "City": "Alajuela",
+      "District": "Alajuela",
+      "Others": "300 mts sur de las paradas de Tuasa"
+    }
+  },
+  {
+    "Username": "BerthaBrenes",
+    "Password": "36comHe1c",
+    "Name": "Bertha Brenes Brenes",
+    "Id": {
+      "Type": "CF",
+      "Number": "267-900-874"
+    },
+    "Email": "bBrenes@mail.com",
+    "Phone": "+(99)(999) 9999-9999",
+    "Mobile": "8888-8888",
+    "Address": {
+      "Department": "Cartago",
+      "City": "Jiménez",
+      "District": "Tucurrique",
+      "Others": ""
+    }
+  },
+  {
+    "Username": "CristhoferAzofeifa",
+    "Password": "2020GiHtPSS",
+    "Name": "Cristhofer Azofeifa ",
+    "Id": {
+      "Type": "CF",
+      "Number": "411-075-313"
+    },
+    "Email": "cdecris@mail.com",
+    "Phone": "+(99)(999) 9999-9999",
+    "Mobile": "8888-8888",
+    "Address": {
+      "Department": "San José",
+      "City": "Perez Zeledón",
+      "District": "San Isidro del General",
+      "Others": "Barrio AAA, Casa #44"
+    }
+  }
+]

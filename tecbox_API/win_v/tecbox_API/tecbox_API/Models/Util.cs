@@ -32,8 +32,12 @@ namespace tecbox_API.Models
         public static object DeletedMessage = JsonConvert.DeserializeObject("{\"Code\":\"200\",\"Message\":\"The object was successfully removed\"}");
         public static object ErrorMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"The action could not be completed\"}");
         public static object ExistingObjectMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"The object that you tried to create already exists in tecbox\"}");
-        
-        
+        public static object AccessDeniedMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"The user or password is incorrect\"}");
+        public static object ExistingUsernameMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"Username in use\"}");
+        public static object ExistingIDMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"Incorrect ID number, another user already exists with that ID number\"}");
+        public static object ExistingEmailMessage = JsonConvert.DeserializeObject("{\"Code\":\"400\",\"Message\":\"The email is already associated with an existing account.\"}");
+
+
         /* ---------------------------------------------
          * Read & Write Functions in JSON Files
          * By @estalvgs1999 
@@ -46,7 +50,11 @@ namespace tecbox_API.Models
         {
             string _path = Path.Combine(_basePath, filePath);
             string fileContent = File.ReadAllText(_path);
-            return JsonConvert.DeserializeObject<List<T>>(fileContent);
+            return JsonConvert.DeserializeObject<List<T>>(fileContent, new JsonSerializerSettings()
+            {
+                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+            });
+           
         }
 
         // This function receives a generic list and serialize it to the json file
@@ -56,5 +64,7 @@ namespace tecbox_API.Models
             string jsonList = JsonConvert.SerializeObject(objectList, Formatting.Indented);
             System.IO.File.WriteAllText(_path, jsonList);
         }
+
+        
     }
 }

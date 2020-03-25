@@ -12,6 +12,8 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
+using Newtonsoft.Json;
+
 namespace tecbox_API.Models
 {
     /// <summary>
@@ -21,8 +23,8 @@ namespace tecbox_API.Models
     public class Client
     {
 
-        private string Username { get; set; }
-        private string Password { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
         public Identification Id { get; set; }
         public string Email { get; set; }
@@ -30,16 +32,17 @@ namespace tecbox_API.Models
         public string Mobile { get; set; }
         public Address Address { get; set; }
 
-        /// <summary>
-        /// Check if the given username and password match those of the user.
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <returns></returns>
+        // Check if the given username and password match those of the user.
         public bool VerifyUser(string username, string password)
         {
             return this.Username.Equals(username) && this.Password.Equals(password);
         }
 
+        public bool KeyConditions(Client compared)
+        {
+            return Username.Equals(compared.Username) &&
+                Id.Number.Equals(compared.Id.Number) &&
+                Email.Equals(compared.Email);
+        }
     }
 }
