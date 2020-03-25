@@ -12,11 +12,6 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace tecbox_API.Models
 {
     /// <summary>
@@ -26,7 +21,7 @@ namespace tecbox_API.Models
     public class Product
     {
 
-        public string Name { get; set; } 
+        public string Name { get; set; }
         public string BarCode { get; set; }
         public string Description { get; set; }
         public Seller Seller { get; set; }

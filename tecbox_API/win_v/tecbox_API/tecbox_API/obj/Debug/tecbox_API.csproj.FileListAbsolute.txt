@@ -1,4 +1,5 @@
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll.config
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.pdb
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\csc.exe
@@ -54,8 +55,11 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Newtonsoft.Json.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Swashbuckle.Core.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Net.Http.Formatting.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Cors.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Helpers.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.Cors.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.WebHost.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Mvc.dll
@@ -64,7 +68,9 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.WebPages.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.WebPages.Razor.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\WebActivatorEx.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\WebGrease.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.Cors.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Newtonsoft.Json.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Net.Http.Formatting.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Helpers.xml
@@ -92,10 +98,4 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csproj.CopyComplete
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.pdb
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Cors.dll
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.Cors.dll
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\System.Web.Http.Cors.xml
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\Swashbuckle.Core.dll
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\WebActivatorEx.dll
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.xml
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csprojAssemblyReference.cache

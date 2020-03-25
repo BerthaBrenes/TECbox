@@ -12,75 +12,111 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
-using System;
-using System.IO;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using tecbox_API.Models;
 using System.Web.Http.Cors;
+using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
+    /// <summary>
+    /// Rest API to control product services.
+    /// </summary>
     [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class ProductController : ApiController
     {
 
         private static readonly string _path = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "App_Data/_products.json");
 
-        List<Product> productList = ReadListFromFile();
+        private List<Product> productList = ReadListFromFile();
+        private object notFoundError = JsonConvert.DeserializeObject("{\"Code\":\"404\",\"Message\":\"The product was not found in tecbox\"}");
+        private object deletedSuccess = JsonConvert.DeserializeObject("{\"Code\":\"200\",\"Message\":\"The product was successfully removed\"}");
 
-        // GET api/products
+
+        // GET api/v1/products
         /// <summary>
         /// Endpoint that allows consulting all the products registered in the application
         /// </summary>
         /// <returns></returns>
-        public List<Product> Get()
+        [HttpGet]
+        [Route("api/v1/products")]
+        public List<Product> GetAllProducts()
         {
             return productList;
         }
 
-        // GET api/products/5
+
+        // GET api/v1/products/:id
         /// <summary>
-        ///Endpoint that allows consulting a product registered in the application.
+        /// Endpoint that allows consulting a product registered in the application.
         /// </summary>
-        /// <param name="id">Id of the product that you want to consult.</param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/v1/products/{id}")]
+        public HttpResponseMessage GetProduct(string id)
         {
-            return "value";
+            Product requestProduct = productList.Find(product => product.BarCode.Equals(id));
+
+            if (requestProduct == null) 
+                return Request.CreateResponse(HttpStatusCode.NotFound, notFoundError);
+                
+            return Request.CreateResponse(HttpStatusCode.OK, requestProduct);
         }
 
-        // POST api/products
-        public void Post([FromBody]string value)
+
+        // POST api/v1/products
+        /// <summary>
+        /// Endpoint that allows creating a product in the application.
+        /// </summary>
+        /// <param name="newProduct"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/v1/products")]
+        public HttpResponseMessage AddProduct([FromBody]Product newProduct)
         {
+            productList.Add(newProduct);
+            WriteListInFile(productList);
+            return Request.CreateResponse(HttpStatusCode.OK, newProduct);
         }
 
-        /*
-         * Es mejor trabajarlo de esta manera así tengo el control de los urls
-         */
-        // PUT api/products/5/image/5
+
+        // PUT api/v1/products/:id
+        /// <summary>
+        /// Endpoint that allows to edit a product in the application.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
         [HttpPut]
-        [Route("api/Product/{id}/image/{url}")]
-        public void alter(int id, string url)
+        [Route("api/v1/products/{id}")]
+        public void EditProduct(string id, [FromBody]Product value)
         {
-
+            // TODO: Edit product given by his id
         }
 
-        // PUT api/products/5
-        public void Put(int id, [FromBody]string value)
+
+        // DELETE api/v1/products/id
+        /// <summary>
+        /// End point that allows you to delete a product in the application.
+        /// </summary>
+        /// <param name="id"></param>
+        [HttpDelete]
+        [Route("api/v1/products/{id}")]
+        public HttpResponseMessage RemoveProduct(string id)
         {
+            Product requestProduct = productList.Find(product => product.BarCode.Equals(id));
+            if (requestProduct == null)
+                return Request.CreateResponse(HttpStatusCode.NotFound, notFoundError);
+            
+            productList.Remove(requestProduct);
+            WriteListInFile(productList);
+            return Request.CreateResponse(HttpStatusCode.OK, deletedSuccess);
         }
 
-        // DELETE api/products/5
-        public void Delete(int id)
-        {
-
-        }
 
         /* ---------------------------------------------
          * Read & Write Functions in JSON Files
@@ -100,7 +136,6 @@ namespace tecbox_API.Controllers
             string jsonList = JsonConvert.SerializeObject(productsList, Formatting.Indented);
             System.IO.File.WriteAllText(_path, jsonList);
         }
-
 
     }
 }

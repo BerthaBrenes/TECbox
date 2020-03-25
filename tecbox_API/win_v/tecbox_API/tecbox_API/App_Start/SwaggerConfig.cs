@@ -1,7 +1,7 @@
-using System.Web.Http;
-using WebActivatorEx;
-using tecbox_API;
 using Swashbuckle.Application;
+using System.Web.Http;
+using tecbox_API;
+using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -63,7 +63,7 @@ namespace tecbox_API
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")

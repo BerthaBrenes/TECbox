@@ -481,18 +481,118 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:tecbox_API.Controllers.ProductController.Get">
+        <member name="T:tecbox_API.Controllers.ClientController">
+            <summary>
+            
+            
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Controllers.ProductController">
+            <summary>
+            Rest API to control product services.
+            </summary>
+        </member>
+        <member name="M:tecbox_API.Controllers.ProductController.GetAllProducts">
             <summary>
             Endpoint that allows consulting all the products registered in the application
             </summary>
             <returns></returns>
         </member>
-        <member name="M:tecbox_API.Controllers.ProductController.Get(System.Int32)">
-             <summary>
+        <member name="M:tecbox_API.Controllers.ProductController.GetProduct(System.String)">
+            <summary>
             Endpoint that allows consulting a product registered in the application.
-             </summary>
-             <param name="id">Id of the product that you want to consult.</param>
-             <returns></returns>
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:tecbox_API.Controllers.ProductController.AddProduct(tecbox_API.Models.Product)">
+            <summary>
+            Endpoint that allows creating a product in the application.
+            </summary>
+            <param name="newProduct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:tecbox_API.Controllers.ProductController.EditProduct(System.String,tecbox_API.Models.Product)">
+            <summary>
+            Endpoint that allows to edit a product in the application.
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:tecbox_API.Controllers.ProductController.RemoveProduct(System.String)">
+            <summary>
+            End point that allows you to delete a product in the application.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:tecbox_API.Models.Address">
+            <summary>
+            Object containing the contact address information.<br></br>
+            A customer or branch address provides distributors 
+            the delivery address for a package.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Client">
+            <summary>
+            Implementation of a tecbox client. Clients can sing in, 
+            log in, buy products and tracking packages.
+            </summary>
+        </member>
+        <member name="M:tecbox_API.Models.Client.VerifyUser(System.String,System.String)">
+            <summary>
+            Check if the given username and password match those of the user.
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:tecbox_API.Models.Employee">
+            <summary>
+            Employees are responsible for managing other employees, branches, 
+            suppliers, products, and delivery routes.<br></br>
+            Employees can take different roles: Administration, Store or Delivery.
+            </summary>
+        </member>
+        <member name="M:tecbox_API.Models.Employee.CalculateSalary">
+            <summary>
+            Calculates monthly salary based on 140 hours worked
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Identification">
+            <summary>
+            Models an identification, contains the type: physical 
+            or legal and the id number.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Office">
+            <summary>
+            Object that represents a branch office of the company.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Package">
+            <summary>
+            Implementation of a tecbox package. 
+            A package consists of products that a customer has purchased.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Product">
+            <summary>
+            Implementation of a tecbox product. 
+            Products represent what tecbox sells.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Route">
+            <summary>
+            Implement a route. The routes are a list of districts that 
+            the delivery person must follow to make deliveries.<br></br> 
+            A route has a name that identifies it.
+            </summary>
+        </member>
+        <member name="T:tecbox_API.Models.Seller">
+            <summary>
+            A seller is an object that represents a user outside of 
+            tecbox who wants to sell their products through the platform.
+            </summary>
         </member>
     </members>
 </doc>

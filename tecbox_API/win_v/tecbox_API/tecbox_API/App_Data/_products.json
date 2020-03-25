@@ -1,32 +1,53 @@
-﻿[
-	{
-		"Name": "MemoriaSD",
-		"Description": "Memoria para celular 16M",
-		"BarCode": "2345",
-		"Seller": "Juan Barnes",
-		"Price": 32,
-		"Discount": false,
-		"Taxes": true,
-		"Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
-	},
-	{
-		"Name": "Microfono",
-		"Description": "Microfono 8mg",
-		"BarCode": "2387",
-		"Seller": "Juan Barnes",
-		"Price": 80,
-		"Discount": true,
-		"Taxes": true,
-		"Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
-	},
-	{
-		"Name": "Microfono",
-		"Description": "Microfono 8mg",
-		"BarCode": "1381",
-		"Seller": "Juan Barnes",
-		"Price": 80,
-		"Discount": true,
-		"Taxes": true,
-		"Image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
-	}
+[
+  {
+    "Name": "Microfono",
+    "BarCode": "ABC-2387",
+    "Description": "Microfono 8mg",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 50,
+    "Price": 80,
+    "Taxes": true,
+    "Discount": true,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
+  },
+  {
+    "Name": "Tinta HP 63+",
+    "BarCode": "ABC-6677",
+    "Description": "Tinta para impresora Láser HP,color RGB",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 150,
+    "Price": 20,
+    "Taxes": false,
+    "Discount": true,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
+  },
+  {
+    "Name": "Laptop Lenovo ThinkPad T440P",
+    "BarCode": "ABC-9956",
+    "Description": "Computador portatil Lenovo;12 GB RAM, 1TB SSD",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 20,
+    "Price": 200,
+    "Taxes": true,
+    "Discount": false,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+  }
 ]
