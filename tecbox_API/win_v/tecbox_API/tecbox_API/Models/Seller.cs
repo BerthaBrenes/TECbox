@@ -25,5 +25,14 @@ namespace tecbox_API.Models
         public string Name { get; set; }
         public Identification Id { get; set; }
 
+        // Edit values of the object
+        public void EditSeller(Seller seller)
+        {
+            if (seller.Name != null)
+                this.Name = seller.Name;
+
+            if (seller.Id != null)
+                this.Id = seller.Id;
+        }
     }
 }

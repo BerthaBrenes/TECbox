@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "POLLOS BETO S.A",
+    "Id": {
+      "Type": "CJ",
+      "Number": "901-589-545-2"
+    }
+  },
+  {
+    "Name": "INTELEC",
+    "Id": {
+      "Type": "CJ",
+      "Number": "900-123-123-8"
+    }
+  },
+  {
+    "Name": "MICRO JPM",
+    "Id": {
+      "Type": "CJ",
+      "Number": "900-534-876-5"
+    }
+  },
+  {
+    "Name": "PALI",
+    "Id": {
+      "Type": "CJ",
+      "Number": "902-239-256-1"
+    }
+  }
+]
