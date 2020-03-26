@@ -31,7 +31,6 @@ namespace tecbox_API.Controllers
 
 
         // GET api/v1/products
-        // Endpoint that allows consulting all the products registered in the application
         [HttpGet]
         [Route("api/v1/products")]
         public List<Product> GetAllProducts()
@@ -40,8 +39,7 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/products/:id
-        // Endpoint that allows consulting a product registered in the application.
+        // GET api/v1/products/{id}
         [HttpGet]
         [Route("api/v1/products/{id}")]
         public HttpResponseMessage GetProduct(string id)
@@ -56,7 +54,6 @@ namespace tecbox_API.Controllers
 
 
         // POST api/v1/products
-        // Endpoint that allows creating a product in the application.
         [HttpPost]
         [Route("api/v1/products")]
         public HttpResponseMessage AddProduct([FromBody]Product newProduct)
@@ -70,8 +67,7 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/products/:id
-        // Endpoint that allows to edit a product in the application.
+        // PUT api/v1/products/{id}
         [HttpPut]
         [Route("api/v1/products/{id}")]
         public HttpResponseMessage EditProduct(string id, [FromBody]Product editedProduct)
@@ -81,14 +77,14 @@ namespace tecbox_API.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
             int productIndex = productList.IndexOf(requestProduct);
+
             productList[productIndex] = editedProduct;
             Util.WriteListInFile(productList, filePath);
             return Request.CreateResponse(HttpStatusCode.OK, editedProduct);
         }
 
 
-        // DELETE api/v1/products/id
-        // End point that allows you to delete a product in the application.
+        // DELETE api/v1/products/{id}
         [HttpDelete]
         [Route("api/v1/products/{id}")]
         public HttpResponseMessage RemoveProduct(string id)

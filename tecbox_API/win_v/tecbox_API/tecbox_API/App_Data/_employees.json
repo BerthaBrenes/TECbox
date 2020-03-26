@@ -1,0 +1,77 @@
+[
+  {
+    "Username": "@billGates",
+    "Password": "admin",
+    "Name": "Bill Gates",
+    "Id": {
+      "Type": "CF",
+      "Number": "123-345-567"
+    },
+    "Role": "Administrator",
+    "BranchOffice": {
+      "Name": "TECbox Tres Ríos",
+      "Admin": "Bill Gates",
+      "Phone": "2222-2222",
+      "Address": {
+        "Department": "Cartago",
+        "City": "La Unión",
+        "District": "Tres Ríos",
+        "Others": "500 mts Oeste de la municipalidad"
+      }
+    },
+    "BirthDate": "28/10/1955",
+    "StartDate": "10/03/2010",
+    "SalaryHour": 100000.0,
+    "SalaryMonth": 14000000.0
+  },
+  {
+    "Username": "ldnoguera",
+    "Password": "yuyo",
+    "Name": "Luis Diego Noguera",
+    "Id": {
+      "Type": "CF",
+      "Number": "100-103-142"
+    },
+    "Role": "Bodeguero",
+    "BranchOffice": {
+      "Name": "TECbox Tres Ríos",
+      "Admin": "Bill Gates",
+      "Phone": "2222-2222",
+      "Address": {
+        "Department": "Cartago",
+        "City": "La Unión",
+        "District": "Tres Ríos",
+        "Others": "500 mts Oeste de la municipalidad"
+      }
+    },
+    "BirthDate": "15/06/1990",
+    "StartDate": "10/08/2015",
+    "SalaryHour": 50000.0,
+    "SalaryMonth": 7000000.0
+  },
+  {
+    "Username": "cookieMonster",
+    "Password": "cookie",
+    "Name": "Juan Roberto Díaz Perez",
+    "Id": {
+      "Type": "CF",
+      "Number": "100-789-142"
+    },
+    "Role": "Repartidor",
+    "BranchOffice": {
+      "Name": "TECbox Tres Ríos",
+      "Admin": "Bill Gates",
+      "Phone": "2222-2222",
+      "Address": {
+        "Department": "Cartago",
+        "City": "La Unión",
+        "District": "Tres Ríos",
+        "Others": "500 mts Oeste de la municipalidad"
+      }
+    },
+    "BirthDate": "15/11/1996",
+    "StartDate": "02/01/2018",
+    "SalaryHour": 18000.0,
+    "SalaryMonth": 2520000.0
+  }
+]

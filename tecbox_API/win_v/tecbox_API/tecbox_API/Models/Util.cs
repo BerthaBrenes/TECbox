@@ -50,10 +50,7 @@ namespace tecbox_API.Models
         {
             string _path = Path.Combine(_basePath, filePath);
             string fileContent = File.ReadAllText(_path);
-            return JsonConvert.DeserializeObject<List<T>>(fileContent, new JsonSerializerSettings()
-            {
-                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-            });
+            return JsonConvert.DeserializeObject<List<T>>(fileContent);
            
         }
 

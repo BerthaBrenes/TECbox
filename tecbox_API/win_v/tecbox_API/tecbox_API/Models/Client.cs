@@ -2,8 +2,8 @@
  * File: Client.cs
  * Dev by: @estalvgs1999
  * Project: TECbox API
- * version: 3.1
- * last edited by: @estalvgs1999 [24/03/2020]
+ * version: 3.0
+ * last edited by: @estalvgs1999 [25/03/2020]
  *
  * Description: Implementation of a tecbox 
  * client. Clients can sing in, log in, buy 
@@ -16,13 +16,8 @@ using Newtonsoft.Json;
 
 namespace tecbox_API.Models
 {
-    /// <summary>
-    /// Implementation of a tecbox client. Clients can sing in, 
-    /// log in, buy products and tracking packages.
-    /// </summary>
     public class Client
     {
-
         public string Username { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
@@ -38,11 +33,45 @@ namespace tecbox_API.Models
             return this.Username.Equals(username) && this.Password.Equals(password);
         }
 
+        // Check if an object has the same values ​​in the key attributes
         public bool KeyConditions(Client compared)
         {
             return Username.Equals(compared.Username) &&
                 Id.Number.Equals(compared.Id.Number) &&
                 Email.Equals(compared.Email);
         }
+
+        // Check if an object has the key values ​​null
+        public bool IsNullKey()
+        {
+            return Username == null && Id == null && Email == null;
+        }
+
+        // Edit values of the object
+        public void EditClient(Client employee)
+        {
+            if (employee.Username != null)
+                this.Username = employee.Username;
+
+            if (employee.Name != null)
+                this.Name = employee.Name;
+
+            if (employee.Id != null)
+                this.Id = employee.Id;
+
+            if (employee.Email != null)
+                this.Email = employee.Email;
+
+            if (employee.Phone != null)
+                this.Phone = employee.Phone;
+
+            if (employee.Mobile != null)
+                this.Mobile = employee.Mobile;
+
+            if (employee.Address != null)
+                this.Address = employee.Address;
+
+        }
+
     }
 }

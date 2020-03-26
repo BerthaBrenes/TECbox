@@ -83,14 +83,12 @@ namespace tecbox_API.Controllers
             if (clientList.Exists(client => client.Id.Number.Equals(newClient.Id.Number)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
 
-            // The username is a key attribute so there cannot be two equals
             else if (clientList.Exists(client => client.Username.Equals(newClient.Username)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingUsernameMessage);
 
             else if (clientList.Exists(client => client.Email.Equals(newClient.Email)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingEmailMessage);
 
-            // If the object meets the conditions it is stored in the temporary list and in the database
             clientList.Add(newClient);
             Util.WriteListInFile<Client>(clientList, filePath);
 
@@ -110,26 +108,30 @@ namespace tecbox_API.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
             // If the edited object does not maintain the key attributes, it is verified that they are valid
-            if (! requestClient.KeyConditions(editedClient))
+            if (! requestClient.KeyConditions(editedClient) && ! editedClient.IsNullKey())
             {
-                // Verify Unique ID
                 if (clientList.Exists(client => client.Id.Number.Equals(editedClient.Id.Number)))
                     return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingIDMessage);
-                // Verify unique username
+
                 else if (clientList.Exists(client => client.Username.Equals(editedClient.Username)))
                     return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingUsernameMessage);
-                // Verify unique email
+                
                 else if (clientList.Exists(client => client.Email.Equals(editedClient.Email)))
                     return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingEmailMessage);
             }
 
+            
+
             // So if the object doesn't violate the constraints it can be modified
             int productIndex = clientList.IndexOf(requestClient);
-            clientList[productIndex] = editedClient;
+
+            requestClient.EditClient(editedClient);
+            clientList[productIndex] = requestClient;
+
             Util.WriteListInFile(clientList, filePath);
 
-            editedClient.Password = null; // Hides password when sending to user
-            return Request.CreateResponse(HttpStatusCode.OK, editedClient);
+            requestClient.Password = null; // Hides password when sending to user
+            return Request.CreateResponse(HttpStatusCode.OK, requestClient);
 
         }
 
