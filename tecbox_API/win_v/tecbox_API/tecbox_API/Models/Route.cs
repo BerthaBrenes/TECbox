@@ -13,6 +13,8 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
+using System.Collections.Generic;
+
 namespace tecbox_API.Models
 {
     /// <summary>
@@ -23,8 +25,33 @@ namespace tecbox_API.Models
     public class Route
     {
 
-        public string Name { get; set; }
-        public string Districts { get; set; }
+        private static int IdCounter = 1;
 
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<string> Districts { get; set; }
+
+        //
+        public void AddDistrict(string district)
+        {
+            Districts.Add(district);
+        }
+
+        //
+        public void SetID()
+        {
+            this.Id = IdCounter;
+            IdCounter++;
+        }
+
+        //
+        public void EditRoute(Route route)
+        {
+            if (route.Name != null)
+                this.Name = route.Name;
+
+            if (route.Districts != null)
+                this.Districts = route.Districts;
+        }
     }
 }
