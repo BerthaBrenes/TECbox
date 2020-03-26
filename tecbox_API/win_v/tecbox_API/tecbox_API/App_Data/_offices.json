@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 0,
+    "Name": "TECbox Tres Ríos",
+    "Admin": "Bill Gates",
+    "Phone": "2222-2222",
+    "Address": {
+      "Department": "Cartago",
+      "City": "La Unión",
+      "District": "Tres Ríos",
+      "Others": "500 mts Oeste de la municipalidad"
+    }
+  },
+  {
+    "Id": 1,
+    "Name": "TECbox City Mall Alajuela",
+    "Admin": "Milton Villegas",
+    "Phone": "2222-4444",
+    "Address": {
+      "Department": "Alajuela",
+      "City": "Alajuela",
+      "District": "Alajuela",
+      "Others": "Ubicado en el City Mall"
+    }
+  },
+  {
+    "Id": 2,
+    "Name": "TECbox Heredia",
+    "Admin": "Luis Diego Noguera",
+    "Phone": "2222-5566",
+    "Address": {
+      "Department": "Heredia",
+      "City": "Heredia",
+      "District": "Heredia",
+      "Others": "Global Park, Mall Real Cariari, 600m Este"
+    }
+  }
+]

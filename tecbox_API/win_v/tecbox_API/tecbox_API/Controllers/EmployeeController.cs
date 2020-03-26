@@ -7,7 +7,7 @@
  *
  * Description: Rest API to control employee 
  * services. It allows to enter, validate, edit 
- * and delete emplyees.
+ * and delete employees.
  *
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
