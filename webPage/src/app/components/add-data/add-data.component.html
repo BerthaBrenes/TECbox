@@ -2,38 +2,38 @@
     <ion-grid>
         <ion-row>
             <ion-col>
+                <ion-label>Nombre:</ion-label>
                 <ion-item>
-                    <ion-label>Nombre:</ion-label>
                     <ion-input #N type=text></ion-input>
                 </ion-item>
             </ion-col> 
             <ion-col>
+                <ion-label>Teléfono:</ion-label>
                 <ion-item>
-                    <ion-label>Teléfono:</ion-label>
                     <ion-input #T type=text></ion-input>
                 </ion-item>
             </ion-col> 
             <ion-col>
+                <ion-label>Encargado:</ion-label>
                 <ion-item>
-                    <ion-label>Encargado:</ion-label>
                     <ion-input #E type=text></ion-input>
                 </ion-item>
             </ion-col> 
-            <ion-col>                
+            <ion-col>     
+                <ion-label>Provincia</ion-label>           
                 <ion-item>
-                    <ion-label>Provincia</ion-label>
                     <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One">
                         <ion-select-option *ngFor="let p of provincias">{{p}}</ion-select-option>
                     </ion-select>
                 </ion-item>
-                <ion-item>
-                    <ion-label>Cantón</ion-label> 
-                    <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Select One"> 
+                <ion-label *ngIf="cantones">Cantón</ion-label> 
+                <ion-item *ngIf="cantones">
+                    <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Select One" > 
                         <ion-select-option *ngFor="let c of cantones">{{c}}</ion-select-option>
                     </ion-select>
                 </ion-item>
-                <ion-item>
-                    <ion-label>Distrito</ion-label>
+                <ion-label *ngIf="distritos">Distrito</ion-label>
+                <ion-item *ngIf="distritos">
                     <ion-select #D placeholder="Select One">
                         <ion-select-option *ngFor="let d of distritos">{{d}}</ion-select-option>
                     </ion-select>
@@ -51,53 +51,53 @@
     <ion-grid>
         <ion-row>
             <ion-col>
+                <ion-label>Nombre:</ion-label>
                 <ion-item>
-                    <ion-label>Nombre:</ion-label>
                     <ion-input #N type=text></ion-input>
                 </ion-item>
             </ion-col> 
             <ion-col>
+                <ion-label>Apellido 1:</ion-label>
                 <ion-item>
-                    <ion-label>Apellido 1:</ion-label>
                     <ion-input #A1 type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Apellido 2:</ion-label>
                 <ion-item>
-                    <ion-label>Apellido 2:</ion-label>
                     <ion-input #A2 type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Cédula:</ion-label>
                 <ion-item>
-                    <ion-label>Cédula:</ion-label>
                     <ion-input #C type=text></ion-input>
                 </ion-item>
             </ion-col>  
             <ion-row>
             <ion-col>
+                <ion-label>Fecha Nacimiento:</ion-label>
                 <ion-item>
-                    <ion-label>Fecha Nacimiento:</ion-label>
                     <ion-input #FN type=date></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Fecha Ingreso:</ion-label>
                 <ion-item>
-                    <ion-label>Fecha Ingreso:</ion-label>
                     <ion-input #FI type=date></ion-input>
                 </ion-item>
             </ion-col>
-            <ion-col>                
+            <ion-col>     
+                <ion-label>Sucursal</ion-label>           
                 <ion-item>
-                    <ion-label>Sucursal</ion-label>
                     <ion-select #S placeholder="Select One">
                         <ion-select-option *ngFor="let s of sucursales">{{s}}</ion-select-option>
                     </ion-select>
                 </ion-item>
             </ion-col>  
             <ion-col>
+                <ion-label>Salario Hora:</ion-label>
                 <ion-item>
-                    <ion-label>Salario Hora:</ion-label>
                     <ion-input #SH type=text></ion-input>
                 </ion-item>
             </ion-col>
@@ -113,26 +113,26 @@
     <ion-grid>
         <ion-row>
             <ion-col>
+                <ion-label>Nombre:</ion-label>
                 <ion-item>
-                    <ion-label>Nombre:</ion-label>
                     <ion-input #N type=text></ion-input>
                 </ion-item>
             </ion-col> 
             <ion-col>
+                <ion-label>Apellido 1:</ion-label>
                 <ion-item>
-                    <ion-label>Apellido 1:</ion-label>
                     <ion-input #A1 type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Apellido 2:</ion-label>
                 <ion-item>
-                    <ion-label>Apellido 2:</ion-label>
                     <ion-input #A2 type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Cédula:</ion-label>
                 <ion-item>
-                    <ion-label>Cédula:</ion-label>
                     <ion-input #C type=text></ion-input>
                 </ion-item>
             </ion-col>  
@@ -147,45 +147,51 @@
     <ion-grid>
         <ion-row>
             <ion-col>
+                <ion-label>Nombre:</ion-label>
                 <ion-item>
-                    <ion-label>Nombre:</ion-label>
                     <ion-input #N type=text></ion-input>
                 </ion-item>
             </ion-col> 
             <ion-col>
+                <ion-label>Descripción:</ion-label>
                 <ion-item>
-                    <ion-label>Descripción:</ion-label>
                     <ion-input #D type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Código Barras:</ion-label>
                 <ion-item>
-                    <ion-label>Código Barras:</ion-label>
                     <ion-input #C type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Vendedor:</ion-label>
                 <ion-item>
-                    <ion-label>Vendedor:</ion-label>
                     <ion-input #V type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Precio de compra:</ion-label>
                 <ion-item>
-                    <ion-label>Precio de compra:</ion-label>
                     <ion-input #PC type=text></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Impuesto:</ion-label>
                 <ion-item>
-                    <ion-label>Impuesto:</ion-label>
-                    <ion-input #I type=text></ion-input>
+                    <ion-select #I placeholder="Select One">
+                        <ion-select-option>Si</ion-select-option>
+                        <ion-select-option>No</ion-select-option>
+                      </ion-select>
                 </ion-item>
             </ion-col>
             <ion-col>
+                <ion-label>Descuento:</ion-label>
                 <ion-item>
-                    <ion-label>Descuento:</ion-label>
-                    <ion-input #DES type=text></ion-input>
+                    <ion-select #DES placeholder="Select One">
+                        <ion-select-option>Si</ion-select-option>
+                        <ion-select-option>No</ion-select-option>
+                      </ion-select>
                 </ion-item>
             </ion-col>
             <ion-col>
@@ -197,21 +203,21 @@
 <div *ngIf='idEntity == "rutas"'>
     <ion-grid>
         <ion-row>
-            <ion-col>                
+            <ion-col>
+                <ion-label>Provincia</ion-label>                
                 <ion-item>
-                    <ion-label>Provincia</ion-label>
                     <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One">
                         <ion-select-option *ngFor="let p of provincias">{{p}}</ion-select-option>
                     </ion-select>
                 </ion-item>
+                <ion-label>Cantón</ion-label> 
                 <ion-item>
-                    <ion-label>Cantón</ion-label> 
                     <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Select One"> 
                         <ion-select-option *ngFor="let c of cantones">{{c}}</ion-select-option>
                     </ion-select>
                 </ion-item>
+                <ion-label>Distrito</ion-label>
                 <ion-item>
-                    <ion-label>Distrito</ion-label>
                     <ion-select #D placeholder="Select One">
                         <ion-select-option *ngFor="let d of distritos">{{d}}</ion-select-option>
                     </ion-select>
