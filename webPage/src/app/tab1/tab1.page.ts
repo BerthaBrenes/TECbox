@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import {EntityService} from '../services/entity.service'
+import {APIService} from '../services/api.service'
 
 @Component({
   selector: 'app-tab1',
@@ -50,7 +50,7 @@ export class Tab1Page {
   * @param entityService Services for get all the entity information
   */
 
-  constructor(private menu: MenuController, private router: Router, private entityService:EntityService
+  constructor(private menu: MenuController, private router: Router, private entityService:APIService
     ) { 
       // this.entityService.addProducts(this.TestData).subscribe(Response=>{
       //   console.log(Response)

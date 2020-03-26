@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {EntityService} from '../../services/entity.service'
+import {APIService} from '../../services/api.service'
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 @Component({
   selector: 'app-add-data',
@@ -24,7 +24,7 @@ export class AddDataComponent implements OnInit {
   clientes:Array<any>;
 
 
-  constructor(private entityService:EntityService) { 
+  constructor(private entityService:APIService) { 
     
 
   }

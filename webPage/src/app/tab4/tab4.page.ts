@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {EntityService} from '../services/entity.service'
-
+import  {APIService} from '../services/api.service'
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
@@ -26,7 +25,7 @@ export class Tab4Page implements OnInit {
    * @param entityService manage the request of product Service
    */
   constructor(
-    private entityService:EntityService
+    private entityService:APIService
   ) { 
     // this.entityService.addProducts(this.TestData).subscribe(Response=>{
     //   console.log(Response)
@@ -40,6 +39,8 @@ export class Tab4Page implements OnInit {
       this.inputClients=data;
       console.log('Clients',data)
   });
+  
+  
 }
 /**
  * Go after the constructor
