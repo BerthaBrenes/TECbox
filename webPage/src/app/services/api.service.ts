@@ -60,9 +60,7 @@ export class APIService {
     "Quantity":quantiy
   }
  }
- getProductSell(){
-   return this.productSave;
- }
+ 
  handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {
     // A client-side or network error occurred. Handle it accordingly.
@@ -109,7 +107,10 @@ getSeller() {
 postProduct(Obj:any){
   return this.http.post<any>(`${this.url}/api/Product`,Obj)
 }
-
+getProductSell(){
+  console.log(this.productSave);
+  return this.productSave.json;
+}
 }
 
 

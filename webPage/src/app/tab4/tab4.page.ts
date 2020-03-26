@@ -39,7 +39,7 @@ export class Tab4Page implements OnInit {
       this.inputClients=data;
       console.log('Clients',data)
   });
-  
+
   
 }
 /**
