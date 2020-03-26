@@ -86,7 +86,8 @@ public ComponentLoginForm: FormGroup;
           this.presentToast();
           let navigationExtras = {
             queryParams: {
-              special: JSON.stringify(this.ComponentLoginForm.value.password)
+              /**CAMBIAR AQUI EL VALOR DEL JSON DE TRACKID */
+              special: JSON.stringify(this.data[credential]['TrackID'])
             }
           }
           this.router.navigate(['/tracking'],navigationExtras);

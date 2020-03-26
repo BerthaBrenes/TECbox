@@ -14,7 +14,7 @@ export class TrackingPage implements OnInit {
 /**
  * Variable is the product tracked
  */
-Product:any;
+Package:any;
 /**
  * Status of the product
  */
@@ -29,12 +29,12 @@ productStatus:string="Pendiente";
     this.route.queryParams.subscribe(params => {
       if (params && params.special) {
         this.data = JSON.parse(params.special);
-        console.log('data Tracking',this.data)
+        console.log('distrubuitor Tracking ID, received',this.data)
       }
     });
-    this.api.getClientes().subscribe(data=>{
-      console.log('Data Tracking',data);
-      this.getInfoPackage(data);
+    this.api.getPackages().subscribe(Packages=>{
+      console.log('Data Packages',Packages);
+      this.getInfoPackage(Packages);
     });
     
   }
@@ -45,13 +45,16 @@ productStatus:string="Pendiente";
   }
   /**
    * Funtion the get the correct Package information, in here it must take the product by the seller
+   * Here there is two option, get package by the TrackID, or use this funtion that call all the package and look what is for what
    * @param data list with all the products
    */
-  getInfoPackage(data:any){
-    for(var i in data){
-      if(data[i]['idCard']== this.data){
-        console.log('Data function',data[i]);
-        this.Product= data[i];
+  getInfoPackage(Packages:any){
+    for(var i in Packages){
+      if(Packages[i]['TrackID']== this.data){
+        console.log('Info Package',Packages[i]);
+        this.Package= Packages[i];
+        /**Second way , its to get directly by the Package ID */
+        this.api.getPackageByID(this.data)
         break;
       }
       else{
@@ -73,6 +76,8 @@ productStatus:string="Pendiente";
    */
   summitStatus(){
     console.log('summit Data',this.productStatus);
+    this.api.changeStatus(this.productStatus);
     this.router.navigate(['home']);
+    
   }
 }

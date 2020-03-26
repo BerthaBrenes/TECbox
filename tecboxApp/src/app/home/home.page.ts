@@ -9,13 +9,13 @@ import {RestApiService} from '../service/rest-api.service';
 })
 export class HomePage implements OnInit {
   constructor(public api: RestApiService, public loadingController: LoadingController) {}
-  clients:any;
+  distributor:any;
   ngOnInit(){
       this.getData();
   }
   async getData() {
-    this.api.getClientes().subscribe(data=>{
-      this.clients=data;
+    this.api.getDistributors().subscribe(data=>{
+      this.distributor=data;
       console.log(data);
     });
   }
