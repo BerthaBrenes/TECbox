@@ -83,5 +83,22 @@
     "Taxes": false,
     "Discount": false,
     "image": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
+  },
+  {
+    "Name": "Raspberry Pi 4",
+    "BarCode": "RP-001",
+    "Description": "More Powerful processor. USB-C Power Supply. 4GB RAM. Micro HDMI Ports. USB 2/3. GigaBit Ethernet",
+    "Seller": {
+      "Name": "Raspberry Pi org",
+      "Id": {
+        "Type": "CJ",
+        "Number": "800-232-351-4"
+      }
+    },
+    "OnStock": 15,
+    "Price": 35,
+    "Taxes": false,
+    "Discount": false,
+    "image": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
   }
 ]

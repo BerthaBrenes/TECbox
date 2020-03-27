@@ -176,6 +176,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OfficeController.cs" />
+    <Compile Include="Controllers\PackageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RouteController.cs" />
     <Compile Include="Controllers\SellerController.cs" />
@@ -196,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\_offices.json" />
+    <None Include="App_Data\_packages.json" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

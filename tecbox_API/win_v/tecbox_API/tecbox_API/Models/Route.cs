@@ -17,11 +17,6 @@ using System.Collections.Generic;
 
 namespace tecbox_API.Models
 {
-    /// <summary>
-    /// Implement a route. The routes are a list of districts that 
-    /// the delivery person must follow to make deliveries.<br></br> 
-    /// A route has a name that identifies it.
-    /// </summary>
     public class Route
     {
 
@@ -34,7 +29,8 @@ namespace tecbox_API.Models
         //
         public void AddDistrict(string district)
         {
-            Districts.Add(district);
+            if(! Districts.Exists(dis => dis.Equals(district)))
+                Districts.Add(district);
         }
 
         //

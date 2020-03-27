@@ -87,9 +87,9 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestRoute);
         }
 
-        // PUT api/v1/routes/{id}/district
+        // PUT api/v1/routes/{id}?district={district}
         [HttpPut]
-        [Route("api/v1/routes/{id}/{district}")]
+        [Route("api/v1/routes/{id}/district={district}")]
         public HttpResponseMessage AddDistrict(int id, string district)
         {
             Route requestRoute = routeList.Find(route => route.Id.Equals(id));

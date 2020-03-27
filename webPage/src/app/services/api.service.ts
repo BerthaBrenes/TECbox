@@ -14,7 +14,7 @@ const httpOptions = {headers: new HttpHeaders({
   providedIn: 'root'
 })
 export class APIService {
-  url = "localhost:5000/";
+  url = "https://localhost:44332";
   productSave:any;
 
   constructor(private http: HttpClient) {
@@ -29,14 +29,14 @@ export class APIService {
   Retorna todos los clientes 
   */
   getCliente(){
-    return this.http.get<void[]>(this.url);
+    return this.http.get<void[]>(`${this.url}/api/v1/clients`);
   }
 
   /*
   Recibe un cliente y lo publica en el rest api
   */
   addCliente(cliente:void){
-    return this.http.post<any>(this.url,cliente)
+    return this.http.post<any>(`${this.url}/api/v1/clients`,cliente)
  }
  /**
   *  Funtion to save the information of the product saved
@@ -76,36 +76,39 @@ export class APIService {
   return throwError(
     'Something bad happened; please try again later.');
 };
+
 getProducts() {
   console.log("Service Get")
-  return this.http.get(`${this.url}/api/Product`);
+  return this.http.get(`${this.url}/api/v1/products`);
 }
+
 addProducts(data:any){
   console.log(data);
-  return this.http.post(`${this.url}/api/Product"`,data,this.httpOptions)
+  return this.http.post(`${this.url}/api/v1/products`,data,this.httpOptions)
   .pipe(
     retry(2),
     catchError(this.handleError)
   )
 }
+
 getClientes() {
   console.log("Service Get")
-  return this.http.get(`${this.url}/client/getClient/All`);
+  return this.http.get(`${this.url}/api/v1/clients`);
 }
 getPackages() {
   console.log("Service Get")
-  return this.http.get(`${this.url}/products/getProducts/All`);
+  return this.http.get(`${this.url}/api/v1/packages`);
 }
 getWorkers() {
   console.log("Service Get")
-  return this.http.get(`${this.url}/products/getProducts/All`);
+  return this.http.get(`${this.url}/api/v1/employees`);
 }
 getSeller() {
   console.log("Service Get")
-  return this.http.get(`${this.url}/products/getProducts/All`);
+  return this.http.get(`${this.url}/api/v1/sellers`);
 }
 postProduct(Obj:any){
-  return this.http.post<any>(`${this.url}/api/Product`,Obj)
+  return this.http.post<any>(`${this.url}/api/v1/products`,Obj)
 }
 getProductSell(){
   console.log(this.productSave);

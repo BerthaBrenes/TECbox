@@ -1,0 +1,72 @@
+[
+  {
+    "TrackID": "A-349",
+    "Client": {
+      "Username": null,
+      "Password": null,
+      "Name": "Ellon Musk",
+      "Id": {
+        "Type": "CF",
+        "Number": "123-345-567"
+      },
+      "Email": null,
+      "Phone": "+(99)(999) 9999-9999",
+      "Mobile": "8888-8888",
+      "Address": {
+        "Department": "Cartago",
+        "City": "Cartago",
+        "District": "San Nicolás",
+        "Others": "La Lima"
+      }
+    },
+    "Description": "Memoria SD 1 Unit",
+    "Route": {
+      "Id": 0,
+      "Name": "GAM AM 2M2020",
+      "Districts": [
+        "Desamparados",
+        "Gravilias",
+        "San Antonio",
+        "Tres Ríos",
+        "San Nicolas"
+      ]
+    },
+    "Status": "En ruta",
+    "DeliveryDate": "01/08/2020"
+  },
+  {
+    "TrackID": "B-552",
+    "Client": {
+      "Username": "estalvgs1999",
+      "Password": null,
+      "Name": "Esteban Alvarado Vargas",
+      "Id": {
+        "Type": "CF",
+        "Number": "123-345-567"
+      },
+      "Email": "esteban@mail.com",
+      "Phone": "+(99)(999) 9999-9999",
+      "Mobile": "8888-8888",
+      "Address": {
+        "Department": "San José",
+        "City": "Desamparados",
+        "District": "Gravilias",
+        "Others": "El Porvenir, Urb Marianela Casa 8F"
+      }
+    },
+    "Description": "Arduino UNO; Raspberry Pi 4",
+    "Route": {
+      "Id": 0,
+      "Name": "GAM AM 2M2020",
+      "Districts": [
+        "Desamparados",
+        "Gravilias",
+        "San Antonio",
+        "Tres Ríos",
+        "San Nicolas"
+      ]
+    },
+    "Status": "Aduanas",
+    "DeliveryDate": "01/04/2020"
+  }
+]

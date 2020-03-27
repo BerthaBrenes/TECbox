@@ -12,7 +12,7 @@ export class ProductosComponent implements OnInit {
   constructor() { }
   @Input() set src(val:any){
     this.data = val;
-    console.log('data',this.data)
+    console.log('product data',this.data)
   }
   ngOnInit() {}
 
