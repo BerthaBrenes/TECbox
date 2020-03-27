@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
+
+
 @Component({
   selector: 'app-sucursales',
   templateUrl: './sucursales.component.html',
@@ -8,9 +10,9 @@ import { MenuController } from '@ionic/angular';
 })
 export class SucursalesComponent implements OnInit {
   data:any;
+  id:string='sucursal';
   enterEnable:boolean=false;
   constructor() { }
-
   @Input() set src(val:any){
     this.data = val;
     console.log('data',this.data)

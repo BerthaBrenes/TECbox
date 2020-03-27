@@ -22,6 +22,7 @@ import { SucursalesComponent } from './pages/sucursales/sucursales.component';
 import { TrabajadoresComponent } from './pages/trabajadores/trabajadores.component';
 import { VendedoresComponent } from './pages/vendedores/vendedores.component';
 import {PagesModule} from './pages/pages.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,7 +43,8 @@ import {PagesModule} from './pages/pages.module';
     IonicModule.forRoot(), 
     AppRoutingModule,
     ComponentsModule,
-    PagesModule],
+    PagesModule,
+    HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

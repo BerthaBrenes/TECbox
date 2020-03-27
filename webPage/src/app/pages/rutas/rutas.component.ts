@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RutasComponent implements OnInit {
   enterEnable:boolean=false;
+  id:string='rutas';
   data:any;
   constructor() { }
   @Input() set src(val:any){

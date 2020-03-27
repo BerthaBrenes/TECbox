@@ -1,5 +1,8 @@
-<div>
-    <ion-button (click)="clickEnter()" color="primary">Primary</ion-button>
+<div class="content">
+    <div>
+        <h2>Gestion de Paquetes</h2>
+        <ion-button (click)="clickEnter()" color="primary">Agregar</ion-button>
+    </div>
     <app-add-data *ngIf='enterEnable'></app-add-data>
-    <app-table></app-table>
+    <app-table [type]='id'></app-table>
 </div>

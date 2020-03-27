@@ -1,0 +1,13 @@
+div{
+    &.content{
+        margin: 30px;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h2{
+                align-self: center;
+            }
+        }
+    }
+}

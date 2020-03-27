@@ -8,13 +8,34 @@ import { forkJoin } from 'rxjs';
 })
 
 export class RestApiService {
-apiUrl = "http://api.zippopotam.us/";
+  apiUrl = 'https://localhost:5001';
   constructor(private http: HttpClient) { }
-  getData(): Observable<any> {
-    let response1 = this.http.get(this.apiUrl+'US/00210');
-    let response2= this.http.get(this.apiUrl+'IN/110001');
-    let response3 = this.http.get(this.apiUrl+'BR/01000-000');
-    let response4 = this.http.get(this.apiUrl+'FR/01000');
-    return forkJoin([response1, response2, response3, response4]);
+
+  /**
+   * Get info of all the distribuitor
+   */
+  getDistributors(){
+    console.log("Service Get");
+    return this.http.get(`${this.apiUrl}/employee/getEmployee/All`);
+  }
+  /**
+   * Put status of the package
+   * @param status status of the package
+   */
+  changeStatus(status:string){
+    console.log('Service Package Post');
+    return this.http.post(`${this.apiUrl}/package/changeStatus/`,status);
+  }
+  /**
+   * Get information of a specific package
+   * @param Id TrackID of the package
+   */
+  getPackageByID(Id:string){
+    console.log('Package Id', Id);
+    return this.http.get(`${this.apiUrl}/package/getPackageID/`+Id);
+  }
+  getPackages(){
+    console.log('Package data');
+    return this.http.get(`${this.apiUrl}/package/getAllPackage`);
   }
 }

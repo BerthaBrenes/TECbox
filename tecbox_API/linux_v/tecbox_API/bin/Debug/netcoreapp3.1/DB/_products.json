@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "MemoriaSD",
+    "Description": "Memoria para celular 16M",
+    "BarCode": "2345",
+    "Seller": "Juan Barnes",
+    "Price": 32,
+    "Discount": false,
+    "Taxes": true,
+    "Image": null
+  },
+  {
+    "Name": "Microfono",
+    "Description": "Microfono 8mg",
+    "BarCode": "2387",
+    "Seller": "Juan Barnes",
+    "Price": 80,
+    "Discount": true,
+    "Taxes": true,
+    "Image": null
+  }
+]

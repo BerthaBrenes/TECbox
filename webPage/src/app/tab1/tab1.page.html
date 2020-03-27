@@ -11,13 +11,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-  <app-sucursales [src]="navigate"></app-sucursales>
-  <app-trabajadores></app-trabajadores>
-  <app-vendedores></app-vendedores>
-  <app-productos></app-productos>
-  <app-rutas></app-rutas>
-
-
-  
+  <div>
+      <app-sucursales [src]="navigate"></app-sucursales>  
+  </div>  
+  <div>
+    <app-trabajadores></app-trabajadores>
+  </div>
+  <div>
+    <app-vendedores></app-vendedores>
+  </div>
+  <div>
+    <app-productos [src]="inputProduct"></app-productos>
+  </div>
+  <div>
+    <app-rutas></app-rutas>  
+  </div>
 </ion-content>

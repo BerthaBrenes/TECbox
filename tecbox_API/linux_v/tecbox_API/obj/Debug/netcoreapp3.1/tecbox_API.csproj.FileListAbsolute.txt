@@ -1,0 +1,77 @@
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.deps.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.dev.json
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.pdb
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.WebHost.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csprojAssemblyReference.cache
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.Manifest.cache
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.xml
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.MvcApplicationPartsAssemblyInfo.cache
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfoInputs.cache
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfo.cs
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.RazorTargetAssemblyInfo.cache
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csproj.CopyComplete
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.dll
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.pdb
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.exe
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.deps.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.dev.json
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.pdb
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.WebHost.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csprojAssemblyReference.cache
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.MvcApplicationPartsAssemblyInfo.cache
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfoInputs.cache
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfo.cs
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.RazorTargetAssemblyInfo.cache
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csproj.CopyComplete
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.Manifest.cache
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.xml
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.dll
+D:/Universidad/Semestre_I_2020/DB/Tareas_Cortas/Tarea_Corta_1/TECbox/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.pdb
+/home/estalvgs1999/Documentos/TEC/1S2020/Bases de Datos/4. Tareas Cortas/Tarea Corta 1/TECbox/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/DB/_clients.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/appsettings.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/DB/_clients.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.deps.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.runtimeconfig.dev.json
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/tecbox_API.pdb
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/System.Web.Http.WebHost.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csprojAssemblyReference.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.MvcApplicationPartsAssemblyInfo.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfoInputs.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.AssemblyInfo.cs
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.RazorTargetAssemblyInfo.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csproj.CopyComplete
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.Manifest.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/staticwebassets/tecbox_API.StaticWebAssets.xml
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.dll
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.pdb
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.csproj.CoreCompileInputs.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/obj/Debug/netcoreapp3.1/tecbox_API.genruntimeconfig.cache
+/home/berthabb/Documentos/projects/BDTareaCorta/tecbox_API/tecbox_API/bin/Debug/netcoreapp3.1/DB/_products.json

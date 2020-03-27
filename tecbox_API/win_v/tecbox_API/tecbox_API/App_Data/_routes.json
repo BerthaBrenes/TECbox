@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 0,
+    "Name": "GAM AM  2020",
+    "Districts": [
+      "Desamparados",
+      "Gravilias",
+      "San Antonio",
+      "Tres Ríos",
+      "San Nicolas"
+    ]
+  },
+  {
+    "Id": 1,
+    "Name": "CARTAGO AM 2M2020",
+    "Districts": [
+      "Agua Caliente",
+      "Carmen",
+      "Guadalupe",
+      "Quebradilla",
+      "San Nicolas",
+      "Tierra Blanca",
+      "Oriental"
+    ]
+  }
+]

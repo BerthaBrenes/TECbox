@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 navigate2:any;
+id:string='rastreo';
   constructor() {}
   sideMenu2(){
     this.navigate2=[{

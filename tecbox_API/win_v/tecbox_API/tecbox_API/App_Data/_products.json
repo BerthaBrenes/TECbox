@@ -1,0 +1,104 @@
+[
+  {
+    "Name": "Microfono",
+    "BarCode": "ABC-2387",
+    "Description": "Microfono 8mg",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 50,
+    "Price": 80,
+    "Taxes": true,
+    "Discount": true,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
+  },
+  {
+    "Name": "Tinta HP 63+",
+    "BarCode": "ABC-6677",
+    "Description": "Tinta para impresora Láser HP,color RGB",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 150,
+    "Price": 20,
+    "Taxes": false,
+    "Discount": true,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
+  },
+  {
+    "Name": "Laptop Lenovo ThinkPad T440P",
+    "BarCode": "ABC-9956",
+    "Description": "Computador portatil Lenovo;12 GB RAM, 1TB SSD",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 20,
+    "Price": 200,
+    "Taxes": true,
+    "Discount": false,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+  },
+  {
+    "Name": "Memoria USB 8GB",
+    "BarCode": "ABC-1234",
+    "Description": "Memoria USB 8GB MAXWELL",
+    "Seller": {
+      "Name": "INTELEC",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-123-123-8"
+      }
+    },
+    "OnStock": 200,
+    "Price": 32,
+    "Taxes": true,
+    "Discount": false,
+    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+  },
+  {
+    "Name": "Arduino UNO R3",
+    "BarCode": "AD-746",
+    "Description": "Este es el nuevo Arduino UNO R3. Además de todas las características de la versión anterior, el UNO ahora usa el ATmega16U2 en lugar del 8U2. Esto permite una transferencia más rápida y más memoria. No necesita drives para Linux ó Mac, para Windows los archivos .inf vienen incluídos en el IDE.",
+    "Seller": {
+      "Name": "MICRO JPM",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-534-876-5"
+      }
+    },
+    "OnStock": 60,
+    "Price": 28,
+    "Taxes": false,
+    "Discount": false,
+    "image": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
+  },
+  {
+    "Name": "Raspberry Pi 4",
+    "BarCode": "RP-001",
+    "Description": "More Powerful processor. USB-C Power Supply. 4GB RAM. Micro HDMI Ports. USB 2/3. GigaBit Ethernet",
+    "Seller": {
+      "Name": "Raspberry Pi org",
+      "Id": {
+        "Type": "CJ",
+        "Number": "800-232-351-4"
+      }
+    },
+    "OnStock": 15,
+    "Price": 35,
+    "Taxes": false,
+    "Discount": false,
+    "image": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
+  }
+]
