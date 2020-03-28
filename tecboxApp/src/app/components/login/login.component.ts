@@ -2,6 +2,11 @@ import { Component, OnInit, ChangeDetectorRef,Input } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Validators,FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import {RestApiService} from '../../service/rest-api.service';
+import { error } from 'util';
+import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+
 
 /**
  * Component that works for the page Login Controller
@@ -47,6 +52,7 @@ public ComponentLoginForm: FormGroup;
     private cdr:ChangeDetectorRef,
     public toastController:ToastController,
     public formBuilder:FormBuilder,
+    public api: RestApiService,
     private router:Router
   ) { 
      /**
@@ -80,14 +86,40 @@ public ComponentLoginForm: FormGroup;
 
     }
     else{
-      console.log('email',this.ComponentLoginForm.value.email,'password',this.ComponentLoginForm.value.password)
-      for( var credential in this.data){
-        if((this.data[credential]['email']== this.ComponentLoginForm.value.email) && (this.data[credential]['idCard'] == this.ComponentLoginForm.value.password)){
+      
+      // La validación del usuario se hace del lado del servidor
+
+      let userdata:any;
+
+      this.api.login(this.ComponentLoginForm.value.email, this.ComponentLoginForm.value.password)
+        .subscribe(
+          data => {
+            userdata = data;
+            console.log("data: "+ JSON.stringify(userdata));
+            this.presentToast();
+            let navigationExtras = {
+              queryParams: {
+                
+              //special: JSON.stringify(this.data[credential]['TrackID'])
+              }
+            }
+            this.router.navigate(['/tracking'],navigationExtras);
+            console.log(this.ComponentLoginForm.value);
+          },
+
+          // Si el usuario no existe
+          (error:HttpErrorResponse) => {
+            this.presentToastInvalidCrendential();
+          });    
+      
+      
+      /*for( var credential in this.data){
+        if((this.data[credential]['email']== this.ComponentLoginForm.value.email) && (this.data[credential]['Password'] == this.ComponentLoginForm.value.password)){
           this.presentToast();
           let navigationExtras = {
             queryParams: {
               /**CAMBIAR AQUI EL VALOR DEL JSON DE TRACKID */
-              special: JSON.stringify(this.data[credential]['TrackID'])
+             /* special: JSON.stringify(this.data[credential]['TrackID'])
             }
           }
           this.router.navigate(['/tracking'],navigationExtras);
@@ -95,10 +127,12 @@ public ComponentLoginForm: FormGroup;
         }else{
           this.presentToastInvalidCrendential();
         }
-      }
-      console.log(this.ComponentLoginForm.value);
+      }*/
     }
   }
+
+
+
   /**
    * Funtion that show Toast notification on the aplication at the begging for show the proper way to enter the email
    */

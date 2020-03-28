@@ -9,6 +9,7 @@
     },
     "Role": "Administrator",
     "BranchOffice": {
+      "Id": 0,
       "Name": "TECbox Tres Ríos",
       "Admin": "Bill Gates",
       "Phone": "2222-2222",
@@ -34,6 +35,7 @@
     },
     "Role": "Bodeguero",
     "BranchOffice": {
+      "Id": 0,
       "Name": "TECbox Tres Ríos",
       "Admin": "Bill Gates",
       "Phone": "2222-2222",
@@ -59,6 +61,7 @@
     },
     "Role": "Repartidor",
     "BranchOffice": {
+      "Id": 0,
       "Name": "TECbox Tres Ríos",
       "Admin": "Bill Gates",
       "Phone": "2222-2222",
@@ -73,5 +76,31 @@
     "StartDate": "02/01/2018",
     "SalaryHour": 18000.0,
     "SalaryMonth": 2520000.0
+  },
+  {
+    "Username": "david@gmail.com",
+    "Password": "MyPassword123",
+    "Name": "David Alvarado Vargas",
+    "Id": {
+      "Type": "CF",
+      "Number": "109-251-785"
+    },
+    "Role": "Administrador",
+    "BranchOffice": {
+      "Id": 0,
+      "Name": "TECbox Tres Ríos",
+      "Admin": "Bill Gates",
+      "Phone": "2222-2222",
+      "Address": {
+        "Department": "Cartago",
+        "City": "La Unión",
+        "District": "Tres Ríos",
+        "Others": "500 mts Oeste de la municipalidad"
+      }
+    },
+    "BirthDate": "07/04/2000",
+    "StartDate": "02/01/2018",
+    "SalaryHour": 8000.0,
+    "SalaryMonth": 1120000.0
   }
 ]
