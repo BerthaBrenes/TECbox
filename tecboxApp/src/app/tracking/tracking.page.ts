@@ -54,7 +54,7 @@ productStatus:string="Pendiente";
         console.log('Info Package',Packages[i]);
         this.Package= Packages[i];
         /**Second way , its to get directly by the Package ID */
-        this.api.getPackageByID(this.data)
+        this.api.getPackageByID(this.data);
         break;
       }
       else{
@@ -70,14 +70,16 @@ productStatus:string="Pendiente";
   packageStatusAction($event){
     console.log('selected',this.productStatus)
   }
+
+
   /**
    * Send Status of the package
-   * HERE goes the post
+   * HERE goes the put
    */
   summitStatus(){
     console.log('summit Data',this.productStatus);
-    this.api.changeStatus(this.productStatus);
-    this.router.navigate(['home']);
+    this.api.changeStatus(this.productStatus).subscribe();
+    //this.router.navigate(['home']);
     
   }
 }

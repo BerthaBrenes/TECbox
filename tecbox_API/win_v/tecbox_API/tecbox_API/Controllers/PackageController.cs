@@ -67,12 +67,13 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PATCH api/v1/packages/{id}
-        [HttpPatch]
+        // PUT api/v1/packages/{id}
+        [HttpPut]
         [Route("api/v1/packages/{id}")]
         public HttpResponseMessage EditPackage(string id, [FromBody]Package editedPackage)
         {
             Package requestPackage = packageList.Find(package => package.TrackID.Equals(id));
+
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 

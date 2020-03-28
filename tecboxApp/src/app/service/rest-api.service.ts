@@ -17,8 +17,8 @@ import { retry, catchError } from 'rxjs/operators';
 })
 
 export class RestApiService{
-  constructor(private http: HttpClient) { }
 
+  constructor(private http: HttpClient) { }
   
   apiUrl = 'https://localhost:44332';
 
@@ -35,24 +35,7 @@ export class RestApiService{
     console.log("Service Get");
     return this.http.get(`${this.apiUrl}/api/v1/sellers`);
   }
-
-  handleError(error: HttpErrorResponse) {
-      if (error.error instanceof ErrorEvent) {
-        // A client-side or network error occurred. Handle it accordingly.
-        console.error('An error occurred:', error.error.message);
-      } else {
-        // The backend returned an unsuccessful response code.
-        // The response body may contain clues as to what went wrong,
-        console.error(
-          `Backend returned code ${error.status}, ` +
-          `body was: ${error.error}`);
-      }
-      // return an observable with a user-facing error message
-      return throwError(
-        'Something bad happened; please try again later.');
-  }
   
-
 
   /**
    * Validates if a given user is valid
@@ -64,16 +47,19 @@ export class RestApiService{
     return this.http.post(`${this.apiUrl}/api/v1/employees/login`, data,this.httpOptions);
   }
 
-  
 
   /**
    * Edit status of the package
    * @param status status of the package
    */
   changeStatus(status:string){
-    console.log('Service Package Post');
-    return this.http.patch(`${this.apiUrl}/api/v1/packages`,status);
+    console.log('Service Package Post: '+ status);
+    const jsonData = { "Status": status }; 
+    console.log(JSON.stringify(jsonData));
+    return this.http.put<any>(`${this.apiUrl}/api/v1/packages/A-349`,jsonData, this.httpOptions);
   }
+
+
   /**
    * Get information of a specific package
    * @param Id TrackID of the package
@@ -82,6 +68,8 @@ export class RestApiService{
     console.log('Package Id', Id);
     return this.http.get(`${this.apiUrl}/api/v1/packages/`+Id);
   }
+
+
   getPackages(){
     console.log('Package data');
     return this.http.get(`${this.apiUrl}/api/v1/packages`);
