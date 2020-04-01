@@ -20,7 +20,7 @@ packagesIDs:Array<string> = [];
 productStatus:string="Pendiente";
 
 // Product Track ID
-productTrackID:string="XX-XXX";
+productTrackID:string="";
 
 /**
  * First function of the page
@@ -46,16 +46,14 @@ productTrackID:string="XX-XXX";
     
   }
   
-  /**
-   * Second function to initialize
-   */
+  //Second function to initialize
   ngOnInit() {
   }
 
   /**
-   * Funtion the get the correct Package information, in here it must take the product by the seller
-   * Here there is two option, get package by the TrackID, or use this funtion that call all the package and look what is for what
-   * @param Packages list with all the products
+   * Function that takes all the packets, extracts their 
+   * trackID and enters them in the list of identifiers
+   * @param Packages List of all packages
    */
   getInfoPackage(Packages:any){
     for(var i in Packages){
@@ -73,10 +71,7 @@ productTrackID:string="XX-XXX";
     console.log('selected',this.productStatus);
   }
 
-  /**
-   * Value Selected to sent to the package
-   * 
-   */
+  //Value Selected to sent to the package
   packageTrackIDAction($event){
     console.log('selected',this.productTrackID);
   }
@@ -84,12 +79,9 @@ productTrackID:string="XX-XXX";
 
   /**
    * Send Status of the package
-   * HERE goes the put
    */
   summitStatus(){
     console.log('summit Data',this.productStatus);
     this.api.changeStatus(this.productStatus, this.productTrackID).subscribe();
-    //this.router.navigate(['home']);
-    
   }
 }

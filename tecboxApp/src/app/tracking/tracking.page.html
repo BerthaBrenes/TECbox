@@ -15,7 +15,8 @@
   <ion-label>Track ID</ion-label>
   <div class="selection">
     <ion-select #mySelect [value]="productTrackID" [selectedText]="productTrackID" 
-    [(ngModel)]="productTrackID" okText="Okay" cancelText="Dismiss" (ionChange)="packageTrackIDAction($event)" mode="ios" placeholder="Selecione Track ID">
+    [(ngModel)]="productTrackID" okText="Okay" cancelText="Dismiss" 
+    (ionChange)="packageTrackIDAction($event)" mode="ios" placeholder="Seleccione Track ID">
       <ion-select-option *ngFor="let trackID of packagesIDs">{{trackID}}</ion-select-option>
     </ion-select>
   </div>

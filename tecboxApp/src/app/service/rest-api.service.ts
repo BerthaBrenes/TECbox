@@ -67,7 +67,10 @@ export class RestApiService{
     return this.http.get(`${this.apiUrl}/api/v1/packages/`+Id);
   }
 
-
+  /**
+   * Get the packages of a certain deliverer
+   * @param deliverer 
+   */
   getPackages(deliverer:string){
     console.log('Package data');
     return this.http.get(`${this.apiUrl}/api/v1/packages/delivery/${deliverer}`);

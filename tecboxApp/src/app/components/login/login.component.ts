@@ -97,7 +97,7 @@ export class LoginComponent implements OnInit {
 
             let navigationExtras = {
               queryParams: {
-                // Enviar el repartidor  
+                // Enviar el repartidor a la siguiente página
                 special: JSON.stringify(deliverer)
               }
             }
