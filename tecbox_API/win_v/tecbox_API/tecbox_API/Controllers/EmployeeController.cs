@@ -63,8 +63,8 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/employees/login
-        [HttpGet]
+        // POST api/v1/employees/login
+        [HttpPost]
         [Route("api/v1/employees/login")]
         public HttpResponseMessage LogIn([FromBody] Employee data)
         {
