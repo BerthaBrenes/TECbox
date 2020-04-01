@@ -1,6 +1,6 @@
 [
   {
-    "Username": "@billGates",
+    "Username": "billGates@tecbox.com",
     "Password": "admin",
     "Name": "Bill Gates",
     "Id": {
@@ -26,7 +26,7 @@
     "SalaryMonth": 14000000.0
   },
   {
-    "Username": "ldnoguera",
+    "Username": "ldnoguera@tecbox.com",
     "Password": "yuyo",
     "Name": "Luis Diego Noguera",
     "Id": {
@@ -52,7 +52,7 @@
     "SalaryMonth": 7000000.0
   },
   {
-    "Username": "cookieMonster",
+    "Username": "cookieMonster@tecbox.com",
     "Password": "cookie",
     "Name": "Juan Roberto Díaz Perez",
     "Id": {
@@ -78,14 +78,14 @@
     "SalaryMonth": 2520000.0
   },
   {
-    "Username": "david@gmail.com",
-    "Password": "MyPassword123",
+    "Username": "david@tecbox.com",
+    "Password": "pass123",
     "Name": "David Alvarado Vargas",
     "Id": {
       "Type": "CF",
       "Number": "109-251-785"
     },
-    "Role": "Administrador",
+    "Role": "Repartidor",
     "BranchOffice": {
       "Id": 0,
       "Name": "TECbox Tres Ríos",

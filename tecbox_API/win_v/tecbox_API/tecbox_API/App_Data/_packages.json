@@ -31,7 +31,8 @@
         "San Nicolas"
       ]
     },
-    "Status": "Entregado",
+    "Deliverer": "david@tecbox.com",
+    "Status": "Return",
     "DeliveryDate": "01/08/2020"
   },
   {
@@ -66,7 +67,8 @@
         "San Nicolas"
       ]
     },
-    "Status": "Aduanas",
+    "Deliverer": "david@tecbox.com",
+    "Status": "Failed",
     "DeliveryDate": "01/04/2020"
   }
 ]

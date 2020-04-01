@@ -21,6 +21,7 @@ namespace tecbox_API.Models
         public Client Client { get; set; }
         public string Description { get; set; }
         public Route Route { set; get; }
+        public string Deliverer { set; get; }
         public string Status { set; get; }
         public string DeliveryDate { set; get; }
 
