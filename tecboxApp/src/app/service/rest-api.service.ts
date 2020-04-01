@@ -52,11 +52,9 @@ export class RestApiService{
    * Edit status of the package
    * @param status status of the package
    */
-  changeStatus(status:string){
-    console.log('Service Package Post: '+ status);
+  changeStatus(status:string, trackId: string){
     const jsonData = { "Status": status }; 
-    console.log(JSON.stringify(jsonData));
-    return this.http.put<any>(`${this.apiUrl}/api/v1/packages/A-349`,jsonData, this.httpOptions);
+    return this.http.put<any>(`${this.apiUrl}/api/v1/packages/${trackId}`,jsonData, this.httpOptions);
   }
 
 
@@ -70,9 +68,9 @@ export class RestApiService{
   }
 
 
-  getPackages(){
+  getPackages(deliverer:string){
     console.log('Package data');
-    return this.http.get(`${this.apiUrl}/api/v1/packages`);
+    return this.http.get(`${this.apiUrl}/api/v1/packages/delivery/${deliverer}`);
   }
 }
 

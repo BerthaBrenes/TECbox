@@ -90,17 +90,19 @@ export class LoginComponent implements OnInit {
       this.api.login(this.ComponentLoginForm.value.email, this.ComponentLoginForm.value.password)
         .subscribe(
           data => {
-            userdata = data;
             console.log("data: "+ JSON.stringify(userdata));
             this.presentToast();
+            let deliverer = { user: this.ComponentLoginForm.value.email};
+            console.log(deliverer);
+
             let navigationExtras = {
               queryParams: {
-              // Cambiar aquí el JSON de Track ID?  
-              //special: JSON.stringify(this.data[credential]['TrackID'])
+                // Enviar el repartidor  
+                special: JSON.stringify(deliverer)
               }
             }
             this.router.navigate(['/tracking'],navigationExtras);
-            console.log(this.ComponentLoginForm.value);
+            
           },
 
           // Si el usuario no existe
