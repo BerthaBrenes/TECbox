@@ -22,6 +22,7 @@ productStatus:string="Pendiente";
 // Product Track ID
 productTrackID:string="";
 
+
 /**
  * First function of the page
  * @param route Controller of the Actived url and the information get it by it
@@ -34,13 +35,13 @@ productTrackID:string="";
 
     this.route.queryParams.subscribe(params => {
       if (params && params.special) {
-        this.data = JSON.parse(params.special)['user'].replace(/@tecbox.com/gi,``);
+        this.data = JSON.parse(params.special)['user'];
         console.log('distrubuitor: ',this.data);
       }
     });
 
-    this.api.getPackages(this.data).subscribe(Packages=>{
-      console.log('Data Packages',Packages);
+    this.api.getPackages().subscribe(Packages=>{
+      console.log('Data Packages: ',Packages);
       this.getInfoPackage(Packages);
     });
     
@@ -51,14 +52,17 @@ productTrackID:string="";
   }
 
   /**
-   * Function that takes all the packets, extracts their 
+   * Function that takes all the packages, extracts their 
    * trackID and enters them in the list of identifiers
    * @param Packages List of all packages
    */
   getInfoPackage(Packages:any){
     for(var i in Packages){
-        console.log('Info Package',Packages[i]['TrackID']);
-        this.packagesIDs.push(Packages[i]['TrackID']);
+        
+        if (Packages[i]['Deliverer'] == this.data){
+          console.log('Info Package: ',Packages[i]['TrackID']);
+          this.packagesIDs.push(Packages[i]['TrackID']);
+        }
     }
     console.log(`array: ${this.packagesIDs}`);
   }

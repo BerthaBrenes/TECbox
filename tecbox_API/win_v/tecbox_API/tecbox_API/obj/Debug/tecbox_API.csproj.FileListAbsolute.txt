@@ -1,4 +1,3 @@
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll.config
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\tecbox_API.pdb
@@ -13,6 +12,7 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
@@ -97,4 +97,3 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csproj.CopyComplete
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.pdb
-C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csprojAssemblyReference.cache

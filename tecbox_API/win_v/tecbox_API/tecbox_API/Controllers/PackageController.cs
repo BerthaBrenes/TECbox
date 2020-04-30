@@ -28,6 +28,7 @@ namespace tecbox_API.Controllers
     {
         private static string filePath = "App_Data/_packages.json";
         private List<Package> packageList = Util.ReadListFromFile<Package>(filePath);
+        List<Package> del_list = new List<Package>();
 
 
         // GET api/v1/packages
@@ -38,22 +39,12 @@ namespace tecbox_API.Controllers
             return packageList;
         }
 
-        // GET api/v1/packages/delivery/
-        [HttpGet]
-        [Route("api/v1/packages/delivery/{deliverer}")]
-        public List<Package> GetPackagesByDeliverer(string deliverer)
-        {
-            List<Package> packs = packageList.FindAll(package => package.Deliverer.Equals(deliverer));
-            return packageList;
-        }
-
 
         // GET api/v1/packages/{id}
         [HttpGet]
         [Route("api/v1/packages/{id}")]
         public HttpResponseMessage GetPackage(string id)
         {
-            id = string.Join(id, "@tecbox.com");
             Package requestPackage = packageList.Find(package => package.TrackID.Equals(id));
 
             if (requestPackage == null)

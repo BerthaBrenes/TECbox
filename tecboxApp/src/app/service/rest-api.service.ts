@@ -27,14 +27,6 @@ export class RestApiService{
       'Content-Type': 'application/json'
     })
   }
-
-  /**
-   * Get info of all the distribuitor
-   */
-  getDistributors(){
-    console.log("Service Get");
-    return this.http.get(`${this.apiUrl}/api/v1/sellers`);
-  }
   
 
   /**
@@ -59,21 +51,11 @@ export class RestApiService{
 
 
   /**
-   * Get information of a specific package
-   * @param Id TrackID of the package
-   */
-  getPackageByID(Id:string){
-    console.log('Package Id', Id);
-    return this.http.get(`${this.apiUrl}/api/v1/packages/`+Id);
-  }
-
-  /**
    * Get the packages of a certain deliverer
    * @param deliverer 
    */
-  getPackages(deliverer:string){
-    console.log('Package data');
-    return this.http.get(`${this.apiUrl}/api/v1/packages/delivery/${deliverer}`);
+  getPackages(){
+    return this.http.get(`${this.apiUrl}/api/v1/packages`);
   }
 }
 

@@ -32,7 +32,7 @@
       ]
     },
     "Deliverer": "david@tecbox.com",
-    "Status": "Return",
+    "Status": "Entregado",
     "DeliveryDate": "01/08/2020"
   },
   {
@@ -67,8 +67,8 @@
         "San Nicolas"
       ]
     },
-    "Deliverer": "david@tecbox.com",
-    "Status": "Failed",
+    "Deliverer": "ron@tecbox.com",
+    "Status": "Return",
     "DeliveryDate": "01/04/2020"
   }
 ]
