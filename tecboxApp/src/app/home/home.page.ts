@@ -11,12 +11,7 @@ export class HomePage implements OnInit {
   constructor(public api: RestApiService, public loadingController: LoadingController) {}
   distributor:any;
   ngOnInit(){
-      this.getData();
+    console.log("App Launched");
   }
-  async getData() {
-    this.api.getDistributors().subscribe(data=>{
-      this.distributor=data;
-      console.log(data);
-    });
-  }
+  
 }

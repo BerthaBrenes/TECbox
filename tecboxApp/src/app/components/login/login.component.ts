@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
   // Input of the correct clients
   @Input() set src(val:any){
     this.data = val;
-    console.log('data Login',this.data)
 }
 
   // Is a Form Group that will valid the entry of the credential
