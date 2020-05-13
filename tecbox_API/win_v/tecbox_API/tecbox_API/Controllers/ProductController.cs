@@ -22,7 +22,7 @@ using tecbox_API.Models;
 namespace tecbox_API.Controllers
 {
     
-    [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class ProductController : ApiController
     {
 
