@@ -125,4 +125,8 @@ export class AddDataComponent implements OnInit {
  guardarRuta(){
    console.log("Soy la ruta: ", this.distritosRutas)
  }
+
+ guardarPaquete(TrackingID:any, Cliente:any, FechaLlegada:any, DescripciónValue:any){
+    console.log(TrackingID);
+ }
 }
