@@ -17,12 +17,17 @@ namespace tecbox_API.Models
     public class Package
     {
 
-        public string TrackID { get; set; }
-        public Client Client { get; set; }
+        public string TrackId { get; set; }
+        public string Client { get; set; } // Only the client name
         public string Description { get; set; }
-        public Route Route { set; get; }
-        public string Deliverer { set; get; }
+        public int RouteId { set; get; }
+        public string DeliveryMan { set; get; }
+        
+        // DeliveryMan ID is what is used for searches as two employees can have the same name
+        public string DmId { set; get; }
         public string Status { set; get; }
+        
+        // Date Format: yy-mm-dd
         public string DeliveryDate { set; get; }
 
         // Lets you edit a package. Only the status and delivery 

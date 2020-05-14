@@ -45,7 +45,7 @@ namespace tecbox_API.Controllers
         [Route("api/v1/packages/{id}")]
         public HttpResponseMessage GetPackage(string id)
         {
-            Package requestPackage = packageList.Find(package => package.TrackID.Equals(id));
+            Package requestPackage = packageList.Find(package => package.TrackId.Equals(id));
 
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -59,7 +59,7 @@ namespace tecbox_API.Controllers
         [Route("api/v1/packages")]
         public HttpResponseMessage AddPackage([FromBody]Package newPackage)
         {
-            if (packageList.Exists(package => package.TrackID.Equals(newPackage.TrackID)))
+            if (packageList.Exists(package => package.TrackId.Equals(newPackage.TrackId)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
 
             packageList.Add(newPackage);
@@ -73,7 +73,7 @@ namespace tecbox_API.Controllers
         [Route("api/v1/packages/{id}")]
         public HttpResponseMessage EditPackage(string id, [FromBody]Package editedPackage)
         {
-            Package requestPackage = packageList.Find(package => package.TrackID.Equals(id));
+            Package requestPackage = packageList.Find(package => package.TrackId.Equals(id));
 
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -93,7 +93,7 @@ namespace tecbox_API.Controllers
         [Route("api/v1/packages/{id}")]
         public HttpResponseMessage RemovePackage(string id)
         {
-            Package requestPackage = packageList.Find(package => package.TrackID.Equals(id));
+            Package requestPackage = packageList.Find(package => package.TrackId.Equals(id));
 
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

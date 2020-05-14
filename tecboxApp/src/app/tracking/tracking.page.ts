@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {RestApiService} from '../service/rest-api.service';
+import { ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {RestApiService} from '../service/rest-api.service';
 export class TrackingPage implements OnInit {
 
 // Recieve deliverer user
-data:any;
+deliveryMan:any;
 
 //Variable that contains all the packages of certain deliverer
 packagesIDs:Array<string> = [];
@@ -29,16 +30,16 @@ productTrackID:string="";
  * @param router Controller of the Router 
  * @param api Controller the Rest Api Service
  */
-  constructor(private route: ActivatedRoute, private router: Router,public api: RestApiService) {
+  constructor(private route: ActivatedRoute, private router: Router,public api: RestApiService, public toastController: ToastController) {
 
-    let user:string;
 
-    this.route.queryParams.subscribe(params => {
-      if (params && params.special) {
-        this.data = JSON.parse(params.special)['user'];
-        console.log('distrubuitor: ',this.data);
+    this.route.queryParams.subscribe(
+      params => {
+        if (params && params.special) {
+          this.deliveryMan = JSON.parse(params.special);
+        }
       }
-    });
+    );
 
     this.api.getPackages().subscribe(Packages=>{
       console.log('Data Packages: ',Packages);
@@ -48,8 +49,7 @@ productTrackID:string="";
   }
   
   //Second function to initialize
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   /**
    * Function that takes all the packages, extracts their 
@@ -59,12 +59,10 @@ productTrackID:string="";
   getInfoPackage(Packages:any){
     for(var i in Packages){
         
-        if (Packages[i]['Deliverer'] == this.data){
-          console.log('Info Package: ',Packages[i]['TrackID']);
-          this.packagesIDs.push(Packages[i]['TrackID']);
+        if (Packages[i]['DmId'] == this.deliveryMan['Id']){
+          this.packagesIDs.push(Packages[i]['TrackId']);
         }
     }
-    console.log(`array: ${this.packagesIDs}`);
   }
 
   /**
@@ -85,7 +83,17 @@ productTrackID:string="";
    * Send Status of the package
    */
   summitStatus(){
-    console.log('summit Data',this.productStatus);
     this.api.changeStatus(this.productStatus, this.productTrackID).subscribe();
+    this.packageUpdatedToast();
+  }
+
+  // Shows a message 
+  async packageUpdatedToast() {
+    const toast = await this.toastController.create({
+      message: 'El estado del paquete ha sido actualizado.',
+      duration: 2000
+    });
+    toast.present();
   }
 }
+

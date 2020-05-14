@@ -89,10 +89,9 @@ export class LoginComponent implements OnInit {
       this.api.login(this.ComponentLoginForm.value.email, this.ComponentLoginForm.value.password)
         .subscribe(
           data => {
-            console.log("data: "+ JSON.stringify(userdata));
-            this.presentToast();
-            let deliverer = { user: this.ComponentLoginForm.value.email};
-            console.log(deliverer);
+            this.presentToast(data['Name']);
+            let deliverer = { Name:data['Name'], Id:data['Id']['Number']};
+            console.log(JSON.stringify(deliverer));
 
             let navigationExtras = {
               queryParams: {
@@ -129,9 +128,9 @@ export class LoginComponent implements OnInit {
   /**
    * Funtion that show Toast notification on the aplication when the credentials are correct and its going to summit the information
    */
-  async presentToast() {
+  async presentToast(name:string) {
     const toast = await this.toastController.create({
-      message: 'Valid Credentials',
+      message: `¡Bienvenido ${name}!`,
       color:"success",
       duration: 2000
     });
@@ -143,8 +142,8 @@ export class LoginComponent implements OnInit {
    */
   async presentToastInvalidCrendential() {
       const toast = await this.toastController.create({
-        message: 'Invalid Credentials, user or password not found',
-        color:"success",
+        message: '¡Usuario o contraseña incorrectos!',
+        color:"danger",
         duration: 2000
       });
       toast.present();
