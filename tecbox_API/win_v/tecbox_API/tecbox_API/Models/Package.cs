@@ -2,8 +2,8 @@
  * File: Package.cs
  * Dev by: @estalvgs1999
  * Project: TECbox API
- * version: 3.0
- * last edited by: @estalvgs1999 [27/03/2020]
+ * version: 4.0
+ * last edited by: @estalvgs1999 [16/05/2020]
  *
  * Description: Implementation of a tecbox package. 
  * A package consists of products that a customer 
@@ -11,6 +11,8 @@
  * 
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
+
+using System;
 
 namespace tecbox_API.Models
 {
@@ -40,5 +42,15 @@ namespace tecbox_API.Models
             if (package.Status != null)
                 this.Status = package.Status;
         }
+        
+        // Indicates if the date of the package is in the given range.
+        public bool IsOnDateRange(DateTime startDate, DateTime endDate)
+        {
+            DateTime pDate = DateTime.Parse(this.DeliveryDate);
+            //  DateTime.Compare(d1,d2) -> [ r < 0 if d1 is earlier than d2]
+            return DateTime.Compare(startDate, pDate) < 0 && DateTime.Compare(pDate, endDate) < 0;
+        }
+        
+        
     }
 }
