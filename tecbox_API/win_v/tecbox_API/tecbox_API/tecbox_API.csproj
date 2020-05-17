@@ -199,6 +199,7 @@
   <ItemGroup>
     <None Include="App_Data\_offices.json" />
     <None Include="App_Data\_packages.json" />
+    <Content Include="App_Data\_bestSellers.json" />
     <Content Include="App_Data\_sales.json" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />

@@ -46,7 +46,7 @@ namespace tecbox_API.Models
         public bool IsOnDateRange(DateTime startDate, DateTime endDate)
         {
             DateTime saleDate = DateTime.Parse(this.SaleDate);
-            return DateTime.Compare(startDate,saleDate) < 0 && DateTime.Compare(saleDate,endDate) < 0;
+            return DateTime.Compare(startDate,saleDate) <= 0 && DateTime.Compare(saleDate,endDate) <= 0;
         }
     }
 }

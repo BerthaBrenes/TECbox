@@ -3,11 +3,18 @@
     "SaleId": 1,
     "SaleDate": "2019-04-22",
     "ClientName": "Esteban Alvarado Vargas",
-    "Products": [{
-      "BarCode": "ABC-9956",
-      "ProductName":"Laptop Lenovo ThinkPad T440P",
-      "Qty": 1
-    }]
+    "Products": [
+      {
+        "BarCode": "ABC-9956",
+        "ProductName":"Laptop Lenovo ThinkPad T440P",
+        "Qty": 1
+      },
+      {
+        "BarCode": "ABC-2387",
+        "ProductName":"Microfono",
+        "Qty": 3
+      }
+    ]
   },
   {
     "SaleId": 2,
@@ -33,10 +40,17 @@
     "SaleId": 4,
     "SaleDate": "2020-05-22",
     "ClientName": "Ricardo Solano",
-    "Products": [{
-      "BarCode": "ABC-2387",
-      "ProductName":"Microfono",
-      "Qty": 5
-    }]
+    "Products": [
+      {
+        "BarCode": "ABC-2387",
+        "ProductName":"Microfono",
+        "Qty": 5
+      },
+      {
+        "BarCode": "AD-746",
+        "ProductName":"Arduino UNO R3",
+        "Qty": 1
+      }
+    ]
   }
 ]

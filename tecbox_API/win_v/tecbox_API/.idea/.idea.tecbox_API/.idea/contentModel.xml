@@ -7,6 +7,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="tecbox_API" t="IncludeRecursive">
         <e p="App_Data" t="Include">
+          <e p="_bestSellers.json" t="Include" />
           <e p="_clients.json" t="Include" />
           <e p="_employees.json" t="Include" />
           <e p="_offices.json" t="Include" />

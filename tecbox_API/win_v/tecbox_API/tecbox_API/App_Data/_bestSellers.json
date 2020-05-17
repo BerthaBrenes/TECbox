@@ -1,0 +1,22 @@
+﻿[
+  {
+    "BarCode": "ABC-2387",
+    "ProductName": "Microfono",
+    "Qty": 10
+  },
+  {
+    "BarCode": "ABC-6677",
+    "ProductName": "Tinta HP 63+",
+    "Qty": 3
+  },
+  {
+    "BarCode": "ABC-9956",
+    "ProductName": "Laptop Lenovo ThinkPad T440P",
+    "Qty": 1
+  },
+  {
+    "BarCode": "AD-746",
+    "ProductName": "Arduino UNO R3",
+    "Qty": 1
+  }
+]

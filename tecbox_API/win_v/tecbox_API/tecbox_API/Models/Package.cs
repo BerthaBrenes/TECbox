@@ -48,7 +48,7 @@ namespace tecbox_API.Models
         {
             DateTime pDate = DateTime.Parse(this.DeliveryDate);
             //  DateTime.Compare(d1,d2) -> [ r < 0 if d1 is earlier than d2]
-            return DateTime.Compare(startDate, pDate) < 0 && DateTime.Compare(pDate, endDate) < 0;
+            return DateTime.Compare(startDate, pDate) <= 0 && DateTime.Compare(pDate, endDate) <= 0;
         }
         
         

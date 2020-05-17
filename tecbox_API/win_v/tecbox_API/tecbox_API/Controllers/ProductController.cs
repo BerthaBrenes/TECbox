@@ -68,6 +68,7 @@ namespace tecbox_API.Controllers
             // 2. Filter sales by date and store them in a list.
             List<Sale> salesOnDate = saleList.FindAll(sale => sale.IsOnDateRange(startDate, endDate));
             
+            // 3. In a dictionary enter the product as a key (only once) and the amount of sales (the times it appears).
             Dictionary<string,SubProduct> products = new Dictionary<string, SubProduct>();
             
             foreach (var sale in salesOnDate)
@@ -77,18 +78,26 @@ namespace tecbox_API.Controllers
                 {
                     if (products.ContainsKey(currProduct.BarCode))
                         products[currProduct.BarCode].Qty += currProduct.Qty;
-                    else
-                    {
+                    else {
                         products.Add(currProduct.BarCode,currProduct);
                     }
                 }
             }
-
+            
+            // 4. Then, sort the dictionary by best-selling least-selling value.
             var bestSellerProducts = products.Values.ToList().OrderByDescending(p => p.Qty);
             return Request.CreateResponse(HttpStatusCode.OK, bestSellerProducts);
         }
         
-        
+        // GET api/v1/products/report/emergency
+        [HttpGet]
+        [Route("api/v1/products/bestseller/emergency")]
+        public HttpResponseMessage GetBestSellersEmergency()
+        {
+            List<SubProduct> bestSellers = Util.ReadListFromFile<SubProduct>("App_Data/_bestSellers.json");
+            return Request.CreateResponse(HttpStatusCode.OK, bestSellers);
+        }
+
 
         // POST api/v1/products
         [HttpPost]
