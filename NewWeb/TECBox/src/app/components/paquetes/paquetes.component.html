@@ -1,8 +1,16 @@
 <div class="content">
-  <div>
-      <h2>Gestion de Paquetes</h2>
-      <ion-button (click)="clickEnter()" color="primary">Agregar</ion-button>
+  <div class="title">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <h2>Paquetes</h2>
+          </ion-col>
+          <ion-col size="3">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
   </div>
-  <app-add-data *ngIf='enterEnable'></app-add-data>
-  <app-table [type]='id'></app-table>
+  <div>
+    <app-table [type]='id'></app-table>
+  </div>
 </div>

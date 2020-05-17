@@ -4,14 +4,21 @@ import { finalize } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { retry, catchError } from 'rxjs/operators';
-
+/**
+ * options for the http header
+ */
 const httpOptions = {headers: new HttpHeaders({
   'Content-Type': 'application/json'
 })};
-
+/**
+ * Injectable of the service
+ */
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Handle the request to the backEnd
+ */
 export class ApiService {
 /**
  * Url for the request
@@ -31,6 +38,7 @@ export class ApiService {
   };
   /**
    * This method initializes the component
+   * @param http Controller for the httpClient
    */
   constructor(private http: HttpClient) {
   }
@@ -57,13 +65,19 @@ export class ApiService {
   */
  addProductSell(finalPrice, quantity, productData){
   this.productSave = {
+    // tslint:disable-next-line: no-string-literal
     Name: productData['Name'],
+    // tslint:disable-next-line: no-string-literal
     BarCode: productData['BarCode'],
+    // tslint:disable-next-line: no-string-literal
     Description: productData['Description'],
     Seller: {
+      // tslint:disable-next-line: no-string-literal
         Name : productData['Seller']['Name'],
         Id : {
+            // tslint:disable-next-line: no-string-literal
             Type: productData['Seller']['Id']['Type'],
+            // tslint:disable-next-line: no-string-literal
             Number: productData['Seller']['Id']['Number']
         }
     },
@@ -94,7 +108,7 @@ export class ApiService {
  * Get all the product
  */
 getProducts() {
-  console.log("Service Get")
+  console.log('Service Get');
   return this.http.get(`${this.url}/api/v1/products`);
 }
 
@@ -115,28 +129,28 @@ addProducts(data: any){
  * Get all the clients
  */
 getClientes() {
-  console.log("Service Get")
+  console.log('Service Get');
   return this.http.get(`${this.url}/api/v1/clients`);
 }
 /**
  * Get all the package
  */
 getPackages() {
-  console.log("Service Get")
+  console.log('Service Get');
   return this.http.get(`${this.url}/api/v1/packages`);
 }
 /**
  * Get worker information
  */
 getWorkers() {
-  console.log("Service Get")
+  console.log('Service Get');
   return this.http.get(`${this.url}/api/v1/employees`);
 }
 /**
  * get information of the seller
  */
 getSeller() {
-  console.log("Service Get")
+  console.log('Service Get');
   return this.http.get(`${this.url}/api/v1/sellers`);
 }
 
@@ -145,7 +159,7 @@ getSeller() {
  * @param Obj Obj to post
  */
 postProduct(Obj: any){
-  return this.http.post<any>(`${this.url}/api/v1/products`,Obj)
+  return this.http.post<any>(`${this.url}/api/v1/products`, Obj);
 }
 /**
  * get all the product sellen

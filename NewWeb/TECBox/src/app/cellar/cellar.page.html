@@ -1,45 +1,58 @@
 <ion-header >
   <ion-toolbar >
     <ion-title>
-      Vista del bodeguero
+      Bodeguero
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card (click)="presentPackage()">
-        <ion-card-header>
-          <ion-card-title>Gestión de paquetes</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          <img src='assets/imgs/package.jpeg'>
-          <p>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-          </p>
-        </ion-card-content>
-      </ion-card>
-      
-    </ion-col>
-    <ion-col>
-      <ion-card (click)="presentTrackingPackage()">
-        <ion-card-header>
-          <ion-card-title>Rastreo de paquetes</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          <img src='assets/imgs/rastrep.jpg'>
-          <p>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-            and climb a mountain or spend a week in the woods. Wash your spirit clean.</p>
-        </ion-card-content>
-      </ion-card>
-      
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<div class="Container">
+  <div (click)="openComponent('gestion')" class="gestion">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Gestión de paquetes</ion-label>
+        </ion-col>
+        <ion-col>
+          <img src='assets/imgs/paquetes.png'>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div  class="tracking" (click)="openComponent('rastreo')">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Rastreo de paquetes</ion-label>
+        </ion-col>
+        <ion-col>
+          <img src='assets/imgs/rastreo.png'>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+<div class="reportContainer">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <div #ComponentContainer>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="report">
+          <ion-title> Vista de Reportes</ion-title>
+          <img src="assets/imgs/reportImage.png" alt="">
+          <ion-button routerLink='/report'>Reportes</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-icon name="cube"></ion-icon>
+  <span>TECbox</span>
+</ion-footer>

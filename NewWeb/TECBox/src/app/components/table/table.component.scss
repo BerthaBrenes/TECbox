@@ -1,20 +1,13 @@
 ion-grid{
     padding-bottom: 20px;
-   ion-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-       
-       
-    }
-}
-ion-col{
-    border: 2px solid black;
-    font-size: small;
-    &.header{
-        font-weight: bold;
-        font-size: medium;
-        background: #99b3ff;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    ion-col{
+        font-size: small;
+        color: #919091;
+        &.header{
+            font-weight: bold;
+            font-size: medium;
+        }
     }
 }

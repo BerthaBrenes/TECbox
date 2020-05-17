@@ -1,10 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-paquetes',
   templateUrl: './paquetes.component.html',
   styleUrls: ['./paquetes.component.scss'],
 })
+/**
+ * Component that handles the packages
+ */
 export class PaquetesComponent implements OnInit {
   /**
    * Data of packages

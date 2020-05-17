@@ -1,19 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.scss'],
 })
+/**
+ * Component that handles the products page
+ */
 export class ProductosComponent implements OnInit {
   /**
    * Enable the component for add data
    */
-  enterEnable:boolean=false;
+  enterEnable: boolean = false;
   /**
    * id of the page for pass to the table
    */
-  id:string='producto';
+  id: string = 'producto';
   /**
    * data of the component
    */
@@ -21,7 +26,7 @@ export class ProductosComponent implements OnInit {
   /**
    * Input of the component
    */
-  @Input() set src(val: any){
+  @Input() set src(val: any) {
     this.data = val;
     console.log('product data', this.data);
   }
@@ -32,11 +37,11 @@ export class ProductosComponent implements OnInit {
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
-  ngOnInit() {}
+  ngOnInit() { }
   /**
    * Function for add product
    */
-  clickEnter(){
+  clickEnter() {
     this.enterEnable = true;
   }
 

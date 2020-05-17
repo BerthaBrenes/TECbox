@@ -1,12 +1,101 @@
 ion-toolbar {
-    --background: #2575e1;
+    --background: #4b08d1;
     color: white;
     display: grid;
     --min-height: 70px;
     text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
   }
-ion-card{
-    img{
-        height: 200px;
+ion-content{
+    div{ 
+        &.Container{
+            margin: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: white;
+            div{
+                &.gestion{
+                    height: 170px;
+                    border-radius: 10px;
+                    width: 400px;
+                    margin: 10px;
+                    background: #8fdccd;
+                    ion-grid{
+                        ion-row{
+                            ion-col{
+                                img{
+                                    margin-top: 20px;
+                                    height: 125px;
+                                    width: 125px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.tracking{
+                    height: 170px;
+                    border-radius: 10px;
+                    width: 400px;
+                    margin: 10px;
+                    background: #be8fdc;
+                    ion-grid{
+                        ion-row{
+                            ion-col{
+                                img{
+                                    height: 150px;
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.reportContainer{
+            ion-grid{
+                ion-row{
+                  ion-col{
+                    div{
+                      &.report{
+                        padding: 15px;
+                        margin-right: 30px;
+                        border: 3px solid lightgray;
+                        border-radius: 9px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                          height: 300px;
+                          width: 200px;
+                        }
+                        ion-button{
+                          height: 30px;
+                          color: white;
+                          --border-radius: 4px;
+                          --background: blue;
+                        }
+                        ion-title{
+                          font-weight: bold;
+                          margin: 10px;
+                        }
+                      }
+                    }
+                  }
+                }
+            }
+        }
     }
 }
+ion-footer{
+    background: #4b08d1;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 50px;
+    padding: 15px;
+    ion-icon{
+      margin-right: 10px;
+    }
+  }

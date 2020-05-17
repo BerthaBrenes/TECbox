@@ -1,7 +1,71 @@
 ion-toolbar {
-    --background: #2575e1;
+    --background: #4b08d1;
     color: white;
     display: grid;
     --min-height: 70px;
     text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
   }
+ion-content{
+  ion-grid{
+    ion-row{
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 30px;
+      ion-col{
+        div{
+          background-image: url("./../../assets/imgs/reportBackground.jpg");
+          height: 150%;
+          width: 90%;
+          padding: 15px;
+          border: 3px solid lightgray;
+          border-radius: 9px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          ion-button{
+            margin-top: 30px;
+            //height: 0px;
+            color: white;
+            --border-radius: 4px;
+            --background: blue;
+            &.best{
+              --background: #d84313;
+            }
+            &.ready{
+              --background: #e70404;
+            }
+          }
+          ion-label{
+            font-weight: bold;
+            
+          }
+          img{
+            margin:30px 5px;
+            height: 200px;
+            width: 200px;
+            &.best{
+              width: 300px;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+ion-footer{
+  background: #4b08d1;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+  padding: 15px;
+  ion-icon{
+    margin-right: 10px;
+  }
+}

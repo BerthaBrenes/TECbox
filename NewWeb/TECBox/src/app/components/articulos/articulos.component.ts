@@ -1,13 +1,18 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',
   styleUrls: ['./articulos.component.scss'],
 })
+/**
+ * Component that handles the articles
+ */
 export class ArticulosComponent implements OnInit {
   /**
-   * Variable for the data of the articke
+   * Variable for the data of the article
    */
   data: any;
   /**
@@ -30,6 +35,7 @@ export class ArticulosComponent implements OnInit {
   /**
    * Call passed by parameter.
    */
+  // tslint:disable-next-line: no-output-on-prefix
   @Output() onAnswered = new EventEmitter<{ value: number }>();
 
   /**
@@ -55,6 +61,9 @@ export class ArticulosComponent implements OnInit {
     this.quantity--;
     this.setAnswer();
   }
+  /**
+   * Set an answer
+   */
   setAnswer() {
     this.answered = true;
     this.onAnswered.emit({ value: this.quantity });
@@ -64,14 +73,18 @@ export class ArticulosComponent implements OnInit {
   }
   /**
    * Buy products, add the product to service
+   * @param product product it will be buy
    */
   buy(product: any) {
-    let FinalPrice = this.quantity * product['Price']
+    // tslint:disable-next-line: no-string-literal
+    let FinalPrice = this.quantity * product['Price'];
     let discount = 1;
     let taxes = 1;
+    // tslint:disable-next-line: no-string-literal
     if (product['Discount'] === true) {
       discount = ((this.quantity * 10) / 100);
     }
+    // tslint:disable-next-line: no-string-literal
     if (product['Taxes'] === true) {
       taxes = ((this.quantity * 13) / 100);
     }

@@ -2,12 +2,17 @@ div{
     &.content{
         margin: 30px;
         div{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            h2{
-                align-self: center;
+            &.title{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                h2{
+                    color: gray;
+                    text-transform: uppercase;
+                }
             }
+            
+
         }
     }
 }

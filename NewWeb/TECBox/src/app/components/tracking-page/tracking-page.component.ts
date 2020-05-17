@@ -1,10 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-tracking-page',
   templateUrl: './tracking-page.component.html',
   styleUrls: ['./tracking-page.component.scss'],
 })
+/**
+ * Component that handle the tracking page
+ */
 export class TrackingPageComponent implements OnInit {
   /**
    * Data for the component

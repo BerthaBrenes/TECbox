@@ -1,10 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.scss'],
 })
+/**
+ * Component that handles the client
+ */
 export class ClientesComponent implements OnInit {
   /**
    * Data for the component
@@ -14,7 +19,6 @@ export class ClientesComponent implements OnInit {
    * id to set up the table
    */
   id: string = 'cliente';
-
   /**
    * Input of the component
    */

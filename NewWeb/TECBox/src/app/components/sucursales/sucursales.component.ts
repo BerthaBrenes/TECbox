@@ -1,10 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+/**
+ * Component
+ */
 @Component({
   selector: 'app-sucursales',
   templateUrl: './sucursales.component.html',
   styleUrls: ['./sucursales.component.scss'],
 })
+/**
+ * class that handles the branches
+ */
 export class SucursalesComponent implements OnInit {
 
   /**
@@ -22,7 +27,7 @@ export class SucursalesComponent implements OnInit {
   /**
    * Input function that get the data
    */
-  @Input() set src(val: any){
+  @Input() set src(val: any) {
     this.data = val;
     console.log('data', this.data);
   }
@@ -34,11 +39,11 @@ export class SucursalesComponent implements OnInit {
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
-  ngOnInit() {}
+  ngOnInit() { }
   /**
    * Function that enable the add data
    */
-  clickEnter(){
+  clickEnter() {
     this.enterEnable = true;
   }
 
