@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vista Web del cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+      Articulos
+      <app-articulos [src]='inputArticle'></app-articulos>
+      <ion-button (click)="enableCliente()" color="primary">Clientes</ion-button>
+      <app-clientes *ngIf="ClienteEnable" [src]="inputClients"></app-clientes>
+
+      <ion-button (click)="enablePaquete()" color="primary">Rastreo Paquetes</ion-button>
+      <app-tracking-page *ngIf="PaquetesEnable"></app-tracking-page>
+
+  </div>
+  
+    
+</ion-content>

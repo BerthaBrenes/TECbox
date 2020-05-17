@@ -1,0 +1,45 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-title>
+      Vista del bodeguero
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card (click)="presentPackage()">
+        <ion-card-header>
+          <ion-card-title>Gestión de paquetes</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <img src='assets/imgs/package.jpeg'>
+          <p>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      
+    </ion-col>
+    <ion-col>
+      <ion-card (click)="presentTrackingPackage()">
+        <ion-card-header>
+          <ion-card-title>Rastreo de paquetes</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <img src='assets/imgs/rastrep.jpg'>
+          <p>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.</p>
+        </ion-card-content>
+      </ion-card>
+      
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

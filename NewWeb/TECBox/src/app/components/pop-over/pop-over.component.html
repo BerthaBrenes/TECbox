@@ -1,0 +1,8 @@
+<ion-list class="ion-no-padding" color="primary" lines="none" no-lines>
+    <span *ngFor="let item of config.menuItems">
+        <ion-item  (click)="item.callback($event)" button  color="primary" lines="none" no-lines>
+        <ion-icon [name]="item.icon" [ngClass]="{ 'yellow': item.color === 'yellow'}"></ion-icon>
+        <ion-label class="ion-text-start"> {{ item.displayText }} </ion-label>
+        </ion-item>
+    </span>
+</ion-list>

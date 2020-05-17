@@ -1,0 +1,12 @@
+ion-toolbar {
+    --background: #2575e1;
+    color: white;
+    display: grid;
+    --min-height: 70px;
+    text-align: center;
+  }
+ion-card{
+    img{
+        height: 200px;
+    }
+}
