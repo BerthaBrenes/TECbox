@@ -191,6 +191,7 @@
     <Compile Include="Models\Package.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Seller.cs" />
     <Compile Include="Models\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,6 +199,7 @@
   <ItemGroup>
     <None Include="App_Data\_offices.json" />
     <None Include="App_Data\_packages.json" />
+    <Content Include="App_Data\_sales.json" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

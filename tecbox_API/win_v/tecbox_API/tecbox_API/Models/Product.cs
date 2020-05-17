@@ -25,7 +25,7 @@ namespace tecbox_API.Models
         public int Price { get; set; }
         public bool Taxes { get; set; }
         public bool Discount { get; set; }
-        public string image { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 }

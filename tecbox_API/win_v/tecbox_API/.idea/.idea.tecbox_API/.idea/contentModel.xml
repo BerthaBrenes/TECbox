@@ -13,6 +13,7 @@
           <e p="_packages.json" t="Include" />
           <e p="_products.json" t="Include" />
           <e p="_routes.json" t="Include" />
+          <e p="_sales.json" t="Include" />
           <e p="_sellers.json" t="Include" />
         </e>
         <e p="App_Start" t="Include">
@@ -134,6 +135,7 @@
           <e p="Package.cs" t="Include" />
           <e p="Product.cs" t="Include" />
           <e p="Route.cs" t="Include" />
+          <e p="Sale.cs" t="Include" />
           <e p="Seller.cs" t="Include" />
           <e p="Util.cs" t="Include" />
         </e>

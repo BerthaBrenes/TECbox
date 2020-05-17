@@ -12,11 +12,15 @@
  * TEC 2020 | CE3101 - Bases de Datos
  * --------------------------------------------*/
 
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using Newtonsoft.Json.Linq;
 using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
@@ -28,7 +32,7 @@ namespace tecbox_API.Controllers
 
         private static string filePath = "App_Data/_products.json";
         private List<Product> productList = Util.ReadListFromFile<Product>(filePath);
-
+        private List<Sale> saleList = Util.ReadListFromFile<Sale>("App_Data/_sales.json");
 
         // GET api/v1/products
         [HttpGet]
@@ -51,7 +55,40 @@ namespace tecbox_API.Controllers
                 
             return Request.CreateResponse(HttpStatusCode.OK, requestProduct);
         }
+        
+        // GET api/v1/products/report
+        [HttpGet]
+        [Route("api/v1/products/bestseller")]
+        public HttpResponseMessage GetBestSellers([FromBody] JObject dates)
+        {
+            // 1. Get delimiting dates
+            DateTime startDate = DateTime.Parse(dates["startDate"].ToString());
+            DateTime endDate = DateTime.Parse(dates["endDate"].ToString());
+            
+            // 2. Filter sales by date and store them in a list.
+            List<Sale> salesOnDate = saleList.FindAll(sale => sale.IsOnDateRange(startDate, endDate));
+            
+            Dictionary<string,SubProduct> products = new Dictionary<string, SubProduct>();
+            
+            foreach (var sale in salesOnDate)
+            {
+                List<SubProduct> ProdList = sale.Products;
+                foreach (var currProduct in ProdList)
+                {
+                    if (products.ContainsKey(currProduct.BarCode))
+                        products[currProduct.BarCode].Qty += currProduct.Qty;
+                    else
+                    {
+                        products.Add(currProduct.BarCode,currProduct);
+                    }
+                }
+            }
 
+            var bestSellerProducts = products.Values.ToList().OrderByDescending(p => p.Qty);
+            return Request.CreateResponse(HttpStatusCode.OK, bestSellerProducts);
+        }
+        
+        
 
         // POST api/v1/products
         [HttpPost]
