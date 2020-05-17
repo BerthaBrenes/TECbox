@@ -102,8 +102,9 @@ export class Tab3Page {
         }
         
       }
-        pdf.autoTable(columns,data, { margin:{ top: 50 }, theme : 'grid'});
-        pdf.save('Productos Entregados.pdf');
+
+      pdf.autoTable(columns,data, { margin:{ top: 50 }, theme : 'grid'});
+      pdf.save('Productos Entregados.pdf');
     }
 
   
