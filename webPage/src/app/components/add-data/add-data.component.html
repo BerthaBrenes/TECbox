@@ -235,3 +235,37 @@
         </ion-row>
     </ion-grid>
 </div>
+
+<div *ngIf='idEntity == "paquetes"'>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-label>Tracking id:</ion-label>
+                <ion-item>
+                <ion-input #TI type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Cliente:</ion-label>
+                <ion-item>
+                <ion-input #C type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Fecha de llegada:</ion-label>
+                <ion-item>
+                <ion-input #FL type=date></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-label>Descripción:</ion-label>
+                <ion-item>
+                <ion-input #D type=text></ion-input>
+                </ion-item>
+            </ion-col>            
+            <ion-button (click) = "guardarPaquete(TI.value, C.value, FL.value, D.value)" color = "primary">Guardar</ion-button>
+        </ion-row>
+    </ion-grid>
+</div>

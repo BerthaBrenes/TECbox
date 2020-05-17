@@ -27,7 +27,13 @@ const routes: Routes = [
   {path: 'productos',component:ProductosComponent},
   {path: 'paquetes',component:PaquetesComponent},  
   {path: 'cliente',component:ClienteComponent},
-  {path: 'articulos',component:ArticulosComponent}
+  {path: 'articulos',component:ArticulosComponent},
+  {
+    path: 'pop-over-controller',
+    loadChildren: () => import('./pop-over-controller/pop-over-controller.module').then( m => m.PopOverControllerPageModule)
+  },
+
+
 
 
 ];

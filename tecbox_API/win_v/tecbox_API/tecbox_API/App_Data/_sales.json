@@ -1,0 +1,56 @@
+﻿[
+  {
+    "SaleId": 1,
+    "SaleDate": "2019-04-22",
+    "ClientName": "Esteban Alvarado Vargas",
+    "Products": [
+      {
+        "BarCode": "ABC-9956",
+        "ProductName":"Laptop Lenovo ThinkPad T440P",
+        "Qty": 1
+      },
+      {
+        "BarCode": "ABC-2387",
+        "ProductName":"Microfono",
+        "Qty": 3
+      }
+    ]
+  },
+  {
+    "SaleId": 2,
+    "SaleDate": "2020-04-01",
+    "ClientName": "Hernán Jiménez",
+    "Products": [{
+      "BarCode": "ABC-2387",
+      "ProductName":"Microfono",
+      "Qty": 2
+    }]
+  },
+  {
+    "SaleId": 3,
+    "SaleDate": "2020-02-22",
+    "ClientName": "Luis Guillermo Solís",
+    "Products": [{
+      "BarCode": "ABC-6677",
+      "ProductName":"Tinta HP 63+",
+      "Qty": 3
+    }]
+  },
+  {
+    "SaleId": 4,
+    "SaleDate": "2020-05-22",
+    "ClientName": "Ricardo Solano",
+    "Products": [
+      {
+        "BarCode": "ABC-2387",
+        "ProductName":"Microfono",
+        "Qty": 5
+      },
+      {
+        "BarCode": "AD-746",
+        "ProductName":"Arduino UNO R3",
+        "Qty": 1
+      }
+    ]
+  }
+]

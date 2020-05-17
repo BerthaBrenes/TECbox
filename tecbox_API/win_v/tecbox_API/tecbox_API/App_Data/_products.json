@@ -14,7 +14,7 @@
     "Price": 80,
     "Taxes": true,
     "Discount": true,
-    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
+    "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
   },
   {
     "Name": "Tinta HP 63+",
@@ -31,7 +31,7 @@
     "Price": 20,
     "Taxes": false,
     "Discount": true,
-    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
+    "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
   },
   {
     "Name": "Laptop Lenovo ThinkPad T440P",
@@ -48,7 +48,7 @@
     "Price": 200,
     "Taxes": true,
     "Discount": false,
-    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+    "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
     "Name": "Memoria USB 8GB",
@@ -65,7 +65,7 @@
     "Price": 32,
     "Taxes": true,
     "Discount": false,
-    "image": "https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
+    "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
     "Name": "Arduino UNO R3",
@@ -82,7 +82,7 @@
     "Price": 28,
     "Taxes": false,
     "Discount": false,
-    "image": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
+    "ImageUrl": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
   },
   {
     "Name": "Raspberry Pi 4",
@@ -99,6 +99,6 @@
     "Price": 35,
     "Taxes": false,
     "Discount": false,
-    "image": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
+    "ImageUrl": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
   }
 ]
