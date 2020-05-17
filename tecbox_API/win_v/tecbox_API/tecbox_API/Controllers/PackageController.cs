@@ -88,8 +88,8 @@ namespace tecbox_API.Controllers
             }
             
             // 4. Create Dictionary {DeliveryMan, Product List}
-            var packages = new Dictionary<string,List<Package>>();
-            
+            var packages = new Dictionary<int,List<Package>>();
+            var counter = 0;
             foreach (var deliveryMan in deliveryManList)
             {
                 var tmpList = deliveredPackages.Where(pack => pack.DmId == deliveryMan).ToList();
@@ -100,7 +100,8 @@ namespace tecbox_API.Controllers
                         DateTime.Parse(p1.DeliveryDate), 
                         DateTime.Parse(p2.DeliveryDate))
                     );
-                packages.Add(tmpList[0].DeliveryMan,tmpList);
+                packages.Add(counter,tmpList);
+                counter++;
             }
             
             return Request.CreateResponse(HttpStatusCode.OK, packages);
