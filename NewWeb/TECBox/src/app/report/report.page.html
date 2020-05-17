@@ -16,21 +16,21 @@
         <div>
           <ion-label>Los 25 productos mas vendidos de TECBox.com</ion-label>
           <img class="best" src="assets/imgs/bestReport.png">
-          <ion-button class="best">Ver Reporte</ion-button>
+          <ion-button class="best" (click)='generarReporte1()'>Ver Reporte</ion-button>
         </div>
       </ion-col>
       <ion-col size="4">
         <div>
           <ion-label>Paquetes listos para entregas</ion-label>
           <img src="assets/imgs/readyReport.png">
-          <ion-button  class="ready">Ver Reporte</ion-button>
+          <ion-button  class="ready" (click)='generarReporte2()'>Ver Reporte</ion-button>
         </div>
       </ion-col>
       <ion-col size="4">
          <div>
            <ion-label>Paquetes entregados</ion-label>
            <img src="assets/imgs/deliveredReport.png">
-           <ion-button>Ver Reporte</ion-button>
+           <ion-button (click)='generarReporte3()'>Ver Reporte</ion-button>
          </div>
       </ion-col>
     </ion-row>
