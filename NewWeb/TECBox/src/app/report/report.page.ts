@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { ApiService } from '../services/api/api.service';
 /**
  * Component
  */
@@ -31,8 +32,16 @@ export class ReportPage implements OnInit {
   reporte3: Array<any>;
   /**
    * First Function to call in the page
+   * @param instanceApi Controller for the api service
    */
-  constructor() { }
+  constructor(
+    private instanceApi: ApiService
+  ) {
+    const reports = this.instanceApi.getReport();
+    this.reporte1 = reports?.report1;
+    this.reporte2 = reports?.report2;
+    this.reporte3 = reports?.report3;
+  }
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
