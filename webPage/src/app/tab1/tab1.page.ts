@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import {APIService} from '../services/api.service'
-
+import { SidemenucontrollerComponent } from '../components/sidemenucontroller/sidemenucontroller.component';
+import { PopOverControllerPage } from '../pop-over-controller/pop-over-controller.page';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -50,7 +51,11 @@ export class Tab1Page {
   * @param entityService Services for get all the entity information
   */
 
-  constructor(private menu: MenuController, private router: Router, private entityService:APIService
+  constructor(
+    private menu: MenuController, 
+    private router: Router, 
+    private entityService:APIService,
+    public popoverController: PopoverController
     ) { 
       // this.entityService.addProducts(this.TestData).subscribe(Response=>{
       //   console.log(Response)
@@ -61,6 +66,22 @@ export class Tab1Page {
         console.log(data)
       });
   
+    }
+
+    /**
+     * Present the menu for the 
+     * @param ev Event
+     */
+    async sideAdminMenu(ev: CustomEvent) {
+      const popover = await this.popoverController.create({
+        component: PopOverControllerPage,
+        event: ev,
+        translucent: true,
+        componentProps: {
+          type: 'admin'
+        }
+      });
+      return await popover.present();
     }
 
 }

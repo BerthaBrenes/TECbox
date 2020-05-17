@@ -3,14 +3,27 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import {TableComponent} from './table/table.component';
 import {AddDataComponent} from './add-data/add-data.component';
+import { SidemenucontrollerComponent } from './sidemenucontroller/sidemenucontroller.component';
 
 
 @NgModule({
-  declarations: [TableComponent,AddDataComponent],
+  declarations: [
+    TableComponent,
+    AddDataComponent,
+    SidemenucontrollerComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
   ],
-  exports:[TableComponent,AddDataComponent]
+  exports:[
+    TableComponent,
+    AddDataComponent,
+    SidemenucontrollerComponent
+  ],
+  entryComponents: [
+    TableComponent,
+    AddDataComponent,
+    SidemenucontrollerComponent
+  ],
 })
 export class ComponentsModule { }

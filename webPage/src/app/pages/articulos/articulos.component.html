@@ -2,7 +2,7 @@
     <ion-row >
       <ion-col *ngFor='let product of data' >
         <div>
-          <img src="{{product.image}}" alt="">
+          <img src="{{product.ImageUrl}}" alt="">
         <p class="name">{{product.name}} ({{product.barCode}})</p>
         <p>{{product.description}}</p>
         <p class="price">${{product.price}}</p>
