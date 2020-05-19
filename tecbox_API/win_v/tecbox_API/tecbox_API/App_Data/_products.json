@@ -68,23 +68,6 @@
     "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
-    "Name": "Arduino UNO R3",
-    "BarCode": "AD-746",
-    "Description": "Este es el nuevo Arduino UNO R3. Además de todas las características de la versión anterior, el UNO ahora usa el ATmega16U2 en lugar del 8U2. Esto permite una transferencia más rápida y más memoria. No necesita drives para Linux ó Mac, para Windows los archivos .inf vienen incluídos en el IDE.",
-    "Seller": {
-      "Name": "MICRO JPM",
-      "Id": {
-        "Type": "CJ",
-        "Number": "900-534-876-5"
-      }
-    },
-    "OnStock": 60,
-    "Price": 28,
-    "Taxes": false,
-    "Discount": false,
-    "ImageUrl": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
-  },
-  {
     "Name": "Raspberry Pi 4",
     "BarCode": "RP-001",
     "Description": "More Powerful processor. USB-C Power Supply. 4GB RAM. Micro HDMI Ports. USB 2/3. GigaBit Ethernet",
@@ -100,5 +83,22 @@
     "Taxes": false,
     "Discount": false,
     "ImageUrl": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
+  },
+  {
+    "Name": "Arduino UNO R3",
+    "BarCode": "AD-746",
+    "Description": "Este es el nuevo Arduino UNO R3. Además de todas las características de la versión anterior, el UNO ahora usa el ATmega16U2 en lugar del 8U2. Esto permite una transferencia más rápida y más memoria. No necesita drives para Linux ó Mac, para Windows los archivos .inf vienen incluídos en el IDE.",
+    "Seller": {
+      "Name": "MICRO JPM",
+      "Id": {
+        "Type": "CJ",
+        "Number": "900-534-876-5"
+      }
+    },
+    "OnStock": 60,
+    "Price": 32,
+    "Taxes": true,
+    "Discount": false,
+    "ImageUrl": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
   }
 ]

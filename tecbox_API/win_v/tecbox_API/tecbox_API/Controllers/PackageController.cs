@@ -44,10 +44,10 @@ namespace tecbox_API.Controllers
 
         // GET api/v1/packages/?packId={id}
         [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("api/v1/packages/{id}")]
-        public HttpResponseMessage GetPackage(string id)
+        [System.Web.Http.Route("api/v1/packages/")]
+        public HttpResponseMessage GetPackage([FromUri] string packId)
         {
-            var requestPackage = _packageList.Find(package => package.TrackId.Equals(id));
+            var requestPackage = _packageList.Find(package => package.TrackId.Equals(packId));
 
             return requestPackage == null ? Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage) : Request.CreateResponse(HttpStatusCode.OK, requestPackage);
         }
@@ -124,10 +124,10 @@ namespace tecbox_API.Controllers
 
         // PUT api/v1/packages/?packId={id}
         [System.Web.Http.HttpPut]
-        [System.Web.Http.Route("api/v1/packages/{id}")]
-        public HttpResponseMessage EditPackage(string id, [FromBody]Package editedPackage)
+        [System.Web.Http.Route("api/v1/packages/")]
+        public HttpResponseMessage EditPackage([FromUri] string packId, [FromBody]Package editedPackage)
         {
-            Package requestPackage = _packageList.Find(package => package.TrackId.Equals(id));
+            Package requestPackage = _packageList.Find(package => package.TrackId.Equals(packId));
 
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -144,10 +144,10 @@ namespace tecbox_API.Controllers
 
         // DELETE api/v1/packages/?packId={id}
         [System.Web.Http.HttpDelete]
-        [System.Web.Http.Route("api/v1/packages/{id}")]
-        public HttpResponseMessage RemovePackage(string id)
+        [System.Web.Http.Route("api/v1/packages/")]
+        public HttpResponseMessage RemovePackage([FromUri] string packId)
         {
-            Package requestPackage = _packageList.Find(package => package.TrackId.Equals(id));
+            Package requestPackage = _packageList.Find(package => package.TrackId.Equals(packId));
 
             if (requestPackage == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
