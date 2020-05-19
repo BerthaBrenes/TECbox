@@ -102,5 +102,31 @@
     "StartDate": "02/01/2018",
     "SalaryHour": 8000.0,
     "SalaryMonth": 1120000.0
+  },
+  {
+    "Username": "mikeJordan@tecbox.com",
+    "Password": "chicagoBulls",
+    "Name": "Michael Jordan",
+    "Id": {
+      "Type": "CF",
+      "Number": "105-257-855"
+    },
+    "Role": "Administrador",
+    "BranchOffice": {
+      "Id": 0,
+      "Name": "TECbox Chicago",
+      "Admin": "Phill Jackson",
+      "Phone": "2222-2244",
+      "Address": {
+        "Department": "Illinois",
+        "City": "Chicago",
+        "District": "",
+        "Others": ""
+      }
+    },
+    "BirthDate": "1963-02-17",
+    "StartDate": "2015-05-22",
+    "SalaryHour": 100000.0,
+    "SalaryMonth": 14000000.0
   }
 ]

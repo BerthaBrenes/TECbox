@@ -1,13 +1,13 @@
 [
   {
     "Id": 0,
-    "Name": "TECbox Tres Ríos",
+    "Name": "TECbox Tres Rï¿½os",
     "Admin": "Bill Gates",
     "Phone": "2222-2222",
     "Address": {
       "Department": "Cartago",
-      "City": "La Unión",
-      "District": "Tres Ríos",
+      "City": "La Uniï¿½n",
+      "District": "Tres Rï¿½os",
       "Others": "500 mts Oeste de la municipalidad"
     }
   },

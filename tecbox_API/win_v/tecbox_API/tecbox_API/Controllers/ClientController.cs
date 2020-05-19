@@ -46,12 +46,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/clients/{id}
+        // GET api/v1/clients/?clientId={id}
         [HttpGet]
-        [Route("api/v1/clients/{id}")]
-        public HttpResponseMessage GetClient(string id)
+        [Route("api/v1/clients/")]
+        public HttpResponseMessage GetClient([FromUri]string clientId)
         {
-            Client requestClient = clientList.Find(client => client.Id.Number == id);
+            Client requestClient = clientList.Find(client => client.Id.Number == clientId);
 
             if (requestClient == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -97,12 +97,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/clients/{id}
+        // PUT api/v1/clients/?clienId={id}
         [HttpPut]
-        [Route("api/v1/clients/{id}")]
-        public HttpResponseMessage EditClient(string id, [FromBody]Client editedClient)
+        [Route("api/v1/clients/")]
+        public HttpResponseMessage EditClient([FromUri] string clientId, [FromBody]Client editedClient)
         {
-            Client requestClient = clientList.Find(client => client.Id.Number.Equals(id));
+            Client requestClient = clientList.Find(client => client.Id.Number.Equals(clientId));
             
             if (requestClient == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -119,9 +119,7 @@ namespace tecbox_API.Controllers
                 else if (clientList.Exists(client => client.Email.Equals(editedClient.Email)))
                     return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingEmailMessage);
             }
-
             
-
             // So if the object doesn't violate the constraints it can be modified
             int productIndex = clientList.IndexOf(requestClient);
 
@@ -136,12 +134,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // DELETE api/v1/clients/{id}
+        // DELETE api/v1/clients/?clientId={id}
         [HttpDelete]
-        [Route("api/v1/clients/{id}")]
-        public HttpResponseMessage RemoveClient(string id)
+        [Route("api/v1/clients/")]
+        public HttpResponseMessage RemoveClient([FromUri]string clientId)
         {
-            Client requestClient = clientList.Find(client => client.Id.Number.Equals(id));
+            Client requestClient = clientList.Find(client => client.Id.Number.Equals(clientId));
 
             if (requestClient == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

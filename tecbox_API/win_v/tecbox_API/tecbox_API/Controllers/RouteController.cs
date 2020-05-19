@@ -39,12 +39,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/routes/{id}
+        // GET api/v1/routes/?routeId={id}
         [HttpGet]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage GetRoute(int id)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage GetRoute([FromUri] int routeId)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
 
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -69,12 +69,13 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/routes/{id}
+        // PUT api/v1/routes/?routeId={id}
         [HttpPut]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage EditRoute(int id, [FromBody]Route editedRoute)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage EditRoute([FromUri] int routeId, [FromBody]Route editedRoute)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
+            
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -87,12 +88,12 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestRoute);
         }
 
-        // PUT api/v1/routes/{id}?district={district}
+        // PUT api/v1/routes/?routeId={id}&districtId={district}
         [HttpPut]
-        [Route("api/v1/routes/{id}/district={district}")]
-        public HttpResponseMessage AddDistrict(int id, string district)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage AddDistrict([FromUri] int routeId,[FromUri] string district)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -105,12 +106,12 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestRoute);
         }
 
-        // DELETE api/v1/routes/{id}
+        // DELETE api/v1/routes/?routeId={id}
         [HttpDelete]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage RemoveRoute(int id)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage RemoveRoute([FromUri]int routeId)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
 
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

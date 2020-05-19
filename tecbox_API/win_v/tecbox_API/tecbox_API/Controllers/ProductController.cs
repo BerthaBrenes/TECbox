@@ -43,12 +43,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/products/{id}
+        // GET api/v1/products/?productId={id}
         [HttpGet]
-        [Route("api/v1/products/{id}")]
-        public HttpResponseMessage GetProduct(string id)
+        [Route("api/v1/products/")]
+        public HttpResponseMessage GetProduct([FromUri] string productId)
         {
-            Product requestProduct = productList.Find(product => product.BarCode.Equals(id));
+            Product requestProduct = productList.Find(product => product.BarCode.Equals(productId));
 
             if (requestProduct == null) 
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -89,6 +89,7 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, bestSellerProducts);
         }
         
+        
         // GET api/v1/products/report/emergency
         [HttpGet]
         [Route("api/v1/products/bestseller/emergency")]
@@ -101,8 +102,8 @@ namespace tecbox_API.Controllers
 
         // POST api/v1/products
         [HttpPost]
-        [Route("api/v1/products")]
-        public HttpResponseMessage AddProduct([FromBody]Product newProduct)
+        [Route("api/v1/products/")]
+        public HttpResponseMessage AddProduct([FromBody] Product newProduct)
         {
             if (productList.Exists(product => product.BarCode.Equals(newProduct.BarCode)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
@@ -113,12 +114,13 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/products/{id}
+        // PUT api/v1/products/?productId={id}
         [HttpPut]
-        [Route("api/v1/products/{id}")]
-        public HttpResponseMessage EditProduct(string id, [FromBody]Product editedProduct)
+        [Route("api/v1/products/")]
+        public HttpResponseMessage EditProduct([FromUri] string productId, [FromBody] Product editedProduct)
         {
-            Product requestProduct = productList.Find(product => product.BarCode.Equals(id));
+            Product requestProduct = productList.Find(product => product.BarCode.Equals(productId));
+            
             if (requestProduct == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -130,12 +132,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // DELETE api/v1/products/{id}
+        // DELETE api/v1/products/?productId={id}
         [HttpDelete]
-        [Route("api/v1/products/{id}")]
-        public HttpResponseMessage RemoveProduct(string id)
+        [Route("api/v1/products/")]
+        public HttpResponseMessage RemoveProduct([FromUri] string productId)
         {
-            Product requestProduct = productList.Find(product => product.BarCode.Equals(id));
+            Product requestProduct = productList.Find(product => product.BarCode.Equals(productId));
 
             if (requestProduct == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
