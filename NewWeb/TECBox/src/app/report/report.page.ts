@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import { ApiService } from '../services/api/api.service';
+import { ApiService } from '../services/api.service';
 /**
  * Component
  */

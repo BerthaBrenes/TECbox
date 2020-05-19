@@ -14,13 +14,13 @@ import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
-})
+})str
 
 export class RestApiService{
 
   constructor(private http: HttpClient) { }
   
-  apiUrl = 'https://localhost:44332';
+  apiUrl = 'https://localhost:44332/api/v1';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -36,7 +36,7 @@ export class RestApiService{
    */
   login(user:string, password:string){
     const data = { "Username": user, "Password":password};
-    return this.http.post(`${this.apiUrl}/api/v1/employees/login`, data,this.httpOptions);
+    return this.http.post(`${this.apiUrl}/employees/login`, data,this.httpOptions);
   }
 
 
@@ -46,7 +46,7 @@ export class RestApiService{
    */
   changeStatus(status:string, trackId: string){
     const jsonData = { "Status": status }; 
-    return this.http.put<any>(`${this.apiUrl}/api/v1/packages/${trackId}`,jsonData, this.httpOptions);
+    return this.http.put<any>(`${this.apiUrl}/packages/?packId=${trackId}`,jsonData, this.httpOptions);
   }
 
 
@@ -55,7 +55,7 @@ export class RestApiService{
    * @param deliverer 
    */
   getPackages(){
-    return this.http.get(`${this.apiUrl}/api/v1/packages`);
+    return this.http.get(`${this.apiUrl}/packages`);
   }
 }
 
