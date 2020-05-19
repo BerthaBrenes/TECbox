@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 /**
  * Component
  */
@@ -29,10 +30,18 @@ export class ClientesComponent implements OnInit {
   /**
    * This method initializes the component
    */
-  constructor() { }
+  constructor(public modalCtrl: ModalController) { }
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
   ngOnInit() { }
+  /**
+   * Dismiss the modal
+   */
+  dismiss() {
+    this.modalCtrl.dismiss({
+      dismissed: true
+    });
+  }
 
 }

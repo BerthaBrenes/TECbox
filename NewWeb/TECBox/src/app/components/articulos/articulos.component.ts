@@ -19,7 +19,10 @@ export class ArticulosComponent implements OnInit {
    * Variable to get the number of products to buy
    */
   quantity: number = 0;
-
+  /**
+   * user Validation
+   */
+  userValidation: boolean;
   /**
    * Checks if there is a variable selected.
    */
@@ -31,12 +34,16 @@ export class ArticulosComponent implements OnInit {
     this.data = val;
     console.log('data', this.data);
   }
+  @Input() set userValidate(valUser: boolean) {
+    this.userValidation = valUser;
+    console.log('userEntry', valUser);
+  }
 
   /**
    * Call passed by parameter.
    */
   // tslint:disable-next-line: no-output-on-prefix
-  @Output() onAnswered = new EventEmitter<{ value: number }>();
+  @Output() onAnswered = new EventEmitter<{ price: number, quantity: number, product: any}>();
 
   /**
    * This method initializes the component
@@ -52,44 +59,39 @@ export class ArticulosComponent implements OnInit {
    */
   increment() {
     this.quantity++;
-    this.setAnswer();
   }
   /**
    * This function decrement the value of the quantity.
    */
   decrement() {
-    this.quantity--;
-    this.setAnswer();
+    if (this.quantity >= 1){
+      this.quantity--;
+    }
   }
   /**
    * Set an answer
    */
-  setAnswer() {
+  setAnswer(price: number, quantity: number, product: any) {
     this.answered = true;
-    this.onAnswered.emit({ value: this.quantity });
-    let initValue = {
-      value: this.quantity
-    };
+    this.onAnswered.emit({ price, quantity, product});
   }
   /**
    * Buy products, add the product to service
    * @param product product it will be buy
    */
-  buy(product: any) {
+  agregarCarrito(product: any) {
     // tslint:disable-next-line: no-string-literal
-    let FinalPrice = this.quantity * product['Price'];
+    let FinalPrice = this.quantity * product['price'];
+    console.log(FinalPrice);
     let discount = 1;
-    let taxes = 1;
     // tslint:disable-next-line: no-string-literal
-    if (product['Discount'] === true) {
-      discount = ((this.quantity * 10) / 100);
+    if (product['discount']) {
+      discount = product?.discount / 100;
     }
-    // tslint:disable-next-line: no-string-literal
-    if (product['Taxes'] === true) {
-      taxes = ((this.quantity * 13) / 100);
-    }
-    FinalPrice = FinalPrice + taxes - discount;
+    FinalPrice = (FinalPrice * discount);
     console.log('Cantidad de productos', this.quantity, 'Precio Final', FinalPrice, 'Product', product);
+    this.setAnswer(FinalPrice, this.quantity, product);
+
   }
 
 }

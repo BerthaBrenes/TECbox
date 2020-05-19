@@ -1,0 +1,24 @@
+<ion-toolbar>
+  <ion-buttons slot="end" (click)="dismiss()">
+    <ion-icon name="close"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <div class="tittle">
+    <ion-icon slot="start" name="cart-outline"></ion-icon>
+    <ion-label>Carrito de compras</ion-label>
+  </div>
+  <div class="contentlist">
+    <h3>Confirma que deseas comprar estos artículos</h3>
+    <ion-grid>
+      <ion-row class="title">
+       <ion-col size="5">Producto</ion-col>   
+       <ion-col size="3">Precio</ion-col>   
+       <ion-col size="2">Cantidad</ion-col> 
+       <ion-col size="2"> </ion-col>  
+      </ion-row>
+    </ion-grid>
+    <ion-icon name="close-circle"></ion-icon>
+  </div>
+  
+</ion-content>

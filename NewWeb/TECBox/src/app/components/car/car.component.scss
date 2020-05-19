@@ -1,0 +1,36 @@
+ion-toolbar {
+    --background: transparent;
+    text-align: center;
+    ion-buttons{
+        ion-icon{
+            font-size: 28px;
+        }
+    }
+    
+}
+ion-content{
+    div{
+        &.tittle{
+            text-align: center;
+            ion-icon{
+                font-size: 39px;
+            }
+        }
+        &.contentlist{
+            h3{
+                text-align: center;
+            }
+            ion-grid{
+                ion-row{
+                    color: black;
+                    &.title{
+                        background: #23286b;
+                        color: white;
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+}

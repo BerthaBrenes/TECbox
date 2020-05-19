@@ -31,6 +31,184 @@ export class ApiService {
    */
   productSave: any;
   /**
+   * Product Test
+   */
+  productTest: any[] = [
+    {
+      TrackId: 'A-349',
+      Client: 'Ellon Musk',
+      Description: 'Memoria SD 1 Unit',
+      RouteId: 0,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Listo para Entrega',
+      DeliveryDate: '2020-08-01'
+    },
+    {
+      TrackId: 'B-552',
+      Client: 'Esteban Alvarado Vargas',
+      Description: 'Arduino UNO; Raspberry Pi 4',
+      RouteId: 0,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Devuelto a Sucursal',
+      DeliveryDate: '2020-04-01'
+    },
+    {
+      TrackId: 'B-553',
+      Client: 'Bertha Brenes',
+      Description: 'Descripción de Producto',
+      RouteId: 1,
+      DeliveryMan: 'Juan Roberto',
+      DmId: '100-789-142',
+      Status: 'Entregado',
+      DeliveryDate: '2020-05-22'
+    },
+    {
+      TrackId: 'B-554',
+      Client: 'Enellia Vargas',
+      Description: 'Descripción de Producto',
+      RouteId: 0,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Entregado',
+      DeliveryDate: '2020-05-21'
+    },
+    {
+      TrackId: 'B-555',
+      Client: 'Sahis Rojas',
+      Description: 'Descripción de Producto',
+      RouteId: 2,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Listo para Entrega',
+      DeliveryDate: '2020-04-01'
+    },
+    {
+      TrackId: 'C-012',
+      Client: 'Maron Arrieta',
+      Description: 'Descripción de Producto',
+      RouteId: 1,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Entregado',
+      DeliveryDate: '2020-04-28'
+    },
+    {
+      TrackId: 'D-502',
+      Client: 'Esteban Alvarado Vargas',
+      Description: 'Descripción de Producto',
+      RouteId: 0,
+      DeliveryMan: 'Juan Roberto',
+      DmId: '100-789-142',
+      Status: 'Entregado',
+      DeliveryDate: '2020-05-10'
+    },
+    {
+      TrackId: 'D-511',
+      Client: 'Tim Cook',
+      Description: 'Descripción de Producto',
+      RouteId: 2,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Intento de Entrega Fallido',
+      DeliveryDate: '2020-04-01'
+    },
+    {
+      TrackId: 'M-334',
+      Client: 'Roberto Azofeifa',
+      Description: 'Descripción de Producto',
+      RouteId: 3,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Entregado',
+      DeliveryDate: '2020-02-16'
+    },
+    {
+      TrackId: 'N-221',
+      Client: 'Alejandro Ibarra',
+      Description: 'Descripción de Producto',
+      RouteId: 1,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'En Sucursal',
+      DeliveryDate: '2020-08-15'
+    },
+    {
+      TrackId: 'X-032',
+      Client: 'Isaac Ramírez',
+      Description: 'Descripción de Producto',
+      RouteId: 3,
+      DeliveryMan: 'David Alvarado',
+      DmId: '109-251-785',
+      Status: 'Listo para Entrega',
+      DeliveryDate: '2020-05-16'
+    }
+  ];
+  /**
+   * user test
+   */
+  userTest: any[] = [{
+    Username: 'estalvgs1999',
+    Password: 'admin',
+    Name: 'Esteban Alvarado Vargas',
+    Id: {
+      Type: 'CF',
+      Number: '123-345-567'
+    },
+    Email: 'esteban@mail.com',
+    Phone: '+(99)(999) 9999-9999',
+    Mobile: '8888-8888',
+    Address: {
+      Department: 'San José',
+      City: 'Desamparados',
+      District: 'Gravillas',
+      Others: 'El Porvenir, Urb Marianela Casa 8F'
+    }
+  },
+  {
+  Username: 'estalvgs1999',
+    Password: 'admin',
+    Name: 'Esteban Alvarado Vargas',
+    Id: {
+      Type: 'CF',
+      Number: '123-345-567'
+    },
+    Email: 'esteban@mail.com',
+    Phone: '+(99)(999) 9999-9999',
+    Mobile: '8888-8888',
+    Address: {
+      Department: 'San José',
+      City: 'Desamparados',
+      District: 'Gravillas',
+      Others: 'El Porvenir, Urb Marianela Casa 8F'
+    }
+  }
+];
+  /**
+   * Test data
+   */
+  // tslint:disable-next-line: max-line-length
+  TemporalArticuleData: any = [
+    { name: 'Celular',
+    description: 'Memoria para celular 16M',
+    barCode: '7545',
+    seller: 'Juan Barnes',
+    price: 7802,
+    discount: 20,
+    taxes: true,
+    image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
+  }, {
+    name: 'Laptp',
+    description: 'Memoria para celular 16M',
+    barCode: '7545',
+    seller: 'Juan Barnes',
+    price: 18000,
+    discount: 20,
+    taxes: true,
+    image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
+  }];
+  /**
    * Set the http options
    */
   httpOptions = {
@@ -166,7 +344,8 @@ export class ApiService {
    */
   getProducts() {
     console.log('Service Get');
-    return this.http.get(`${this.url}/api/v1/products`);
+    return this.TemporalArticuleData;
+//    return this.http.get(`${this.url}/api/v1/products`);
   }
   /**
    * get the reports data

@@ -1,16 +1,10 @@
-ion-grid{
-    ion-row{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        ion-col{
-            
-            div{
-                border: 2px solid #8db7f0;
+div{
+    &.ion-grid{
+        div{
+            &.content{
+                border: 2px solid #bcbcbc;
                 box-sizing: border-box;
-                box-shadow: 2px 2px 3px rgb(189, 214, 247 );
-                border-radius: 10px;
-                width: 250;
+                width: 250px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -22,20 +16,53 @@ ion-grid{
                     padding-left: 15px;
                     font-size: small;
                     &.name{
-                        font-size: medium;
-                        color: darkcyan;
+                        font-size: large;
+                        color: black;
                         font-weight: bold;
                     }
-                    &.price{
-                        font-weight: bold;
+                    ion-label{
+                        &.price{
+                            font-weight: bold;
+                            color: darkcyan;
+                            font-size: 24px;
+                        }
+                        &.discount{
+                            font-weight: bold;
+                            color: darkorange;
+                            font-size: 18px;
+                        }
                     }
-
                 }
                 ion-chip{
                     align-self: flex-start;
                     color: darkgrey;
                 }
+                div{
+                    ion-button{
+                        &.addCar{
+                            --border-radius:4px;
+                            --background: darkorange;
+                        }
+                    }
+                    ion-grid{
+                        margin: 0px;
+                        ion-row{
+                            ion-col{
+                                padding: 0px;
+                                &.text{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    ion-text{
+                                        margin-right: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+   
 }

@@ -1,38 +1,33 @@
-<ion-grid>
-  <ion-row >
-    <ion-col *ngFor='let product of data' >
-      <div>
-        <img src="{{product.image}}" alt="">
-      <p class="name">{{product.name}} ({{product.barCode}})</p>
-      <p>{{product.description}}</p>
-      <p class="price">${{product.price}}</p>
-      <ion-chip *ngIf="product.discount">
-        <ion-icon name="trending-down"></ion-icon>
-        <ion-label>Discount</ion-label>
-      </ion-chip>
-      <ion-chip *ngIf="product.taxes">
-        <ion-icon name="trending-down"></ion-icon>
-        <ion-label>Impuestos</ion-label>
-      </ion-chip>
-      <div><ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button  (click)="decrement()">
-              <ion-icon name="remove-outline"></ion-icon>
-            </ion-button>
-          </ion-col>
-          <ion-col class="text">
-            <ion-text class="number">{{ quantity }}</ion-text>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="increment()">
-              <ion-icon name="add-outline"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid></div>
-      <ion-button (click)="buy(product)">Comprar</ion-button>
+<div class="ion-grid">
+  <div>
+    <div class="content">
+      <img src="{{data.image}}" alt="">
+    </div>
+    <div class="content">
+      <p class="name">{{data.name}} ({{data.barCode}})</p>
+      <p>{{data.description}}</p>
+      <p>Precio <ion-label class="price">${{data.price}}</ion-label></p>
+      <p *ngIf="data.discount">Discount:  <ion-label class="discount"> {{data.discount}}%</ion-label> </p>
+      <div *ngIf='userValidation'>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="text">
+              <ion-text class="number">{{ quantity }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" (click)="decrement()">
+                <ion-icon name="remove-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" (click)="increment()">
+                <ion-icon name="add-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-button (click)="agregarCarrito(data)" class="addCar">Agregar al carrito</ion-button>
       </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+    </div>
+  </div>
+</div>
