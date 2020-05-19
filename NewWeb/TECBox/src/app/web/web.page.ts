@@ -21,7 +21,7 @@ export class WebPage implements OnInit {
   /**
    * Boolean for the client is Log in
    */
-  ClientUser: boolean = true;
+  ClientUser: boolean = false;
   /**
    * Bolean for the Package
    */
@@ -55,7 +55,7 @@ export class WebPage implements OnInit {
     private entityService: ApiService,
     public modalController: ModalController
   ) {
-    this.inputArticle = this.entityService.getProducts();
+    this.inputArticle = this.entityService.getProductsTemporal();
   //   this.entityService.getProducts().subscribe(data => {
   //     this.inputArticle = data;
   //     console.log('Products', data);

@@ -26,6 +26,7 @@ export class ApiService {
    * Url for the request
    */
   url = 'https://localhost:44332';
+  json = 'assets/jsonUbicaciones.json';
   /**
    * Variable for the saved product
    */
@@ -149,18 +150,18 @@ export class ApiService {
    * user test
    */
   userTest: any[] = [{
-    Username: 'estalvgs1999',
-    Password: 'admin',
-    Name: 'Esteban Alvarado Vargas',
+    Username: 'bbrenes1996',
+    Password: 'client',
+    Name: 'Bertha Brenes Brenes',
     Id: {
-      Type: 'CF',
-      Number: '123-345-567'
+      Type: 'CR',
+      Number: '124-345-567'
     },
-    Email: 'esteban@mail.com',
+    Email: 'bertha@mail.com',
     Phone: '+(99)(999) 9999-9999',
     Mobile: '8888-8888',
     Address: {
-      Department: 'San José',
+      Department: 'Cartago',
       City: 'Desamparados',
       District: 'Gravillas',
       Others: 'El Porvenir, Urb Marianela Casa 8F'
@@ -343,9 +344,14 @@ export class ApiService {
    * Get all the product
    */
   getProducts() {
+    return this.http.get(`${this.url}/api/v1/products`);
+  }
+  /**
+   * Get all the product
+   */
+  getProductsTemporal() {
     console.log('Service Get');
     return this.TemporalArticuleData;
-//    return this.http.get(`${this.url}/api/v1/products`);
   }
   /**
    * get the reports data
@@ -483,5 +489,8 @@ export class ApiService {
       report3: []
     };
     return reports;
+  }
+  getUbicacion(){
+    return this.http.get(this.json);
   }
 }

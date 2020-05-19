@@ -62,6 +62,7 @@ export class AddDataComponent implements OnInit {
    * Data of the branch
    */
   sucursales: Array<any>;
+  ubicacionTest: any;
   /**
    * Input of the src variable
    */
@@ -80,19 +81,26 @@ export class AddDataComponent implements OnInit {
    * This method initializes the component
    * @param entityService Controller the api service
    */
-  constructor(private entityService: ApiService) { }
+  constructor(private entityService: ApiService) {}
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
   ngOnInit() {
+    this.ubicacionTest = this.getUbicaciones();
     this.cargarDistritosRuta();
     this.cargarProvincias();
+  }
+  getUbicaciones(){
+    return this.entityService.getUbicacion().subscribe(data => {
+      console.log('services', data['ubicaciones']);
+    });
   }
 
   /**
    * Load providence
    */
-  cargarProvincias() {
+  async cargarProvincias() {
+    console.log('ubicaciones', await this.ubicacionTest['provincias']);
     // tslint:disable-next-line: no-string-literal
     this.provTemp = this.ubicaciones['provincias'];
     // tslint:disable-next-line: prefer-for-of

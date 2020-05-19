@@ -13,6 +13,9 @@ import { PaquetesComponent } from './paquetes/paquetes.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { TrackingPageComponent } from './tracking-page/tracking-page.component';
+import { RegisterComponent } from './register/register.component';
+import { CarComponent } from './car/car.component';
+import { HelpComponent } from './help/help.component';
 
 
 
@@ -29,7 +32,10 @@ import { TrackingPageComponent } from './tracking-page/tracking-page.component';
     PaquetesComponent,
     ArticulosComponent,
     ClientesComponent,
-    TrackingPageComponent
+    TrackingPageComponent,
+    RegisterComponent,
+    CarComponent,
+    HelpComponent
   ],
   imports: [
     CommonModule,

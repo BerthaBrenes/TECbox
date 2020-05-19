@@ -1,11 +1,43 @@
 <ion-toolbar>
-  <ion-title>Information equipo</ion-title>
+  <ion-title>Registro</ion-title>
   <ion-buttons slot="end" (click)="dismiss()">
     <ion-icon name="close"></ion-icon>
   </ion-buttons>
 </ion-toolbar>
 <ion-content>
 <div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre Completo</ion-label>
+      <ion-input placeholder="Mario cars"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" placeholder="correo@correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="tel" placeholder="88855888"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mobile</ion-label>
+      <ion-input type="tel" placeholder="88855888"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One">
+        <ion-select-option *ngFor="let user of providences">{{user.title + ' '}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input  placeholder="mcars"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>password</ion-label>
+      <ion-input type="password" placeholder="correoCars88"></ion-input>
+    </ion-item>
+  </ion-list>
   
 </div>
 </ion-content>
