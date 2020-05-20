@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
 import { ClientService } from 'src/app/services/client.service';
-import {ubicaciones} from './../../../assets/data/ubication';
+import { ubicaciones } from './../../../assets/data/ubication';
+import { HttpErrorResponse } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
+
+
 export class RegisterComponent implements OnInit {
   providences: any[];
   providenceSelected: string;
@@ -22,9 +27,13 @@ export class RegisterComponent implements OnInit {
   username: string;
   password: any;
   otherSign: string;
+
+
   constructor(
     public modalCtrl: ModalController,
-    private entityService: ApiService) {
+    private entityService: ApiService,
+    private clientService: ClientService,
+    private toastController: ToastController) {
     this.entityService.getUbicacion().subscribe(data => {
       console.log('dataUb', data);
     });
@@ -63,7 +72,10 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
+
+
   submit() {
+
     const userObject = {
       Username: this.username,
       Password: this.password,
@@ -82,7 +94,32 @@ export class RegisterComponent implements OnInit {
         Others: this.otherSign
       }
     };
-    this.entityService.addCliente(userObject);
+
+    // Communication with the Client API
+    this.clientService.registerClient(userObject).subscribe(
+      answer => {
+        if (answer) {
+          this.presentToast('Usuario Registrado', 'success');
+        }
+      },
+      (error:HttpErrorResponse) => {
+        this.presentToast('Usuario Existente', 'danger');
+      } 
+    );
+
     this.dismiss();
   }
+  
+  /**
+   * Funtion that show Toast notification on the aplication at the begging for show the proper way to enter the email
+   */
+  async presentToast(messageR: string, colorR: string) {
+    const toast = await this.toastController.create({
+      message: messageR,
+      color: colorR,
+      duration: 3000
+    });
+    toast.present();
+  }
+
 }

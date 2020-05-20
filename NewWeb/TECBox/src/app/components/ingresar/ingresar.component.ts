@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, MaxLengthValidator } from '@angular/forms';
 import { ModalController, ToastController } from '@ionic/angular';
-import { ApiService } from 'src/app/services/api/api.service';
+import { ApiService } from 'src/app/services/api.service';
+import { ClientService } from 'src/app/services/client.service';
+import { EmployeeService } from 'src/app/services/employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
