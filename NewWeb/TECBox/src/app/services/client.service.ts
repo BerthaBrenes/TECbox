@@ -43,6 +43,7 @@ export class ClientService {
       'Something bad happened; please try again later.');
   }
 
+
   /**
    * Requests all clients to the server
    * @returns List with all the clients of tecbox.com
@@ -51,6 +52,7 @@ export class ClientService {
     return this.http.get(`${this.tecboxUrl}/clients`)
   }
 
+  
   /**
    * Request a client from the server
    * @param clientId Customer identification (physical or legal)
@@ -60,7 +62,7 @@ export class ClientService {
     return this.http.get(`${this.tecboxUrl}/clients/?clientId=${clientId}`);
   }
   
-  
+
   /**
    * Register new users to the tecbox.com database
    * @param client Object with the data of the new customer

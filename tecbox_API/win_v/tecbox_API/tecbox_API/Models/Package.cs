@@ -41,6 +41,13 @@ namespace tecbox_API.Models
 
             if (package.Status != null)
                 this.Status = package.Status;
+
+            if (package.DeliveryMan != null && package.DmId != null)
+            {
+                this.DeliveryMan = package.DeliveryMan;
+                this.DmId = package.DmId;
+            }
+            
         }
         
         // Indicates if the date of the package is in the given range.
