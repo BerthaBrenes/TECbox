@@ -43,7 +43,7 @@ export class WebPage implements OnInit {
   /**
    * Variable of the object that wil be buy
    */
-  inputCar: any[];
+  inputCar: any[] = [];
   /**
    * Test data
    */
@@ -110,7 +110,7 @@ export class WebPage implements OnInit {
     });
     modal.onDidDismiss()
     .then((data) => {
-      this.enableCliente(data.data.data)
+      this.enableCliente(data.data.data);
     });
     return await modal.present();
   }

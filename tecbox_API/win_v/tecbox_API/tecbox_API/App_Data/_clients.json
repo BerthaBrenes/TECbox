@@ -1,7 +1,7 @@
 [
   {
     "Username": "estalvgs1999",
-    "Password": "admin",
+    "Password": "administrador",
     "Name": "Esteban Alvarado Vargas",
     "Id": {
       "Type": "CF",
@@ -69,6 +69,24 @@
       "City": "Perez Zeledón",
       "District": "San Isidro del General",
       "Others": "Barrio AAA, Casa #44"
+    }
+  },
+  {
+    "Username": "juanviro",
+    "Password": "gallitodesalchichon",
+    "Name": "Juan Villa Rojas",
+    "Id": {
+      "Type": "CR",
+      "Number": "124-345-567"
+    },
+    "Email": "juanvainas@mymail.com",
+    "Phone": "2285-6987",
+    "Mobile": "8796-3214",
+    "Address": {
+      "Department": "Cartago",
+      "City": "Cartago",
+      "District": "Oriental",
+      "Others": "Residencia del Tecnológico de Costa Rica"
     }
   }
 ]

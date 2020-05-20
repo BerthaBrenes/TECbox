@@ -28,9 +28,9 @@ namespace tecbox_API.Models
         public Address Address { get; set; }
 
         // Check if the given username and password match those of the user.
-        public bool VerifyUser(string username, string password)
+        public bool VerifyUser(string email, string password)
         {
-            return this.Username.Equals(username) && this.Password.Equals(password);
+            return this.Email.Equals(email) && this.Password.Equals(password);
         }
 
         // Check if an object has the same values ​​in the key attributes
