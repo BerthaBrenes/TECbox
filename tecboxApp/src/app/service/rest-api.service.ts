@@ -14,7 +14,7 @@ import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
-})str
+})
 
 export class RestApiService{
 

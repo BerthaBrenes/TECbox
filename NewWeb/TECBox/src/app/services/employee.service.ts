@@ -42,6 +42,7 @@ export class EmployeeService {
       'Something bad happened; please try again later.');
   }
 
+
   /**
    * Requests all employees to the server.
    * @returns List with all the employees of tecbox.com.
@@ -50,6 +51,7 @@ export class EmployeeService {
     return this.http.get(`${this.tecboxUrl}/employees`)
   }
 
+  
   /**
    * Request an employee from the server.
    * @param empId Employee identification number.
