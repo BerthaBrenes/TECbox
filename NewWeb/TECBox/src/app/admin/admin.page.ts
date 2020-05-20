@@ -6,7 +6,7 @@ import { RutasComponent } from '../components/rutas/rutas.component';
 import { SucursalesComponent } from '../components/sucursales/sucursales.component';
 import { TrabajadoresComponent } from '../components/trabajadores/trabajadores.component';
 import { VendedoresComponent } from '../components/vendedores/vendedores.component';
-import { ApiService } from '../services/api/api.service';
+import { ApiService } from '../services/api.service';
 /**
  * Component
  */

@@ -1,11 +1,13 @@
+import { ClientService } from 'src/app/services/client.service';
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api/api.service';
+import { ApiService } from '../services/api.service';
 import { ModalController } from '@ionic/angular';
 import { RegisterComponent } from '../components/register/register.component';
 import { IngresarComponent } from '../components/ingresar/ingresar.component';
 import { ClientesComponent } from '../components/clientes/clientes.component';
 import { HelpComponent } from '../components/help/help.component';
 import { CarComponent } from '../components/car/car.component';
+
 /**
  * Component
  */
@@ -53,6 +55,7 @@ export class WebPage implements OnInit {
    */
   constructor(
     private entityService: ApiService,
+    private clientService: ClientService,
     public modalController: ModalController
   ) {
     this.inputArticle = this.entityService.getProductsTemporal();
@@ -64,12 +67,14 @@ export class WebPage implements OnInit {
   //     this.inputClients = data;
   //     console.log('Clients', data);
   //   });
+
   }
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
   ngOnInit() {
   }
+  
   /**
    * Enables the log in function
    */

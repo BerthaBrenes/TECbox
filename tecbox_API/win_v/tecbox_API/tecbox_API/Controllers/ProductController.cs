@@ -56,8 +56,8 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestProduct);
         }
         
-        // GET api/v1/products/report
-        [HttpGet]
+        // POST api/v1/products/report
+        [HttpPost]
         [Route("api/v1/products/bestseller")]
         public HttpResponseMessage GetBestSellers([FromBody] JObject dates)
         {
@@ -85,7 +85,12 @@ namespace tecbox_API.Controllers
             }
             
             // 4. Then, sort the dictionary by best-selling least-selling value.
-            var bestSellerProducts = products.Values.ToList().OrderByDescending(p => p.Qty);
+            List<SubProduct> bestSellerProducts = products.Values.ToList();
+            bestSellerProducts = bestSellerProducts.OrderByDescending(p => p.Qty).ToList();
+
+            if (bestSellerProducts.Count() >= 25)
+                bestSellerProducts = bestSellerProducts.GetRange(0, 24);
+            
             return Request.CreateResponse(HttpStatusCode.OK, bestSellerProducts);
         }
         

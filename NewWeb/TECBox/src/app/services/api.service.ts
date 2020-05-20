@@ -4,6 +4,7 @@ import { finalize } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { retry, catchError } from 'rxjs/operators';
+
 /**
  * options for the http header
  */
@@ -12,6 +13,7 @@ const httpOptions = {
     'Content-Type': 'application/json'
   })
 };
+
 /**
  * Injectable of the service
  */
@@ -22,6 +24,7 @@ const httpOptions = {
  * Handle the request to the backEnd
  */
 export class ApiService {
+
   /**
    * Url for the request
    */
@@ -286,6 +289,7 @@ export class ApiService {
     console.log(this.userTest);
     //return this.http.post<any>(`${this.url}/api/v1/clients`, cliente);
   }
+
   /**
    *  Function to save the information of the product saved
    * @param finalPrice Final price of the product
@@ -314,6 +318,7 @@ export class ApiService {
       Quantity: quantity
     };
   }
+
   /**
    * add a product
    * @param data data of the component
@@ -367,6 +372,7 @@ export class ApiService {
     console.log('Service Get');
     return this.http.get(`${this.url}/api/v1/packages`);
   }
+
   /**
    * Get worker information
    */
@@ -374,6 +380,7 @@ export class ApiService {
     console.log('Service Get');
     return this.http.get(`${this.url}/api/v1/employees`);
   }
+
   /**
    * get information of the seller
    */
@@ -389,12 +396,14 @@ export class ApiService {
     console.log(this.productSave);
     return this.productSave.json;
   }
+
   /**
    * Get all the product
    */
   getProducts() {
     return this.http.get(`${this.url}/api/v1/products`);
   }
+
   /**
    * Get all the product
    */
