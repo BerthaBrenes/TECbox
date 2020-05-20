@@ -54,7 +54,7 @@ export class OfficeService {
   
   /**
    * Request a client from the server
-   * @param officeId Customer identification (physical or legal)
+   * @param officeId Office identification number
    * @returns The requested Office object.
    */
   getOffice(officeId:string){
@@ -73,7 +73,7 @@ export class OfficeService {
 
   /**
    * It allows to modify the information of a client.
-   * @param officeId Customer identification (physical or legal)
+   * @param officeId Office identification number
    * @param editedOffice The client with the updated information.
    */
   editOfficeData(officeId:string,editedOffice:void){
@@ -83,7 +83,7 @@ export class OfficeService {
 
   /**
    * Delete a customer account from the tecbox.com database.
-   * @param officeId Customer identification (physical or legal)
+   * @param officeId Office identification number
    */
   deleteOffice(officeId:string){
     return this.http.delete<any>(`${this.tecboxUrl}/offices/?officeId=${officeId}`);
