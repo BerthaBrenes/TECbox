@@ -37,7 +37,7 @@ export class WebPage implements OnInit {
   /**
    * user test
    */
-  userTest: string;
+  userTest: any[];
   /**
    * Variable of the object that wil be buy
    */
@@ -73,9 +73,11 @@ export class WebPage implements OnInit {
   /**
    * Enables the log in function
    */
-  enableCliente() {
-    this.ClientUser = true;
-    this.userTest = 'Esteban';
+  enableCliente(dataUser: any) {
+    if (dataUser.answer){
+      this.userTest = dataUser.message;
+      this.ClientUser = true;
+    }
   }
   /**
    * Enables the package function
@@ -99,8 +101,12 @@ export class WebPage implements OnInit {
     const modal = await this.modalController.create({
       component: IngresarComponent,
       componentProps: {
-        src: this.entityService.getClientes()
+        src: this.entityService.getClientes(),
       }
+    });
+    modal.onDidDismiss()
+    .then((data) => {
+      this.enableCliente(data.data.data)
     });
     return await modal.present();
   }

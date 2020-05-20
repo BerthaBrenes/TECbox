@@ -9,35 +9,47 @@
   <ion-list>
     <ion-item>
       <ion-label>Nombre Completo</ion-label>
-      <ion-input placeholder="Mario cars"></ion-input>
+      <ion-input placeholder="Mario cars" [(ngModel)]="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Email</ion-label>
-      <ion-input type="email" placeholder="correo@correo"></ion-input>
+      <ion-input placeholder="correo@correo" [(ngModel)]="email" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Phone</ion-label>
-      <ion-input type="tel" placeholder="88855888"></ion-input>
+      <ion-input placeholder="88855888" [(ngModel)]="phone"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Mobile</ion-label>
-      <ion-input type="tel" placeholder="88855888"></ion-input>
+      <ion-input placeholder="88855888" [(ngModel)]="mobile"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Address</ion-label>
-      <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One">
-        <ion-select-option *ngFor="let user of providences">{{user.title + ' '}}</ion-select-option>
+      <ion-label>Provincia</ion-label>
+      <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Provincia" [(ngModel)]="providenceSelected">
+        <ion-select-option *ngFor="let provincia of providences" >{{provincia.title}}</ion-select-option>
+      </ion-select>
+      <ion-label>Canton</ion-label>
+      <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Cantones" [(ngModel)]="cantonSelected" name="Cantones">
+        <ion-select-option *ngFor="let canton of cantones" >{{canton.title}}</ion-select-option>
+      </ion-select>
+      <ion-label>Distrito</ion-label>
+      <ion-select placeholder="Distritos" [(ngModel)]="districtSelected" name="Distritos">
+        <ion-select-option *ngFor="let distrito of distritos" >{{distrito.title}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
+      <ion-label>Otras señas</ion-label>
+      <ion-input  placeholder="100metros sur"[(ngModel)]="otherSign" ></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label>Username</ion-label>
-      <ion-input  placeholder="mcars"></ion-input>
+      <ion-input  placeholder="mcars"[(ngModel)]="username" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>password</ion-label>
-      <ion-input type="password" placeholder="correoCars88"></ion-input>
+      <ion-input  placeholder="correoCars88" [(ngModel)]="password"></ion-input>
     </ion-item>
   </ion-list>
-  
+  <ion-button  expand="block" (click)="submit()">Registrarme</ion-button>
 </div>
 </ion-content>

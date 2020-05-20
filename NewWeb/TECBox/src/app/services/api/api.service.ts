@@ -168,8 +168,8 @@ export class ApiService {
     }
   },
   {
-  Username: 'estalvgs1999',
-    Password: 'admin',
+    Username: 'estalvgs1999',
+    Password: 'admin1234',
     Name: 'Esteban Alvarado Vargas',
     Id: {
       Type: 'CF',
@@ -184,31 +184,64 @@ export class ApiService {
       District: 'Gravillas',
       Others: 'El Porvenir, Urb Marianela Casa 8F'
     }
+  },
+  {
+    Address: {
+      City: 'Bagaces',
+
+      Department: 'Guanacaste',
+
+      District: 'Mogote',
+
+      Others: '80mtrs sur de soda paquita'
+    },
+
+    City: 'Bagaces',
+
+    Department: 'Guanacaste',
+
+    District: 'Mogote',
+    Others: '80mtrs sur de soda paquita',
+    Email: 'ivafer@gmail.com',
+    Id: {
+      Type: 'CR',
+      Number: '124-345-567'
+    },
+    Mobile: '25350218',
+
+    Name: 'Ivannia Brenes Fernandez',
+
+    Password: '8796',
+
+    Phone: '87011804',
+
+    Username: 'ivabf',
   }
-];
+  ];
   /**
    * Test data
    */
   // tslint:disable-next-line: max-line-length
   TemporalArticuleData: any = [
-    { name: 'Celular',
-    description: 'Memoria para celular 16M',
-    barCode: '7545',
-    seller: 'Juan Barnes',
-    price: 7802,
-    discount: 20,
-    taxes: true,
-    image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
-  }, {
-    name: 'Laptp',
-    description: 'Memoria para celular 16M',
-    barCode: '7545',
-    seller: 'Juan Barnes',
-    price: 18000,
-    discount: 20,
-    taxes: true,
-    image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
-  }];
+    {
+      name: 'Celular',
+      description: 'Memoria para celular 16M',
+      barCode: '7545',
+      seller: 'Juan Barnes',
+      price: 7802,
+      discount: 20,
+      taxes: true,
+      image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
+    }, {
+      name: 'Laptp',
+      description: 'Memoria para celular 16M',
+      barCode: '7545',
+      seller: 'Juan Barnes',
+      price: 18000,
+      discount: 20,
+      taxes: true,
+      image: 'https://res.cloudinary.com/tecbases01bbb/image/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png'
+    }];
   /**
    * Set the http options
    */
@@ -248,8 +281,10 @@ export class ApiService {
    * Look in the database and post
    * @param cliente the client data
    */
-  addCliente(cliente: void) {
-    return this.http.post<any>(`${this.url}/api/v1/clients`, cliente);
+  addCliente(cliente: any) {
+    this.userTest.push(cliente);
+    console.log(this.userTest);
+    //return this.http.post<any>(`${this.url}/api/v1/clients`, cliente);
   }
   /**
    *  Function to save the information of the product saved
@@ -312,6 +347,20 @@ export class ApiService {
     return this.http.get<void[]>(`${this.url}/api/v1/clients`);
   }
   /**
+   * Get the clients
+   */
+  getClienteTemporal(email: string, password: string) {
+    const foundClient = this.userTest.find(user => {
+      return (user.Password === password && user.Email === email);
+    });
+    console.log(foundClient);
+    if (!foundClient){
+        return  {message: 'Email y Contraseña incorrectas', answer: false};
+    }else{
+      return {message: foundClient, answer: true};
+    }
+  }
+  /**
    * Get all the package
    */
   getPackages() {
@@ -356,141 +405,141 @@ export class ApiService {
   /**
    * get the reports data
    */
-  getReport(){
+  getReport() {
     const reports = {
       report1: [
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 1',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 1',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 2',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 2',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 3',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 3',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 4',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 4',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 5',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 5',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 6',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 6',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 7',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 7',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 8',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 8',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 9',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 9',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 10',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 10',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 11',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 11',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 12',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 12',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 13',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 13',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 14',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 14',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 15',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 15',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 16',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 16',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 17',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 17',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 18',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 18',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 19',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 19',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 20',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 20',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 21',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 21',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 22',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 22',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 23',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 23',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 24',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 24',
+          Qty: 100
         },
         {
-            BarCode: 'AAAAA',
-            Name: 'Producto 25',
-            Qty: 100
+          BarCode: 'AAAAA',
+          Name: 'Producto 25',
+          Qty: 100
         }
-    ],
+      ],
       report2: [],
       report3: []
     };
     return reports;
   }
-  getUbicacion(){
+  getUbicacion() {
     return this.http.get(this.json);
   }
 }

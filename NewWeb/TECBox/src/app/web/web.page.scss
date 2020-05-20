@@ -19,11 +19,12 @@ ion-content{
     div{
         &.imageLogIn{
             background-image: url("./../../assets/imgs/Tecbox-registrarse.png");
-            height: 25%;
+            height: 50%;
+            width: 100%;
             border-radius: 12px;
             margin: 40px;
             display: flex;
-            align-items: end;
+            align-items: flex-end;
             ion-button{
                 --border-radius: 9px;
                 --background: white;
@@ -38,7 +39,7 @@ ion-content{
             border-radius: 12px;
             margin: 40px;
             display: flex;
-            align-items: end;
+            align-items: flex-end;
             justify-content: center;
             ion-button{
                 --border-radius: 9px;

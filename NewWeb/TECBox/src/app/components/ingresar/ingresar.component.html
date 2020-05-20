@@ -1,8 +1,25 @@
 <ion-toolbar>
+  <ion-title>Registro</ion-title>
   <ion-buttons slot="end" (click)="dismiss()">
     <ion-icon name="close"></ion-icon>
   </ion-buttons>
 </ion-toolbar>
-<div>
+<ion-content>
+  <div>
+    <form [formGroup]="signInCredentials"> 
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input formControlName="username" type="email" placeholder="  Usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input formControlName="password" type="text" type="password" placeholder="  Contraseña"></ion-input>
+        <p *ngIf='!signInCredentials.controls.password.valid'>Se requiere una contraseña de minimo 8 carateres.</p> 
+      </ion-item>
+    </form>
+    <ion-row style="text-align: center">
+      <ion-button [disabled]="!signInCredentials.valid" size="default" shape="round" (click)="save()">Entrar</ion-button>
+    </ion-row>
+  </div>
   
-</div>
+</ion-content>

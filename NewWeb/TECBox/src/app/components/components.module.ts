@@ -16,6 +16,8 @@ import { TrackingPageComponent } from './tracking-page/tracking-page.component';
 import { RegisterComponent } from './register/register.component';
 import { CarComponent } from './car/car.component';
 import { HelpComponent } from './help/help.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IngresarComponent } from './ingresar/ingresar.component';
 
 
 
@@ -34,12 +36,15 @@ import { HelpComponent } from './help/help.component';
     ClientesComponent,
     TrackingPageComponent,
     RegisterComponent,
+    IngresarComponent,
     CarComponent,
     HelpComponent
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     VendedoresComponent,
@@ -53,6 +58,7 @@ import { HelpComponent } from './help/help.component';
     PaquetesComponent,
     ArticulosComponent,
     ClientesComponent,
+    IngresarComponent,
     TrackingPageComponent
   ]
 })

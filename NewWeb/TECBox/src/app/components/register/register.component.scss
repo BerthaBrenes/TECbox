@@ -7,3 +7,13 @@ ion-toolbar {
         }
     }
 }
+ion-content{
+    ion-list{
+        ion-item{
+            margin: 10px 5px 10px 15px;
+        }
+    }
+    ion-button{
+        --background: #4b08d1;
+    }
+}

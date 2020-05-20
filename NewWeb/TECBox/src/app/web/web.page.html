@@ -16,7 +16,7 @@
       </ion-button>
       <ion-button (click)="MyAccount($event)" *ngIf="ClientUser">
         <ion-icon name="person-circle" ></ion-icon>
-        <span >{{userTest}}</span>
+        <span >{{userTest?.Name}}</span>
       </ion-button>
     </ion-buttons>
     <ion-buttons class="line" slot="end" (click)="openCar($event)">
