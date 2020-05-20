@@ -49,7 +49,7 @@ export class PackageService {
    * @returns List with all the packages of tecbox.com
    */
   getPackagesList(){
-    return this.http.get(`${this.tecboxUrl}/packages`)
+    return this.http.get(`${this.tecboxUrl}/packages`);
   }
 
   

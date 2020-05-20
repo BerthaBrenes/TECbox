@@ -48,7 +48,7 @@ export class EmployeeService {
    * @returns List with all the employees of tecbox.com.
    */
   getEmployeesList(){
-    return this.http.get(`${this.tecboxUrl}/employees`)
+    return this.http.get(`${this.tecboxUrl}/employees`);
   }
 
   

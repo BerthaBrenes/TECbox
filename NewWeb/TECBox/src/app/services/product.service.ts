@@ -48,7 +48,7 @@ export class ProductService {
    * @returns List with all the products of tecbox.com
    */
   getProductsList(){
-    return this.http.get(`${this.tecboxUrl}/products`)
+    return this.http.get(`${this.tecboxUrl}/products`);
   }
 
 

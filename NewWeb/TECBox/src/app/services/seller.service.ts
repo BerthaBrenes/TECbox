@@ -49,7 +49,7 @@ export class SellerService {
    * @returns List with all the sellers of tecbox.com
    */
   getSellersList(){
-    return this.http.get(`${this.tecboxUrl}/sellers`)
+    return this.http.get(`${this.tecboxUrl}/sellers`);
   }
 
   

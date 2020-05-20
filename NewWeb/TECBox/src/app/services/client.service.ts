@@ -49,10 +49,10 @@ export class ClientService {
    * @returns List with all the clients of tecbox.com
    */
   getClientsList(){
-    return this.http.get(`${this.tecboxUrl}/clients`)
+    return this.http.get(`${this.tecboxUrl}/clients`);
   }
 
-  
+
   /**
    * Request a client from the server
    * @param clientId Customer identification (physical or legal)

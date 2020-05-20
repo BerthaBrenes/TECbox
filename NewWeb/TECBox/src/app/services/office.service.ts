@@ -48,7 +48,7 @@ export class OfficeService {
    * @returns List with all the offices of tecbox.com
    */
   getOfficesList(){
-    return this.http.get(`${this.tecboxUrl}/offices`)
+    return this.http.get(`${this.tecboxUrl}/offices`);
   }
 
   
