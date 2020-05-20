@@ -61,12 +61,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/clients/login
-        [HttpGet]
+        // POST api/v1/clients/login
+        [HttpPost]
         [Route("api/v1/clients/login")]
         public HttpResponseMessage LogIn([FromBody] Client data)
         {
-            Client thisClient = clientList.Find(client => client.VerifyUser(data.Username,data.Password));
+            Client thisClient = clientList.Find(client => client.VerifyUser(data.Email,data.Password));
             if (thisClient == null)
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.AccessDeniedMessage);
 

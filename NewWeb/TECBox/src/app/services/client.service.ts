@@ -98,8 +98,8 @@ export class ClientService {
    * @param password client password
    */
   loginClient(username:string,password:string){
-    const clientData = { "Username": username, "Password":password};
-    return this.http.post<any>(`${this.tecboxUrl}/clients/login`,clientData,this.httpOptions);
+    const clientData = { "Email": username, "Password":password};
+    return this.http.post<any>(`${this.tecboxUrl}/clients/login`,clientData);
   }
 
 

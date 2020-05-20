@@ -1,7 +1,7 @@
 [
   {
     "Username": "billgates@tecbox.com",
-    "Password": "admin",
+    "Password": "administrador",
     "Name": "Bill Gates",
     "Id": {
       "Type": "CF",
@@ -27,7 +27,7 @@
   },
   {
     "Username": "ldnoguera@tecbox.com",
-    "Password": "yuyo",
+    "Password": "yuyo1234",
     "Name": "Luis Diego Noguera",
     "Id": {
       "Type": "CF",
@@ -79,7 +79,7 @@
   },
   {
     "Username": "david@tecbox.com",
-    "Password": "pass123",
+    "Password": "pass12345",
     "Name": "David Alvarado Vargas",
     "Id": {
       "Type": "CF",
