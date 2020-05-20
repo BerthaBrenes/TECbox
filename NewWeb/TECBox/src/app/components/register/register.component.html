@@ -24,6 +24,14 @@
       <ion-input placeholder="88855888" [(ngModel)]="mobile"></ion-input>
     </ion-item>
     <ion-item>
+      <ion-label>Identificador</ion-label>
+        <ion-select placeholder="Tipo de cedula" [(ngModel)]="typeOfId">
+          <ion-select-option value="juridica">Juridical</ion-select-option>
+          <ion-select-option value="fisica">Física</ion-select-option>
+        </ion-select>
+      <ion-input placeholder="505550555" [(ngModel)]="id"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label>Provincia</ion-label>
       <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Provincia" [(ngModel)]="providenceSelected">
         <ion-select-option *ngFor="let provincia of providences" >{{provincia.title}}</ion-select-option>

@@ -8,11 +8,11 @@
   <div>
     <form [formGroup]="signInCredentials"> 
       <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input formControlName="username" type="email" placeholder="  Usuario"></ion-input>
+        <ion-label>Correo</ion-label>
+        <ion-input formControlName="username" type="email" placeholder=" correo@correo.com"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Password</ion-label>
+        <ion-label>Contraseña</ion-label>
         <ion-input formControlName="password" type="text" type="password" placeholder="  Contraseña"></ion-input>
         <p *ngIf='!signInCredentials.controls.password.valid'>Se requiere una contraseña de minimo 8 carateres.</p> 
       </ion-item>

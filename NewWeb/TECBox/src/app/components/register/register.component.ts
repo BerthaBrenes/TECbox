@@ -22,6 +22,8 @@ export class RegisterComponent implements OnInit {
   username: string;
   password: any;
   otherSign: string;
+  typeOfId: string;
+  id: string;
   constructor(
     public modalCtrl: ModalController,
     private entityService: ApiService) {

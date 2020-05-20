@@ -58,6 +58,7 @@ import { IngresarComponent } from './ingresar/ingresar.component';
     PaquetesComponent,
     ArticulosComponent,
     ClientesComponent,
+    CarComponent,
     IngresarComponent,
     TrackingPageComponent
   ]

@@ -43,7 +43,7 @@ export class WebPage implements OnInit {
   /**
    * Variable of the object that wil be buy
    */
-  inputCar: any;
+  inputCar: any[];
   /**
    * Test data
    */
@@ -74,7 +74,6 @@ export class WebPage implements OnInit {
    */
   ngOnInit() {
   }
-  
   /**
    * Enables the log in function
    */
@@ -130,7 +129,7 @@ export class WebPage implements OnInit {
    */
   dataProduct(ev: any){
     console.log(ev);
-    this.inputCar = ev;
+    this.inputCar.push(ev);
   }
   /**
    * function to open the help modal

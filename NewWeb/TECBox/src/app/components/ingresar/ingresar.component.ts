@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, MaxLengthValidator } from '@angular/forms';
 import { ModalController, ToastController } from '@ionic/angular';
-import { ApiService } from 'src/app/services/api/api.service';
+import { ApiService } from 'src/app/services/api.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -85,10 +85,10 @@ export class IngresarComponent implements OnInit {
   /**
    * dismiss the modal
    */
-  dismiss(dataT: any) {
+  dismiss(data: any) {
     this.modalCtrl.dismiss({
       dismissed: true,
-      data: dataT
+      data: data
     });
   }
   /**
