@@ -9,9 +9,9 @@
     <ion-input #ID placeholder="Ingrese el Id del paquete"></ion-input>
     <ion-button shape="round" (click)="buscar(ID.value)">Buscar</ion-button>
 </ion-item>
-<ion-item *ngIf="enablePaquete" >
+<div *ngIf="enablePaquete" >
   <app-table [type]="id" [src]="dataPaquete"></app-table>
-</ion-item>
+</div>
 
 </ion-content>
 

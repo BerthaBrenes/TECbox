@@ -14,11 +14,14 @@
       <ion-row class="title">
        <ion-col size="5">Producto</ion-col>   
        <ion-col size="3">Precio</ion-col>   
-       <ion-col size="2">Cantidad</ion-col> 
-       <ion-col size="2"> </ion-col>  
+       <ion-col size="2">Cantidad</ion-col>  
       </ion-row>
+      <ion-row *ngFor="let item of data">
+        <ion-col size="5">{{item.product.Name}}</ion-col>   
+        <ion-col size="3">{{item.price}}</ion-col>   
+        <ion-col size="2">{{item.quantity}}</ion-col>  
+       </ion-row>
     </ion-grid>
-    <ion-icon name="close-circle"></ion-icon>
   </div>
-  
+  <ion-button (click)="comprar()">Comprar</ion-button>
 </ion-content>

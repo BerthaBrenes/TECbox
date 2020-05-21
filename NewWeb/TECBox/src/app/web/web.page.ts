@@ -46,6 +46,10 @@ export class WebPage implements OnInit {
    */
   inputCar: any[] = [];
   /**
+   * compras
+   */
+  comprasPackage: any;
+  /**
    * Test data
    */
   // tslint:disable-next-line: max-line-length
@@ -141,7 +145,7 @@ export class WebPage implements OnInit {
    * @param ev event data
    */
   dataProduct(ev: any){
-    console.log(ev);
+    console.log('update product',ev);
     this.inputCar.push(ev);
   }
   /**
@@ -164,6 +168,11 @@ export class WebPage implements OnInit {
       componentProps: {
         products: this.inputCar
       }
+    });
+    modal.onDidDismiss()
+    .then((data) => {
+      data = this.comprasPackage;
+      console.log(data)
     });
     return await modal.present();
   }
