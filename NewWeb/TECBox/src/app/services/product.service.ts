@@ -90,7 +90,7 @@ export class ProductService {
    * @param product Object with the data of the new customer.
    */
   addNewProduct(product:any){
-    return this.http.post<any>(`${this.tecboxUrl}/products`,product);
+    return this.http.post<any>(`${this.tecboxUrl}/products`,product,this.httpOptions);
   }
 
 

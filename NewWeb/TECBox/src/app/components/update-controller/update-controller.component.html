@@ -1,0 +1,14 @@
+<ion-toolbar>
+  <ion-title>Editar datos</ion-title>
+  <ion-buttons slot="end" (click)="dismiss()">
+    <ion-icon name="close"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+<p>
+  update-controller works!
+</p>
+<ion-select>
+  <ion-select-option *ngFor="let select of selectData">{{select}}</ion-select-option>
+</ion-select>
+

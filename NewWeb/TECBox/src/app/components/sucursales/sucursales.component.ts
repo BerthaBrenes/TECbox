@@ -29,7 +29,7 @@ export class SucursalesComponent implements OnInit {
    */
   @Input() set src(val: any) {
     this.data = val;
-    console.log('data', this.data);
+    console.log('data sucursal comoponet', this.data);
   }
   /**
    * This method is the constructor of the component.

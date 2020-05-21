@@ -23,8 +23,8 @@ namespace tecbox_API.Models
         public Seller Seller { get; set; }
         public int OnStock { get; set; }
         public int Price { get; set; }
-        public bool Taxes { get; set; }
-        public bool Discount { get; set; }
+        public int Taxes { get; set; }
+        public int Discount { get; set; }
         public string ImageUrl { get; set; }
 
     }

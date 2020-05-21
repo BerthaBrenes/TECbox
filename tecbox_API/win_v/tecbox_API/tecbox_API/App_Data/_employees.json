@@ -52,32 +52,6 @@
     "SalaryMonth": 7000000.0
   },
   {
-    "Username": "cookieMonster@tecbox.com",
-    "Password": "cookie",
-    "Name": "Juan Roberto Díaz Perez",
-    "Id": {
-      "Type": "CF",
-      "Number": "100-789-142"
-    },
-    "Role": "Repartidor",
-    "BranchOffice": {
-      "Id": 0,
-      "Name": "TECbox Tres Ríos",
-      "Admin": "Bill Gates",
-      "Phone": "2222-2222",
-      "Address": {
-        "Department": "Cartago",
-        "City": "La Unión",
-        "District": "Tres Ríos",
-        "Others": "500 mts Oeste de la municipalidad"
-      }
-    },
-    "BirthDate": "15/11/1996",
-    "StartDate": "02/01/2018",
-    "SalaryHour": 18000.0,
-    "SalaryMonth": 2520000.0
-  },
-  {
     "Username": "david@tecbox.com",
     "Password": "pass12345",
     "Name": "David Alvarado Vargas",
@@ -128,5 +102,26 @@
     "StartDate": "2015-05-22",
     "SalaryHour": 100000.0,
     "SalaryMonth": 14000000.0
+  },
+  {
+    "Username": "berthabb@tecbox.com",
+    "Password": "pejibaye",
+    "Name": "Bertha Brenes Brenes",
+    "Id": {
+      "Type": "CF",
+      "Number": "132-564-879"
+    },
+    "Role": "Bodeguero",
+    "BranchOffice": {
+      "Id": 0,
+      "Name": "TECbox Tres Ríos",
+      "Admin": null,
+      "Phone": null,
+      "Address": null
+    },
+    "BirthDate": "1996-11-14",
+    "StartDate": "2020-02-14",
+    "SalaryHour": 3500.0,
+    "SalaryMonth": 490000.0
   }
 ]

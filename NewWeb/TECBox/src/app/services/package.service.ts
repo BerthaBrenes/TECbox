@@ -67,7 +67,7 @@ export class PackageService {
    * Returns packages that belong to a route and are in the "Ready for Delivery" status.
    * @param routeId 
    */
-  getPackageByRoute(routeId:string){
+  getPackageByRoute(routeId:number){
     return this.http.get(`${this.tecboxUrl}/packages/report/?routeId=${routeId}`);
   }
 

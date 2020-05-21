@@ -1,7 +1,11 @@
+import { RouteService } from './../services/route.service';
 import { Component, OnInit } from '@angular/core';
 import * as jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { ApiService } from '../services/api.service';
+import { PackageService } from './../services/package.service'
+import { ProductService } from '../services/product.service';
+import { HttpErrorResponse } from '@angular/common/http';
 /**
  * Component
  */
@@ -10,10 +14,15 @@ import { ApiService } from '../services/api.service';
   templateUrl: './report.page.html',
   styleUrls: ['./report.page.scss'],
 })
+
 /**
  * Page handles the report page
  */
 export class ReportPage implements OnInit {
+
+
+  routes:any;
+
   /**
    * Data of the component
    */
@@ -21,36 +30,58 @@ export class ReportPage implements OnInit {
   /**
    * Report one for the best seller
    */
-  reporte1: Array<any>;
+  reporte1:any;
+
+  startDateR1:any;
+  endDateR1:any;
+
   /**
    * Report for the ready to send
    */
-  reporte2: Array<any>;
+  reporte2:any;
+  rutaSeleccionada = 0; // Selected route Id
+
+
   /**
    * Report for the product in home
    */
-  reporte3: Array<any>;
+  startDateR3:any;
+  endDateR3:any;
+  reporte3 = [];
+
+
   /**
    * First Function to call in the page
    * @param instanceApi Controller for the api service
    */
   constructor(
-    private instanceApi: ApiService
-  ) {
-    const reports = this.instanceApi.getReport();
-    this.reporte1 = reports?.report1;
-    this.reporte2 = reports?.report2;
-    this.reporte3 = reports?.report3;
+    private instanceApi: ApiService,
+    private PackageServiceInstace : PackageService,
+    private ProductServiceInstance : ProductService,
+    private RouteServiceInstance : RouteService
+  ){
+
+    this.RouteServiceInstance.getRoutesList()
+    .subscribe(
+      data => {
+        this.routes = data;
+      });
+
   }
+
+
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
   ngOnInit() {
   }
+
+  
   /**
    * Generate the first report
    */
   generarReporte1(){
+
     const pdf = new jsPDF();
     pdf.setFontStyle('times');
     pdf.setFontSize(30);
@@ -64,13 +95,15 @@ export class ReportPage implements OnInit {
         console.log(this.reporte1[x]);
         const temp = [];
         temp.push(this.reporte1[x]['BarCode']);
-        temp.push(this.reporte1[x]['Name']);
+        temp.push(this.reporte1[x]['ProductName']);
         temp.push(this.reporte1[x]['Qty']);
         data.push(temp);
     }
     pdf.autoTable(columns, data, { margin: { top: 50 }, theme : 'grid'});
     pdf.save('Productos más vendidos.pdf');
     }
+
+
     /**
      * Generate second report
      */
@@ -97,12 +130,15 @@ export class ReportPage implements OnInit {
           data.push(temp);
       }
       pdf.autoTable(columns, data, { margin: { top: 100 }, theme : 'grid'});
-      pdf.save('Productos Entregados.pdf');
+      pdf.save('Listos para entrega.pdf');
     }
+
+
     /**
      * Generate third report
      */
     generarReporte3(){
+
       const pdf = new jsPDF();
       pdf.setFontStyle('times');
       pdf.setFontSize(30);
@@ -112,7 +148,7 @@ export class ReportPage implements OnInit {
       const columns = ['Repartidor', 'TrackingId', 'Cliente', 'Descripción', 'IdRuta', 'IdRepartidor', 'Estado', 'Fecha de Entrega'];
       for (let x = 0; x <= this.reporte3.length; x++){
         const temp2 = [];
-        console.log(this.reporte3[0]['1']);
+        console.log('aaa',this.reporte3[0]['1']);
         temp2.push(this.reporte3[0]['' + x][0]['DeliveryMan']);
         data.push(temp2);
         // tslint:disable-next-line: prefer-for-of
@@ -131,5 +167,62 @@ export class ReportPage implements OnInit {
       }
       pdf.autoTable(columns, data, { margin: { top: 50 }, theme : 'grid'});
       pdf.save('Productos Entregados.pdf');
+
+      // Reiniciar la variable
+      this.reporte3 = [];
+    }
+
+
+    /**
+     * 
+     */
+    getReporte1(){
+      this.ProductServiceInstance.getBestSellers(this.startDateR1,this.endDateR1)
+      .subscribe(
+        datos => {
+          this.reporte1 = datos;
+          this.generarReporte1();
+        },
+        (error: HttpErrorResponse) => {
+          this.ProductServiceInstance.getBestSellerEmergency()
+          .subscribe(
+            datos => {
+              this.reporte1 = datos;
+              this.generarReporte1();
+            }
+          );
+        });
+
+    }
+
+
+    /**
+     * 
+     */
+    getReporte2(){
+      console.log(this.rutaSeleccionada);
+      this.PackageServiceInstace.getPackageByRoute(this.rutaSeleccionada)
+      .subscribe(
+        datos => {
+          this.reporte2 = datos;
+          this.generarReporte2();
+        }
+      );
+      
+    }
+
+
+    /**
+     * 
+     */
+    getReporte3(){
+      
+      this.PackageServiceInstace.getDeliveredPackages(this.startDateR3,this.endDateR3).subscribe(
+        datos => {
+          this.reporte3.push(datos);
+          this.generarReporte3();
+        });
+
+
     }
 }

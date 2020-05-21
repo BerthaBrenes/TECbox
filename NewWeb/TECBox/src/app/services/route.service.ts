@@ -57,7 +57,7 @@ export class RouteService {
    * @param routeId route identification number.
    * @returns The requested Route object.
    */
-  getRoute(routeId:string){
+  getRoute(routeId:any){
     return this.http.get(`${this.tecboxUrl}/routes/?routeId=${routeId}`);
   }
   
@@ -76,7 +76,7 @@ export class RouteService {
    * @param routeId route identification number.
    * @param editedRoute The route with the updated information.
    */
-  editRouteData(routeId:number,editedRoute:void){
+  editRouteData(routeId:any,editedRoute:void){
     return this.http.put<any>(`${this.tecboxUrl}/routes/?routeId=${routeId}`,editedRoute);
   }
 
@@ -95,7 +95,7 @@ export class RouteService {
    * Delete a customer account from the tecbox.com database.
    * @param routeId route identification number.
    */
-  deleteRouteAccount(routeId:string){
+  deleteRouteAccount(routeId:any){
     return this.http.delete<any>(`${this.tecboxUrl}/routes/?routeId=${routeId}`);
   }
 

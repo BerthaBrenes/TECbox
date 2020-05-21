@@ -57,7 +57,7 @@ export class OfficeService {
    * @param officeId Office identification number
    * @returns The requested Office object.
    */
-  getOffice(officeId:string){
+  getOffice(officeId:any){
     return this.http.get(`${this.tecboxUrl}/offices/?officeId=${officeId}`);
   }
   
@@ -67,7 +67,7 @@ export class OfficeService {
    * @param office Object with the data of the new customer
    */
   addNewOffice(office:any){
-    return this.http.post<any>(`${this.tecboxUrl}/offices`,office);
+    return this.http.post<any>(`${this.tecboxUrl}/offices`,office,this.httpOptions);
   }
 
 
@@ -76,7 +76,7 @@ export class OfficeService {
    * @param officeId Office identification number
    * @param editedOffice The client with the updated information.
    */
-  editOfficeData(officeId:string,editedOffice:void){
+  editOfficeData(officeId:any,editedOffice:void){
     return this.http.put<any>(`${this.tecboxUrl}/offices/?officeId=${officeId}`,editedOffice);
   }
 
@@ -85,7 +85,7 @@ export class OfficeService {
    * Delete a customer account from the tecbox.com database.
    * @param officeId Office identification number
    */
-  deleteOffice(officeId:string){
+  deleteOffice(officeId:any){
     return this.http.delete<any>(`${this.tecboxUrl}/offices/?officeId=${officeId}`);
   }
   

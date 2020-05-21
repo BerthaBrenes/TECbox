@@ -81,8 +81,8 @@ export class RegisterComponent implements OnInit {
       Password: this.password,
       Name: this.name,
       Id: {
-        Type: 'CR',
-        Number: '124-345-567'
+        Type: this.typeOfId,
+        Number: this.id
       },
       Email: this.email,
       Phone: this.phone,

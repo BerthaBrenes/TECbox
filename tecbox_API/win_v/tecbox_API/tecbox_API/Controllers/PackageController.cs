@@ -65,7 +65,7 @@ namespace tecbox_API.Controllers
         }
         
         // GET api/v1/packages/report
-        [System.Web.Http.HttpGet]
+        [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/v1/packages/report")]
         public HttpResponseMessage GetDeliveredPackages([FromBody] JObject dates)
         {

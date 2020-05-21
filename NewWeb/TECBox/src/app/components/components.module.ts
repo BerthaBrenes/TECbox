@@ -18,6 +18,7 @@ import { CarComponent } from './car/car.component';
 import { HelpComponent } from './help/help.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IngresarComponent } from './ingresar/ingresar.component';
+import { UpdateControllerComponent } from './update-controller/update-controller.component';
 
 
 
@@ -38,7 +39,8 @@ import { IngresarComponent } from './ingresar/ingresar.component';
     RegisterComponent,
     IngresarComponent,
     CarComponent,
-    HelpComponent
+    HelpComponent,
+    UpdateControllerComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +62,8 @@ import { IngresarComponent } from './ingresar/ingresar.component';
     ClientesComponent,
     CarComponent,
     IngresarComponent,
-    TrackingPageComponent
+    TrackingPageComponent,
+    UpdateControllerComponent
   ]
 })
 export class ComponentsModule { }

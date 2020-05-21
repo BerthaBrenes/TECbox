@@ -1,13 +1,13 @@
 [
   {
     "Id": 0,
-    "Name": "TECbox Tres R�os",
+    "Name": "TECbox Tres Ríos",
     "Admin": "Bill Gates",
     "Phone": "2222-2222",
     "Address": {
       "Department": "Cartago",
-      "City": "La Uni�n",
-      "District": "Tres R�os",
+      "City": "La Unión",
+      "District": "Tres Ríos",
       "Others": "500 mts Oeste de la municipalidad"
     }
   },
@@ -33,6 +33,18 @@
       "City": "Heredia",
       "District": "Heredia",
       "Others": "Global Park, Mall Real Cariari, 600m Este"
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "TECbox Porvenir",
+    "Admin": "Michael Jordan",
+    "Phone": "(+506) 2255-5522",
+    "Address": {
+      "Department": "San José",
+      "City": "Desamparados",
+      "District": "Desamparados",
+      "Others": "Edificio Sardimar, 3er Piso."
     }
   }
 ]

@@ -12,8 +12,8 @@
     },
     "OnStock": 50,
     "Price": 80,
-    "Taxes": true,
-    "Discount": true,
+    "Taxes": 0,
+    "Discount": 30,
     "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_3_mwd9bm.png"
   },
   {
@@ -29,8 +29,8 @@
     },
     "OnStock": 150,
     "Price": 20,
-    "Taxes": false,
-    "Discount": true,
+    "Taxes": 0,
+    "Discount": 30,
     "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593723/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_2_gwbmkf.png"
   },
   {
@@ -46,8 +46,8 @@
     },
     "OnStock": 20,
     "Price": 200,
-    "Taxes": true,
-    "Discount": false,
+    "Taxes": 0,
+    "Discount": 12,
     "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
@@ -63,8 +63,8 @@
     },
     "OnStock": 200,
     "Price": 32,
-    "Taxes": true,
-    "Discount": false,
+    "Taxes": 0,
+    "Discount": 12,
     "ImageUrl": "https://res.cloudinary.com/tecbases01bbb/ImageUrl/upload/v1584593724/Screenshot_2020-03-18_International_Shopping_Shop_Computers_that_Ship_Internationally_8_sbfegj.png"
   },
   {
@@ -80,9 +80,23 @@
     },
     "OnStock": 15,
     "Price": 35,
-    "Taxes": false,
-    "Discount": false,
+    "Taxes": 0,
+    "Discount": 12,
     "ImageUrl": "https://www.raspberrypi.org/homepage-9df4b/static/0ac033e17962a041a898d92057e60def/052d8/67d8fcc5b2796665a45f61a2e8a5bb7f10cdd3f5_raspberry-pi-3-1-1619x1080.jpg"
+  },
+  {
+    "Name": "Cable cargador Apple, USB Retráctil",
+    "BarCode": "CUA-1425",
+    "Description": "Cable de conexión retráctil AmazonBasics de nylon trenzado. Certificado por Apple, conector luz a USB A, 3 ft, plata, 6 patas, Gris oscuro",
+    "Seller": {
+      "Name": "Amazon",
+      "Id": null
+    },
+    "OnStock": 0,
+    "Price": 14,
+    "Taxes": 7,
+    "Discount": 5,
+    "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/71p11135VSL._AC_SL1500_.jpg"
   },
   {
     "Name": "Arduino UNO R3",
@@ -97,8 +111,8 @@
     },
     "OnStock": 60,
     "Price": 32,
-    "Taxes": true,
-    "Discount": false,
+    "Taxes": 0,
+    "Discount": 12,
     "ImageUrl": "https://microjpm.com/_files/system_preview_200002425-9a8359b7c5/A0066-Arduino-Uno-TH-2tri.jpg"
   }
 ]

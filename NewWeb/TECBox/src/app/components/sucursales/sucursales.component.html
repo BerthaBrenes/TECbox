@@ -4,6 +4,6 @@
       <ion-button (click)="clickEnter()" color="primary">Añadir Sucursal</ion-button>
   </div>
   <app-add-data [type] = 'id' *ngIf='enterEnable'></app-add-data>
-  <app-table [type]="id"></app-table>
+  <app-table [type]="id" [src]="data"></app-table>
 </div>
 
