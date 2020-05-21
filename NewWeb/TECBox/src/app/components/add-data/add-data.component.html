@@ -280,3 +280,66 @@
       </ion-row>
   </ion-grid>
 </div>
+
+<!-- FORM Paquete -->
+<div *ngIf='idEntity == "paquetes"'>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-label>TrackId:</ion-label>
+              <ion-item>
+                  <ion-input #TI type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-label>Client:</ion-label>
+            <ion-item>
+                <ion-input #C type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-label>Descrición:</ion-label>
+            <ion-item>
+                <ion-input #D type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-label>IdRuta:</ion-label>
+            <ion-item>
+                <ion-input #IR type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-label>Repartidor:</ion-label>
+                <ion-item>
+                    <ion-input #R type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Repartidor Id:</ion-label>
+                <ion-item>
+                    <ion-input #RI type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Estado:</ion-label>
+                <ion-item>
+                    <ion-input #E type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Fecha Entrega:</ion-label>
+                <ion-item>
+                    <ion-input #FE type=date></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-button  (click)="guardarPaquete(TI.value, C.value, D.value, IR.value, R.value, RI.value, E.value, FE.value)" color="primary">Guardar</ion-button>
+            </ion-col>  
+        </ion-row>
+    </ion-grid>
+  </div>
+  
+  

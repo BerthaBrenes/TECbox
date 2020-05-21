@@ -121,6 +121,61 @@
       </ion-col>
     </ion-row>
 </ion-grid>
+<ion-grid *ngIf='id == "paquetes"'>
+  <ion-row >
+      <ion-col  class="header" size=1.5>
+        Track Id
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Cliente
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Descripcion
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Id ruta
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Repartidor
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Status
+      </ion-col>
+      <ion-col class="header" size=1>
+        Fecha entrega
+      </ion-col>
+      <ion-col class="header" size=1>
+        Acciones
+      </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+      <ion-col size=1.5>
+        {{item.TrackId}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Client}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Description}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.RouteId}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.DeliveryMan}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Status}}
+      </ion-col>
+      <ion-col size=1>
+        {{item.DeliveryDate}}
+      </ion-col>
+      <ion-col class="accion" size=1>
+        <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
+        <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-grid>
 <ion-grid *ngIf='id == "vendedores"'>
   <ion-row >
       <ion-col  class="header" size=3>
@@ -207,7 +262,7 @@
     </ion-col>
     </ion-row>
 </ion-grid>
-<ion-grid *ngIf='id == "rutas" || id == "paquetes"'>
+<ion-grid *ngIf='id == "rutas"'>
   <ion-row >
     <ion-col  class="header" size=4>
       Nombre

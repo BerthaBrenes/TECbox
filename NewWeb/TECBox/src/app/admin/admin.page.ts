@@ -285,7 +285,8 @@ export class AdminPage implements OnInit {
    * @param name name of the component
    */
   async openComponent(name: string) {
-    if (name === 'Productos' ) { //&& !this.openProductTable 
+    
+    if (name === 'Productos' && !this.openProductTable ) { 
       // tslint:disable-next-line: no-shadowed-variable
       const { ProductosComponent } = await import('./../components/productos/productos.component');
       const questionFactory = this.cfr.resolveComponentFactory(ProductosComponent);

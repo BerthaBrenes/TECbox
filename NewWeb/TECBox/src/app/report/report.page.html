@@ -18,7 +18,7 @@
           <img class="best" src="assets/imgs/bestReport.png">
           <ion-row>
             <ion-col>
-              <ion-label>Fecha Inicial</ion-label>
+              <ion-label>Fecha Inicio</ion-label>
               <ion-item>
                 <ion-input #FI type=date [(ngModel)]="startDateR1"></ion-input>
               </ion-item>
@@ -44,38 +44,43 @@
               <ion-label>Rutas</ion-label>
               <ion-item>
                 <ion-select #S placeholder="Select One">
-                  <ion-select-option *ngFor="let s of routes" value={{s.Id}} [(ngModel)]="rutaSeleccionada">{{s.Id}}
+                  <ion-select-option *ngFor="let s of routes" value={{s?.Id}}>{{s?.Name}}
                   </ion-select-option>
                 </ion-select>
               </ion-item>
             </ion-col>
           </ion-row>
-          <ion-button class="ready" (click)='getReporte2()'>Ver Reporte</ion-button>
+          <ion-button class="ready" (click)='getReporte2(S.value)'>Ver Reporte</ion-button>
         </div>
       </ion-col>
 
 
       <ion-col size="4">
-        <div>
-          <ion-label>Paquetes entregados</ion-label>
-          <img src="assets/imgs/deliveredReport.png">
-          <ion-row>
-            <ion-col>
-              <ion-label>Fecha Inicial</ion-label>
-              <ion-item>
-                <ion-input #FI type=date [(ngModel)]="startDateR3"></ion-input>
-              </ion-item>
-            </ion-col>
-            <ion-col>
-              <ion-label>Fecha Final</ion-label>
-              <ion-item>
-                <ion-input #FF type=date [(ngModel)]="endDateR3"></ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-button (click)='getReporte3()'>Ver Reporte</ion-button>
-        </div>
+        
+          <div >
+            <img src="assets/imgs/deliveredReport.png">
+
+            <ion-label>Paquetes entregados</ion-label>
+            <ion-row>
+              <ion-col>
+                <ion-label>Fecha Inicio</ion-label>
+                <ion-item>
+                  <ion-input #FI type=date [(ngModel)]="startDateR3"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-label>Fecha Final</ion-label>
+                <ion-item>
+                  <ion-input #FF type=date [(ngModel)]="endDateR3"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-button (click)='getReporte3()'>Ver Reporte</ion-button>
+
+          </div>
+      
       </ion-col>
+
     </ion-row>
   </ion-grid>
 </ion-content>

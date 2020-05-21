@@ -5,10 +5,19 @@
   </ion-buttons>
 </ion-toolbar>
 <ion-content>
-<p>
-  update-controller works!
-</p>
-<ion-select>
-  <ion-select-option *ngFor="let select of selectData">{{select}}</ion-select-option>
-</ion-select>
+  <ion-grid>
+    <ion-row *ngFor="let select of selectData">
+      <ion-col>
+        {{select.title}}
+      </ion-col>
+      <ion-col>
+        <ion-input #Input placeholder="Enter Input" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="updateData(Input.value, select.value)">Agregar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="full" (click)="save($event)">Agregar</ion-button>
 
+</ion-content>

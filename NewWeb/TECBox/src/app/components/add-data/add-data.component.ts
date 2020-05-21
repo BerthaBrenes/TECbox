@@ -320,8 +320,26 @@ export class AddDataComponent implements OnInit {
   /**
    * Save a package
    */
-  guardarPaquete(TrackingID: any, Cliente: any, FechaLlegada: any, DescripciónValue: any) {
-    console.log(TrackingID);
+  guardarPaquete(TrackID:any, Cliente:any, Descripcion:any, IdRuta:any, Repartidor:any, RepartidorID:any, Estado:any, FechaEntrega:any){
+    const paquete = { 
+      "TrackId": TrackID, 
+      "Client": Cliente, 
+      "Description": Descripcion, 
+      "RouteId": IdRuta, 
+      "DeliveryMan": Repartidor, 
+      "DmId": RepartidorID, 
+      "Status": Estado, 
+      "DeliveryDate": FechaEntrega
+    };
+    this.packageService.addNewPackage(paquete).subscribe(
+      data =>{
+         console.log(data);
+         this.presentToast(`El paquete se ha añadido con éxito`,'success');
+      },
+      (error: HttpErrorResponse) => {
+        this.presentToast('¡El paquete no se ha agregado a la base de datos, ya existe o tiene información incompleta', 'danger');
+      }
+    );
   }
 
   async presentToast(messageR: string, colorR: string) {

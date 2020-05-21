@@ -1,3 +1,4 @@
+import { ProductService } from './../services/product.service';
 import { ClientService } from 'src/app/services/client.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
@@ -56,9 +57,16 @@ export class WebPage implements OnInit {
   constructor(
     private entityService: ApiService,
     private clientService: ClientService,
+    private productService: ProductService,
     public modalController: ModalController
   ) {
-    this.inputArticle = this.entityService.getProductsTemporal();
+  
+    this.productService.getProductsList()
+    .subscribe(
+      data =>{
+        this.inputArticle = data;
+      }
+    );
   //   this.entityService.getProducts().subscribe(data => {
   //     this.inputArticle = data;
   //     console.log('Products', data);
@@ -69,6 +77,7 @@ export class WebPage implements OnInit {
   //   });
 
   }
+
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
@@ -83,6 +92,7 @@ export class WebPage implements OnInit {
       this.ClientUser = true;
     }
   }
+  
   /**
    * Enables the package function
    */

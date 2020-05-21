@@ -19,12 +19,30 @@ import { ModalController } from '@ionic/angular';
  * Component for update data
  */
 export class UpdateControllerComponent implements OnInit {
+  /**
+   * Data selected
+   */
   selectData: any[] = [];
+  /**
+   * id passed
+   */
+  idPlace: any;
+  /**
+   * data selected
+   */
+  dataToUpdate: any[] = [];
   /**
    * Input with the data
    */
   @Input() set data(value: any[]){
     this.selectData = value;
+    console.log('editables inputs', this.selectData);
+  };
+  /**
+   * Input of the id 
+   */
+  @Input() set place(value: any){
+    this.idPlace = value;
     console.log('editables inputs', this.selectData);
   };
   /**
@@ -39,7 +57,9 @@ export class UpdateControllerComponent implements OnInit {
     private packageService: PackageService,
     private clientService: ClientService,
     public modalController: ModalController
-  ) { }
+  ) {
+
+   }
 
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
@@ -55,4 +75,17 @@ export class UpdateControllerComponent implements OnInit {
       'dismissed': true
     });
   }
+
+  updateData(data: string, controlador){
+    console.log(data, controlador)
+    var jsonData = {};
+    jsonData[controlador] = data;
+    this.dataToUpdate.push(jsonData);
+    console.log(jsonData);
+  }
+  save(event){
+
+    console.log( this.dataToUpdate);
+  }
+
 }

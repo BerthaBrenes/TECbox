@@ -109,6 +109,7 @@ export class TableComponent implements OnInit {
         title: 'Otras Señas',
         value: 'Address.Others'
       }]
+      this.presentModal(dataUpdate);
       
     } else if (this.id === 'trabajadores') {
       console.log('trabajadores');
@@ -122,6 +123,7 @@ export class TableComponent implements OnInit {
         title: 'Salario /hora',
         value: 'Salary.Hour'
       }]
+      this.presentModal(dataUpdate);
 
     } else if (this.id === 'vendedores') {
       console.log('vendedores');
@@ -135,6 +137,7 @@ export class TableComponent implements OnInit {
         title: 'Numero de cedula',
         value: 'Id.Number'
       }]
+      this.presentModal(dataUpdate);
 
     } else if (this.id === 'producto') {
       console.log('producto');
@@ -160,6 +163,7 @@ export class TableComponent implements OnInit {
         title: 'Impuesto',
         value: 'Taxes'
       }]
+      this.presentModal(dataUpdate);
 
     } else if (this.id === 'rutas') {
       console.log('rutas');
@@ -167,24 +171,39 @@ export class TableComponent implements OnInit {
         title: 'Distrito',
         value: 'Districts'
       }]
+      this.presentModal(dataUpdate);
 
     } else if (this.id === 'paquetes') {
       dataUpdate = [{
         title: 'Repartidor',
         value: 'DeliveryMan'
       },{
+        title: 'Id Repartidor',
+        value: 'DmId'
+      },
+      {
         title: 'Estado',
         value: 'Status'
       }]
       console.log('paquetes');
+      this.presentModal(dataUpdate);
 
     } else if (this.id === 'cliente') {
       console.log('cliente');
       dataUpdate = [{
-        title: '',
-        value: ''
+        title: 'Usuario',
+        value: 'username'
+      },{
+        title: 'Correo',
+        value: 'email'
+      },{
+        title: 'Telefono',
+        value: 'Phone'
+      },{
+        title: 'Celular',
+        value: 'Mobile'
       }]
-
+      this.presentModal(dataUpdate);
     }
   }
   /**

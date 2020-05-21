@@ -39,7 +39,7 @@ export class ReportPage implements OnInit {
    * Report for the ready to send
    */
   reporte2:any;
-  rutaSeleccionada = 0; // Selected route Id
+  rutaSeleccionada:number; // Selected route Id
 
 
   /**
@@ -199,9 +199,8 @@ export class ReportPage implements OnInit {
     /**
      * 
      */
-    getReporte2(){
-      console.log(this.rutaSeleccionada);
-      this.PackageServiceInstace.getPackageByRoute(this.rutaSeleccionada)
+    async getReporte2(ruta:any){
+      this.PackageServiceInstace.getPackageByRoute(ruta)
       .subscribe(
         datos => {
           this.reporte2 = datos;

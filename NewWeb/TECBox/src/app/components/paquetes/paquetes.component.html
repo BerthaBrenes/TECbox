@@ -4,6 +4,7 @@
         <ion-row>
           <ion-col size="9">
             <h2>Paquetes</h2>
+            <ion-button (click)="clickEnter()" color="primary">Añadir Paquete</ion-button>
           </ion-col>
           <ion-col size="3">
           </ion-col>
@@ -11,6 +12,7 @@
       </ion-grid>
   </div>
   <div>
+    <app-add-data [type] = 'id' *ngIf='enterEnable'></app-add-data>
     <app-table [type]='id'></app-table>
   </div>
 </div>

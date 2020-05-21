@@ -1,13 +1,13 @@
 <div class="ion-grid">
   <div>
     <div class="content">
-      <img src="{{data.image}}" alt="">
+      <img src="{{data.ImageUrl}}" alt="">
     </div>
     <div class="content">
-      <p class="name">{{data.name}} ({{data.barCode}})</p>
+      <p class="name">{{data.Name}} ({{data.BarCode}})</p>
       <p>{{data.description}}</p>
-      <p>Precio <ion-label class="price">${{data.price}}</ion-label></p>
-      <p *ngIf="data.discount">Discount:  <ion-label class="discount"> {{data.discount}}%</ion-label> </p>
+      <p>Precio <ion-label class="price">${{data.Price}}</ion-label></p>
+      <p *ngIf="data.Discount">Discount:  <ion-label class="discount"> {{data.Discount}}%</ion-label> </p>
       <div *ngIf='userValidation'>
         <ion-grid>
           <ion-row>

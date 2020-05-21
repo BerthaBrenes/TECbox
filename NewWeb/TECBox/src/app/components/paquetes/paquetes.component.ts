@@ -1,3 +1,4 @@
+import { PackageService } from './../../services/package.service';
 import { Component, OnInit, Input } from '@angular/core';
 /**
  * Component
@@ -33,7 +34,17 @@ export class PaquetesComponent implements OnInit {
   /**
    * This method initializes the component
    */
-  constructor() { }
+  constructor(
+    private packageService: PackageService
+  ) { 
+    this.packageService.getPackagesList()
+    .subscribe(
+      pack => {
+        this.data = pack;
+      }
+    );
+  }
+  
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
