@@ -8,6 +8,7 @@ import { IngresarComponent } from '../components/ingresar/ingresar.component';
 import { ClientesComponent } from '../components/clientes/clientes.component';
 import { HelpComponent } from '../components/help/help.component';
 import { CarComponent } from '../components/car/car.component';
+import { TrackingPageComponent } from '../components/tracking-page/tracking-page.component';
 
 /**
  * Component
@@ -173,6 +174,15 @@ export class WebPage implements OnInit {
     .then((data) => {
       data = this.comprasPackage;
       console.log(data)
+    });
+    return await modal.present();
+  }
+  /**
+   * Tacking component
+   */
+  async presentTrackingModal() {
+    const modal = await this.modalController.create({
+      component: TrackingPageComponent
     });
     return await modal.present();
   }

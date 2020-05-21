@@ -19,12 +19,13 @@ ion-content{
     div{
         &.imageLogIn{
             background-image: url("./../../assets/imgs/Tecbox-registrarse.png");
-            height: 50%;
-            width: 100%;
+            height: 263px;
+            width: 1343px;
             border-radius: 12px;
             margin: 40px;
-            display: flex;
-            align-items: flex-end;
+            display: block;
+            justify-content: center;
+
             ion-button{
                 --border-radius: 9px;
                 --background: white;
@@ -35,11 +36,11 @@ ion-content{
         }
         &.imageSignUp{
             background-image: url("./../../assets/imgs/SignBanner.png");
-            height: 25%;
+            height: 263px;
+            width: 1343px;
             border-radius: 12px;
             margin: 40px;
             display: flex;
-            align-items: flex-end;
             justify-content: center;
             ion-button{
                 --border-radius: 9px;

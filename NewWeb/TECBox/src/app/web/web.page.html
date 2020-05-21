@@ -14,7 +14,7 @@
         <ion-icon name="person-circle" ></ion-icon>
         <span >Mi cuenta <br> Iniciar Sesión</span>
       </ion-button>
-      <ion-button (click)="MyAccount($event)" *ngIf="ClientUser">
+      <ion-button *ngIf="ClientUser">
         <ion-icon name="person-circle" ></ion-icon>
         <span >{{userTest['Name']}}</span>
       </ion-button>
@@ -33,11 +33,11 @@
 </ion-header>
 
 <ion-content>
-  <div class="imageLogIn" *ngIf="!ClientUser">
-    <ion-button shape="round">Registrarme</ion-button>
+  <div class="imageLogIn" *ngIf="!ClientUser" text-center>
+    <ion-button shape="round" (click)="logIn($event)">Registrarme</ion-button>
   </div>
-  <div class="imageSignUp" *ngIf="ClientUser">
-    <ion-button shape="round">Rastrea</ion-button>
+  <div class="imageSignUp" *ngIf="ClientUser" text-center>
+    <ion-button shape="round" (click)="presentTrackingModal()">Rastrea</ion-button>
   </div>
   <div class="image2" *ngIf="!ClientUser">
     <img src="assets/imgs/Tecbox-features.png" alt="">
