@@ -34,10 +34,10 @@
 
 <ion-content>
   <div class="imageLogIn" *ngIf="!ClientUser">
-    <ion-button shape="round">Registrarme</ion-button>
+    <ion-button shape="round" (click)="logIn($event)">Registrarme</ion-button>
   </div>
   <div class="imageSignUp" *ngIf="ClientUser">
-    <ion-button shape="round">Rastrea</ion-button>
+    <ion-button shape="round" (click)="presentTrackingModal()">Rastrea</ion-button>
   </div>
   <div class="image2" *ngIf="!ClientUser">
     <img src="assets/imgs/Tecbox-features.png" alt="">

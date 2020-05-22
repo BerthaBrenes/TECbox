@@ -18,11 +18,10 @@ ion-toolbar {
 ion-content{
     div{
         &.imageLogIn{
-            background-image: url("./../../assets/imgs/Tecbox-registrarse.png");
-            height: 50%;
+            background-image: url("./../../assets/imgs/tecbox-registrarse(3).png");
+            height: 316px;
             width: 100%;
-            border-radius: 12px;
-            margin: 40px;
+            padding:10px;
             display: flex;
             align-items: flex-end;
             ion-button{
@@ -34,8 +33,9 @@ ion-content{
             }
         }
         &.imageSignUp{
-            background-image: url("./../../assets/imgs/SignBanner.png");
-            height: 25%;
+            background-image: url("./../../assets/imgs/signbanner(2).png");
+            height: 313px;
+            width: 100%;
             border-radius: 12px;
             margin: 40px;
             display: flex;

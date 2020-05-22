@@ -8,6 +8,7 @@ import { IngresarComponent } from '../components/ingresar/ingresar.component';
 import { ClientesComponent } from '../components/clientes/clientes.component';
 import { HelpComponent } from '../components/help/help.component';
 import { CarComponent } from '../components/car/car.component';
+import { TrackingPageComponent } from '../components/tracking-page/tracking-page.component';
 
 /**
  * Component
@@ -64,10 +65,9 @@ export class WebPage implements OnInit {
     private productService: ProductService,
     public modalController: ModalController
   ) {
-  
     this.productService.getProductsList()
     .subscribe(
-      data =>{
+      data => {
         this.inputArticle = data;
       }
     );
@@ -145,7 +145,7 @@ export class WebPage implements OnInit {
    * @param ev event data
    */
   dataProduct(ev: any){
-    console.log('update product',ev);
+    console.log('update product', ev);
     this.inputCar.push(ev);
   }
   /**
@@ -172,7 +172,16 @@ export class WebPage implements OnInit {
     modal.onDidDismiss()
     .then((data) => {
       data = this.comprasPackage;
-      console.log(data)
+      console.log(data);
+    });
+    return await modal.present();
+  }
+  /**
+   * Open tracking package
+   */
+  async presentTrackingModal() {
+    const modal = await this.modalController.create({
+      component: TrackingPageComponent
     });
     return await modal.present();
   }
