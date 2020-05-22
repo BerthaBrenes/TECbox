@@ -6,18 +6,20 @@
 </ion-toolbar>
 <ion-content>
   <ion-grid>
+    <p>Favor darle click a cada uno de los botones de actualizar</p>
+
     <ion-row *ngFor="let select of selectData">
       <ion-col>
         {{select.title}}
       </ion-col>
       <ion-col>
-        <ion-input #Input placeholder="Enter Input" ></ion-input>
+        <ion-input #Input placeholder="Enter Input" value={{select?.default}}></ion-input>
       </ion-col>
       <ion-col>
-        <ion-button expand="full" (click)="updateData(Input.value, select.value)">Agregar</ion-button>
+        <ion-icon (click)="updateData(Input.value, select.value)" name="checkbox-outline"></ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-button expand="full" (click)="save($event)">Agregar</ion-button>
+  <ion-button expand="full" [disabled]="!disableButton" (click)="save($event)">Agregar</ion-button>
 
 </ion-content>

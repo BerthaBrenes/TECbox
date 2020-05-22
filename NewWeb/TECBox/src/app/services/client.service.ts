@@ -77,7 +77,7 @@ export class ClientService {
    * @param clientId Customer identification (physical or legal)
    * @param editedClient The client with the updated information.
    */
-  editClientData(clientId:string,editedClient:void){
+  editClientData(clientId:string,editedClient:any){
     return this.http.put<any>(`${this.tecboxUrl}/clients/?clientId=${clientId}`,editedClient);
   }
 

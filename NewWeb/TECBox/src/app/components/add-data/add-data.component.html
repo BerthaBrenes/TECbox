@@ -298,7 +298,7 @@
             </ion-item>
         </ion-col>
         <ion-col>
-            <ion-label>Descrición:</ion-label>
+            <ion-label>Descripción:</ion-label>
             <ion-item>
                 <ion-input #D type=text></ion-input>
             </ion-item>
@@ -326,9 +326,18 @@
             <ion-col>
                 <ion-label>Estado:</ion-label>
                 <ion-item>
-                    <ion-input #E type=text></ion-input>
-                </ion-item>
-            </ion-col>
+                    <ion-select #E placeholder="Select One">
+                      <ion-select-option value="En Tránsito">En tránsito</ion-select-option>
+                      <ion-select-option value="En Aduanas">En aduanas</ion-select-option>
+                      <ion-select-option value="Listo para Entrega">Listo para Entrega</ion-select-option>
+                      <ion-select-option value="En Ruta">En Ruta de Entrega</ion-select-option>
+                      <ion-select-option value="En Sucursal">En Sucursal</ion-select-option>
+                      <ion-select-option value="Entregado">Entregado al Cliente</ion-select-option>
+                      <ion-select-option value="Intento de Entrega Fallido">Intento de entrega fallido</ion-select-option>
+                      <ion-select-option value="Devuelto a Sucursal">Devuelto a Sucursal</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+            </ion-col> 
             <ion-col>
                 <ion-label>Fecha Entrega:</ion-label>
                 <ion-item>

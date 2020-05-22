@@ -11,6 +11,7 @@ import { UpdateControllerComponent } from '../update-controller/update-controlle
 /**
  * Component
  */
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -89,132 +90,161 @@ export class TableComponent implements OnInit {
       console.log('sucursal');
       dataUpdate = [{
         title: 'Nombre',
-        value: 'Name'
+        default: data['Name'],
+        value: 'Name',
       },{
         title: 'Encargado',
+        default: data['Admin'],
         value: 'Admin'
       },{
         title: 'Telefono',
+        default: data['Phone'],
         value: 'Phone'
       },{
         title: 'Provincia',
+        default: data['Address']['Department'],
         value: 'Address.Department'
       },{
         title: 'Canton',
+        default: data['Address']['City'],
         value: 'Address.City'
       },{
         title: 'Distrito',
+        default: data['Address']['District'],
         value: 'Address.District'
       },{
         title: 'Otras Señas',
+        default: data['Address']['Others'],
         value: 'Address.Others'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
       
     } else if (this.id === 'trabajadores') {
       console.log('trabajadores');
       dataUpdate = [{
         title: 'Rol',
+        default: data['Role'],
         value: 'Role'
       },{
         title: 'Sucursal',
+        default: data['BranchOffice']['Name'],
         value: 'BranchOffice.Name'
       },{
         title: 'Salario /hora',
+        default: data['Salary']['Hour'],
         value: 'Salary.Hour'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
 
     } else if (this.id === 'vendedores') {
       console.log('vendedores');
       dataUpdate = [{
         title: 'Nombre',
+        default: data['Name'],
         value: 'Name'
       },{
         title: 'Tipo de cedula',
+        default: data['Id']['Type'],
         value: 'Id.Type'
       },{
         title: 'Numero de cedula',
+        default: data['Id']['Number'],
         value: 'Id.Number'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
 
     } else if (this.id === 'producto') {
       console.log('producto');
       dataUpdate = [{
         title: 'Nombre',
+        default: data['Name'],
         value: 'Name'
       },{
         title: 'Descripcion',
+        default: data['Description'],
         value: 'Description'
       },{
         title: 'Codigo Barras',
+        default: data['BarCode'],
         value: 'BarCode'
       },{
         title: 'Vendedor',
+        default: data['Seller']['Name'],
         value: 'Seller.Name'
       },{
         title: 'Precio',
+        default: data['Price'],
         value: 'Price'
       },{
         title: 'Descuento',
+        default: data['Discount'],
         value: 'Discount'
       },{
         title: 'Impuesto',
+        default: data['Taxes'],
         value: 'Taxes'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
 
     } else if (this.id === 'rutas') {
       console.log('rutas');
       dataUpdate =[{
         title: 'Distrito',
+        default: data['Districts'],
         value: 'Districts'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
 
     } else if (this.id === 'paquetes') {
       dataUpdate = [{
         title: 'Repartidor',
+        default: data['DeliveryMan'],
         value: 'DeliveryMan'
       },{
         title: 'Id Repartidor',
+        default: data['DmId'],
         value: 'DmId'
       },
       {
         title: 'Estado',
+        default: data['Status'],
         value: 'Status'
       }]
       console.log('paquetes');
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
 
     } else if (this.id === 'cliente') {
       console.log('cliente');
       dataUpdate = [{
         title: 'Usuario',
-        value: 'username'
+        default: data['Username'],
+        value: 'Username'
       },{
         title: 'Correo',
-        value: 'email'
+        default: data['Enail'],
+        value: 'Email'
       },{
         title: 'Telefono',
+        default: data['Phone'],
         value: 'Phone'
       },{
         title: 'Celular',
+        default: data['Mobile'],
         value: 'Mobile'
       }]
-      this.presentModal(dataUpdate);
+      this.presentModal(dataUpdate, data);
     }
   }
   /**
    * Present the update Controller Component
    */
-  async presentModal(Editdata: any) {
+  async presentModal(Editdata: any,OriginData:any) {
     const modal = await this.modalController.create({
       component: UpdateControllerComponent,
       componentProps: {
         data: Editdata,
-        place: this.id
+        place: this.id,
+        originJson: OriginData
       }
     });
     return await modal.present();

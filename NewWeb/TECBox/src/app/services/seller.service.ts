@@ -77,7 +77,7 @@ export class SellerService {
    * @param sellerId Seller identification (physical or legal)
    * @param editedSeller The seller with the updated information.
    */
-  editSellerData(sellerId:string,editedSeller:void){
+  editSellerData(sellerId:string,editedSeller:any){
     return this.http.put<any>(`${this.tecboxUrl}/sellers/?sellerId=${sellerId}`,editedSeller);
   }
 

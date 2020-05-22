@@ -13,14 +13,14 @@
   },
   {
     "Id": 1,
-    "Name": "TECbox City Mall Alajuela",
-    "Admin": "Milton Villegas",
-    "Phone": "2222-4444",
+    "Name": "TECbox Tres Ríos Momentum",
+    "Admin": "Bill Gates",
+    "Phone": "5554-8899",
     "Address": {
-      "Department": "Alajuela",
-      "City": "Alajuela",
-      "District": "Alajuela",
-      "Others": "Ubicado en el City Mall"
+      "Department": "Cartago",
+      "City": "La Unión",
+      "District": "Tres Ríos",
+      "Others": "Ubicada en la planta baja del centro comercial Momentum Pinares, contiguo al local de BMW."
     }
   },
   {

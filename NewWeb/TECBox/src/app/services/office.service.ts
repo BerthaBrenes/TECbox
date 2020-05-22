@@ -76,7 +76,7 @@ export class OfficeService {
    * @param officeId Office identification number
    * @param editedOffice The client with the updated information.
    */
-  editOfficeData(officeId:any,editedOffice:void){
+  editOfficeData(officeId:any,editedOffice:any){
     return this.http.put<any>(`${this.tecboxUrl}/offices/?officeId=${officeId}`,editedOffice);
   }
 

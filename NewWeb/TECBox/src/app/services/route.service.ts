@@ -76,7 +76,7 @@ export class RouteService {
    * @param routeId route identification number.
    * @param editedRoute The route with the updated information.
    */
-  editRouteData(routeId:any,editedRoute:void){
+  editRouteData(routeId:any,editedRoute:any){
     return this.http.put<any>(`${this.tecboxUrl}/routes/?routeId=${routeId}`,editedRoute);
   }
 

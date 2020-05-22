@@ -99,7 +99,7 @@ export class ProductService {
    * @param productId Product Barcode.
    * @param editedProduct The product with the updated information.
    */
-  editProductData(productId:string,editedProduct:void){
+  editProductData(productId:string,editedProduct:any){
     return this.http.put<any>(`${this.tecboxUrl}/products/?productId=${productId}`,editedProduct);
   }
 

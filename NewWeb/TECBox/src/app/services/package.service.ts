@@ -100,7 +100,7 @@ export class PackageService {
    * @param packId Package Tracking ID
    * @param editedPackage The package with the updated information.
    */
-  editPackageData(packId:string,editedPackage:void){
+  editPackageData(packId:string,editedPackage:any){
     return this.http.put<any>(`${this.tecboxUrl}/packages/?packId=${packId}`,editedPackage);
   }
 

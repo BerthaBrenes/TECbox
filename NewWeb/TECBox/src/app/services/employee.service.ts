@@ -76,7 +76,7 @@ export class EmployeeService {
    * @param empId Employee identification number.
    * @param editedEmployee The employee with the updated information.
    */
-  editEmployeeData(empId:string,editedEmployee:void){
+  editEmployeeData(empId:string,editedEmployee:any){
     return this.http.put<any>(`${this.tecboxUrl}/employees/?empId=${empId}`,editedEmployee);
   }
 

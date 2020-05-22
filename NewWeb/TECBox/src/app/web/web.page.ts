@@ -92,7 +92,7 @@ export class WebPage implements OnInit {
       this.ClientUser = true;
     }
   }
-  
+
   /**
    * Enables the package function
    */
@@ -129,7 +129,10 @@ export class WebPage implements OnInit {
    */
   async MyAccount(ev: Event){
     const modal = await this.modalController.create({
-      component: ClientesComponent
+      component: ClientesComponent,
+      componentProps: {
+        src: ''
+      }
     });
     return await modal.present();
   }

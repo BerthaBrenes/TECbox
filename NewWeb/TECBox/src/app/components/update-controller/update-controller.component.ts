@@ -6,7 +6,8 @@ import { OfficeService } from 'src/app/services/office.service';
 import { RouteService } from 'src/app/services/route.service';
 import { PackageService } from 'src/app/services/package.service';
 import { ClientService } from 'src/app/services/client.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
+import { HttpErrorResponse } from '@angular/common/http';
 /**
  * Component
  */
@@ -32,6 +33,22 @@ export class UpdateControllerComponent implements OnInit {
    */
   dataToUpdate: any[] = [];
   /**
+   * json
+   */
+  jsonData = {}
+  /**
+   * Data original
+   */
+  dataOrigin = {}
+  /**
+   * disable the add data
+   */
+  disableButton: boolean = false;
+  /**
+   * Times the button update selected
+   */
+  buttonSelected: number = 0;
+  /**
    * Input with the data
    */
   @Input() set data(value: any[]){
@@ -39,16 +56,25 @@ export class UpdateControllerComponent implements OnInit {
     console.log('editables inputs', this.selectData);
   };
   /**
+   * Input of the origin json
+   */
+  @Input() set originJson(value: any){
+    this.dataOrigin = value;
+    console.log('original', this.selectData);
+  };
+  /**
    * Input of the id 
    */
   @Input() set place(value: any){
     this.idPlace = value;
-    console.log('editables inputs', this.selectData);
+    console.log('place where im', this.selectData);
   };
   /**
    * Constructor of the component
    */
   constructor(
+    
+    private toastController: ToastController, 
     private productService: ProductService,
     private employeeService: EmployeeService,
     private sellerService: SellerService,
@@ -76,16 +102,159 @@ export class UpdateControllerComponent implements OnInit {
     });
   }
 
+  /**
+   * Update the data
+   */
   updateData(data: string, controlador){
     console.log(data, controlador)
-    var jsonData = {};
-    jsonData[controlador] = data;
-    this.dataToUpdate.push(jsonData);
-    console.log(jsonData);
+    this.jsonData[controlador] = data;
+    console.log(this.jsonData);
+    this.buttonSelected++;
+    if( this.buttonSelected === this.selectData.length ){
+      this.disableButton = true;
+    }
   }
+  /**
+   * save all the information
+   */
   save(event){
+    console.log( this.jsonData);
+    this.disableButton = false;
+    if (this.idPlace === 'sucursal') {
+      console.log(this.jsonData);
+      console.log('data old', this.dataOrigin);
+      this.dataOrigin['Name'] = this.jsonData['Name'];
+      this.dataOrigin['Admin'] = this.jsonData['Admin'];
+      this.dataOrigin['Phone'] = this.jsonData['Phone'];
+      this.dataOrigin['Address']['Department'] = this.jsonData['Address.Department'];
+      this.dataOrigin['Address']['City'] = this.jsonData['Address.City'];
+      this.dataOrigin['Address']['District'] = this.jsonData['Address.District'];
+      this.dataOrigin['Address']['Others'] = this.jsonData['Address.Others'];
+      console.log('new data', this.dataOrigin);
 
-    console.log( this.dataToUpdate);
+      this.officeService.editOfficeData(this.dataOrigin['Id'],this.dataOrigin)
+      .subscribe(
+        data =>{
+          this.presentToast("La sucursal se ha editado con éxito",'success');
+       },
+       (error: HttpErrorResponse) => {
+         this.presentToast('Opps ¡Algo salió mal!', 'danger');
+       }
+      );
+
+    } else if (this.idPlace === 'trabajadores') {
+      console.log(this.jsonData);
+      console.log('data old', this.dataOrigin);
+      this.dataOrigin['Role'] = this.jsonData['Role'];
+      this.dataOrigin['BranchOffice']['Name'] = this.jsonData['BranchOffice.Name'];
+      this.dataOrigin['Salary']['Hour'] = this.jsonData['Salary.Hour'];
+      console.log('new data', this.dataOrigin);
+      this.employeeService.editEmployeeData(this.dataOrigin['Id']['Numer'], this.dataOrigin).subscribe(
+        data =>{
+          this.presentToast("El trabajador se ha editado con éxito",'success');
+        },
+        (error: HttpErrorResponse) => {
+          this.presentToast('Opps ¡Algo salió mal!', 'danger');
+        }
+      )
+
+    } else if (this.idPlace === 'vendedores') {
+      const seller = {
+        "Name":this.jsonData["Name"],
+        "Id":{
+          "Type":this.jsonData["Id.Type"],
+          "Number":this.jsonData["Id.Number"]
+        }
+      }
+      this.sellerService.editSellerData(this.dataOrigin['Id']['Number'],seller)
+      .subscribe(
+        data =>{
+          this.presentToast("El vendedor se ha editado con éxito",'success');
+       },
+       (error: HttpErrorResponse) => {
+         this.presentToast('Opps ¡Algo salió mal!', 'danger');
+       }
+      );
+
+
+    } else if (this.idPlace === 'producto') {
+      console.log(this.jsonData);
+      console.log('old data', this.dataOrigin);
+      this.dataOrigin['Name'] = this.jsonData['Name'];
+      this.dataOrigin['Description'] = this.jsonData['Description'];
+      this.dataOrigin['BarCode'] = this.jsonData['BarCode'];
+      this.dataOrigin['Seller']['Name'] = this.jsonData['Seller.Name'];
+      this.dataOrigin['Price'] = this.jsonData['Price'];
+      this.dataOrigin['Discount'] = this.jsonData['Discount'];
+      this.dataOrigin['Taxes'] = this.jsonData['Taxes'];
+      console.log('new data', this.dataOrigin);
+      this.productService.editProductData(this.dataOrigin['BarCode'], this.dataOrigin).subscribe(
+        data=>{
+          this.presentToast("El producto se ha editado con éxito",'success');
+        },
+        (error: HttpErrorResponse) => {
+          this.presentToast('Opps ¡Algo salió mal!', 'danger');
+        }
+      )
+      
+
+    } else if (this.idPlace === 'rutas') {
+      console.log(this.jsonData['Districts']);
+      this.routeService.addDistrict(this.jsonData['Id'],this.jsonData['Districts']).subscribe(
+        data =>{
+          this.presentToast("La ruta se ha editado con éxito",'success');
+        },
+        (error: HttpErrorResponse) => {
+          this.presentToast('Opps ¡Algo salió mal!', 'danger');
+        }
+      )
+
+    } else if (this.idPlace === 'paquetes') {
+      console.log(this.jsonData);
+      console.log('old data', this.dataOrigin);
+      this.dataOrigin['DeliveryMan'] = this.jsonData['DeliveryMan'];
+      this.dataOrigin['DmId'] = this.jsonData['DmId'];
+      this.dataOrigin['Status'] = this.jsonData['Status'];
+      console.log('new data', this.dataOrigin);
+      this.packageService.editPackageData(this.dataOrigin['TrackId'], this.dataOrigin).subscribe(
+        data =>{
+          this.presentToast("El paquete se ha editado con éxito",'success');
+        },
+        (error: HttpErrorResponse) => {
+          this.presentToast('Opps ¡Algo salió mal!', 'danger');
+        }
+      )
+
+
+    } else if (this.idPlace === 'cliente') {
+      console.log('old data', this.dataOrigin);
+      this.dataOrigin['Username'] = this.jsonData['Username'];
+      this.dataOrigin['Enail'] = this.jsonData['Enail'];
+      this.dataOrigin['Phone'] = this.jsonData['Phone'];
+      this.dataOrigin['Mobile'] = this.jsonData['Mobile'];
+      console.log('new data', this.dataOrigin);
+      this.clientService.editClientData(this.dataOrigin['Id']['Number'], this.dataOrigin).subscribe(
+        data =>{
+          this.presentToast("El cliente se ha editado con éxito",'success');
+        },
+        (error: HttpErrorResponse) => {
+          this.presentToast('Opps ¡Algo salió mal!', 'danger');
+        }
+      )
+
+    }
+  }
+
+  /**
+   * Present toast
+   */
+  async presentToast(messageR: string, colorR: string) {
+    const toast = await this.toastController.create({
+      message: messageR,
+      color: colorR,
+      duration: 4000
+    });
+    toast.present();
   }
 
 }
