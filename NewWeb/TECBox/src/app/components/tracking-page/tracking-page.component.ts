@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ModalController, ToastController } from '@ionic/angular';
+import { PackageService } from 'src/app/services/package.service';
+import { HttpErrorResponse } from '@angular/common/http';
+
 /**
  * Component
  */
@@ -18,8 +22,10 @@ export class TrackingPageComponent implements OnInit {
   /**
    * id to set up the table
    */
-  id: string = 'cliente';
+  id: string = 'rastreo';
 
+  dataPaquete: any;
+  enablePaquete: boolean = false;
   /**
    * Input of the component
    */
@@ -30,9 +36,51 @@ export class TrackingPageComponent implements OnInit {
   /**
    * This method initializes the component
    */
-  constructor() { }
+  constructor(
+    private toastController: ToastController, 
+    public modalController: ModalController,
+    private packageService: PackageService
+
+  ) { }
   /**
    * A life cycle hook that is called after Angular has initialized all data-bound properties of a directive.
    */
   ngOnInit() { }
+    /**
+   * Dismmiss the page
+   */
+  dismiss() {
+    // using the injected ModalController this page
+    // can "dismiss" itself and optionally pass back data
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  }
+  /**
+   * Buscar paquete
+   */
+  buscar(id: string){
+    console.log('id Packete',id);
+    this.packageService.getPackage(id).subscribe(
+      data =>{
+        this.dataPaquete = data;
+        console.log('data Package', this.dataPaquete);
+        this.enablePaquete = true;
+      },
+      (error: HttpErrorResponse) => {
+        this.presentToast('Opps ¡Algo salió mal! Id paquete no es valido', 'danger');
+      }
+    )
+  }
+   /**
+   * Present toast
+   */
+  async presentToast(messageR: string, colorR: string) {
+    const toast = await this.toastController.create({
+      message: messageR,
+      color: colorR,
+      duration: 4000
+    });
+    toast.present();
+  }
 }

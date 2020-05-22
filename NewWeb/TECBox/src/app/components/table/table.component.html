@@ -372,19 +372,49 @@
 
 <ion-grid *ngIf='id == "rastreo"'>
   <ion-row >
-    <ion-col  class="header" size=2.5>
-      Tracking id
-    </ion-col>
-    <ion-col class="header" size=2.5>
-      Estado
-    </ion-col>
+      <ion-col  class="header" size=1.5>
+        Track Id
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Cliente
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Descripcion
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Id ruta
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Repartidor
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Status
+      </ion-col>
+      <ion-col class="header" size=1>
+        Fecha entrega
+      </ion-col>
   </ion-row>
-  <ion-row *ngFor="let item of data">
-    <ion-col size=2.5>
-        {{item.Name}}
+  <ion-row >
+    <ion-col size=1.5>
+      {{data['TrackId']}}
     </ion-col>
-    <ion-col size=2.5>
-      {{item.Province}}
+    <ion-col size=1.5>
+      {{data['Client']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['Description']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['RouteId']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['DeliveryMan']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['Status']}}
+    </ion-col>
+    <ion-col size=1>
+      {{data['DeliveryDate']}}
     </ion-col>
     </ion-row>
 </ion-grid>

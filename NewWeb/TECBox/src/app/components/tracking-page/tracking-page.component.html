@@ -1,11 +1,17 @@
-<div>
-  <h2>Rastreo de Paquetes</h2>
-</div>
-
-<ion-item>
-        <ion-label>Gender</ion-label>
-        <ion-select placeholder="Select One">
-          <ion-select-option value="f">Female</ion-select-option>
-          <ion-select-option value="m">Male</ion-select-option>
-        </ion-select>
+<ion-toolbar>
+  <ion-title>Tracking package</ion-title>
+  <ion-buttons slot="end" (click)="dismiss()">
+    <ion-icon name="close"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <ion-item>
+    <ion-input #ID placeholder="Ingrese el Id del paquete"></ion-input>
+    <ion-button shape="round" (click)="buscar(ID.value)">Buscar</ion-button>
 </ion-item>
+<ion-item *ngIf="enablePaquete" >
+  <app-table [type]="id" [src]="dataPaquete"></app-table>
+</ion-item>
+
+</ion-content>
+

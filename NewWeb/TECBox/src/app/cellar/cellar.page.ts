@@ -2,6 +2,7 @@ import { Component, OnInit, ComponentFactoryResolver, Injector, ViewChild, ViewC
 import { ModalController } from '@ionic/angular';
 import { PaquetesComponent } from '../components/paquetes/paquetes.component';
 import { TableComponent } from '../components/table/table.component';
+import { TrackingPageComponent } from '../components/tracking-page/tracking-page.component';
 /**
  * Component
  */
@@ -57,13 +58,14 @@ export class CellarPage implements OnInit {
       this.instance = instance;
     }
     else if (name === 'rastreo') {
-      // tslint:disable-next-line: no-shadowed-variable
-      const { TableComponent } = await import('./../components/table/table.component');
-      const questionFactory = this.cfr.resolveComponentFactory(TableComponent);
-      const { instance } = this.responsibilityContainer.createComponent(questionFactory, null, this.injector);
-      this.instance = instance;
-      instance.type = this.idTracking;
+      this.presentTrackingModal();
     }
   }
 
+  async presentTrackingModal() {
+    const modal = await this.modalController.create({
+      component: TrackingPageComponent
+    });
+    return await modal.present();
+  }
 }
