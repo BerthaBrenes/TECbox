@@ -61,7 +61,7 @@ export class IngresarComponent implements OnInit {
                 message: client
               }
               this.onAnswered.emit({ UserData: answerData });
-              this.dismiss(answerData);
+              this.dismissWD(answerData);
             },
             (error: HttpErrorResponse) => {
               const answerData = {
@@ -70,7 +70,7 @@ export class IngresarComponent implements OnInit {
               }
               this.onAnswered.emit({ UserData: answerData });
               this.presentToast("¡Usuario o contraseña incorrectos!", 'danger');
-              this.dismiss(answerData);
+              this.dismissWD(answerData);
             }
           );
 
@@ -113,11 +113,19 @@ export class IngresarComponent implements OnInit {
   /**
    * dismiss the modal
    */
-  dismiss(dataD: any) {
+  dismissWD(dataD: any) {
     this.modalCtrl.dismiss({
       dismissed: true,
       data: dataD
     });
+  }
+  /**
+   * dismiss the modal
+   */
+  dismiss() {
+    this.modalCtrl.dismiss({
+      dismissed: true
+    })
   }
 
   /**

@@ -54,7 +54,7 @@
       <ion-col size=1.5>
         {{item.Address.Others}}
       </ion-col>
-      <ion-col size=1>
+      <ion-col size=1 class="accion">
         <ion-icon name="close-circle" (click)="delete(item.Id)"></ion-icon>
         <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
       </ion-col>
@@ -115,7 +115,7 @@
       <ion-col size=1>
         {{item.SalaryMonth}}
       </ion-col>
-      <ion-col size=1>
+      <ion-col class="accion" size=1>
         <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
         <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
       </ion-col>
@@ -146,7 +146,7 @@
       <ion-col size=3>
         {{item.Id.Number}}
       </ion-col>
-      <ion-col size=3>
+      <ion-col size=3 class="accion">
         <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
         <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
       </ion-col>
@@ -201,7 +201,7 @@
     <ion-col size=1.5>
       {{item.Taxes}}
     </ion-col>
-    <ion-col size=1.5>
+    <ion-col class="accion" size=1.5>
       <ion-icon name="close-circle" (click)="delete(item.BarCode)"></ion-icon>
       <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
     </ion-col>
@@ -232,7 +232,7 @@
     <ion-col size=5>
       <p *ngFor="let district of item.Districts">{{district}}</p>
     </ion-col>
-    <ion-col size=1>
+    <ion-col class="accion" size=1>
       <ion-icon name="close-circle" (click)="delete(item.Id)"></ion-icon>
       <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
     </ion-col>
@@ -307,7 +307,7 @@
     <ion-col size=1.2>
         {{item.locker}}
      </ion-col>
-     <ion-col size=1.5>
+     <ion-col class="accion" size=1.5>
       <ion-icon name="close-circle" (click)="delete(item.Id.Name)"></ion-icon>
       <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
     </ion-col>

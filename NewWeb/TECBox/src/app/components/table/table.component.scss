@@ -9,5 +9,11 @@ ion-grid{
             font-weight: bold;
             font-size: medium;
         }
+        &.accion{
+            ion-icon{
+                margin:2px;
+                font-size: 20px;
+            }
+        }
     }
 }

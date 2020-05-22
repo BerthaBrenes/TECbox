@@ -1,3 +1,6 @@
+
+
+<!-- FORM SUCURSALES -->
 <div *ngIf='idEntity == "sucursal"'>
   <ion-grid>
       <ion-row>
@@ -52,7 +55,9 @@
   </ion-grid>
 </div>
 
-    
+
+
+<!-- FORM TRABAJADORES -->
 <div *ngIf='idEntity == "trabajadores"'>
   <ion-grid>
       <ion-row>
@@ -119,7 +124,7 @@
               <ion-label>Sucursal</ion-label>           
               <ion-item>
                   <ion-select #S placeholder="Select One">
-                      <ion-select-option *ngFor="let s of sucursales" value={{s.Name}}>{{s.Name}}</ion-select-option>
+                      <ion-select-option *ngFor="let s of sucursales" value={{s.Name}}>{{s?.Name}}</ion-select-option>
                   </ion-select>
               </ion-item>
           </ion-col>  
@@ -130,13 +135,15 @@
               </ion-item>
           </ion-col>
           <ion-col>
-              <ion-button  (click)="guardarTrabajador(N.value, A1.value, A2.value, C.value, FN.value, FI.value, S.value, SH.value, CO.value, US.value, RO.value)" color="primary">Guardar</ion-button>
+              <ion-button  (click)="guardarTrabajador(N.value, A1.value, A2.value, C.value, FN.value, FI.value,S.value, SH.value, CO.value, US.value, RO.value)" color="primary">Guardar</ion-button>
           </ion-col> 
       </ion-row>                    
   </ion-row>
   </ion-grid>
 </div>
 
+
+<!-- FORM VENDEDORES -->
 <div *ngIf='idEntity == "vendedores"'>
   <ion-grid>
       <ion-row>
@@ -147,17 +154,14 @@
               </ion-item>
           </ion-col> 
           <ion-col>
-              <ion-label>Apellido 1:</ion-label>
-              <ion-item>
-                  <ion-input #A1 type=text></ion-input>
+            <ion-label>Tipo de Cédula:</ion-label>
+            <ion-item>
+                <ion-select #CT placeholder="Select One">
+                  <ion-select-option value="CF">Física</ion-select-option>
+                  <ion-select-option value="CJ">Jurídica</ion-select-option>
+                </ion-select>
               </ion-item>
-          </ion-col>
-          <ion-col>
-              <ion-label>Apellido 2:</ion-label>
-              <ion-item>
-                  <ion-input #A2 type=text></ion-input>
-              </ion-item>
-          </ion-col>
+        </ion-col> 
           <ion-col>
               <ion-label>Cédula:</ion-label>
               <ion-item>
@@ -165,12 +169,14 @@
               </ion-item>
           </ion-col>  
           <ion-col>
-              <ion-button  (click)="guardarVendedor(N.value, A1.value, A2.value)" color="primary">Guardar</ion-button>
+              <ion-button  (click)="guardarVendedor(N.value, CT.value, C.value)" color="primary">Guardar</ion-button>
           </ion-col>
       </ion-row>                    
   </ion-grid>
 </div>
 
+
+<!-- FORM PRODUCTOS -->
 <div *ngIf='idEntity == "producto"'>
   <ion-grid>
       <ion-row>
@@ -230,9 +236,18 @@
       </ion-row>
   </ion-grid>
 </div>
+
+
+<!-- FORM RUTAS -->
 <div *ngIf='idEntity == "rutas"'>
   <ion-grid>
       <ion-row>
+        <ion-col>
+            <ion-label>Nombre:</ion-label>
+            <ion-item>
+                <ion-input #N type=text></ion-input>
+            </ion-item>
+        </ion-col>
           <ion-col>
               <ion-label>Provincia</ion-label>                
               <ion-item>
@@ -257,7 +272,7 @@
               <ion-button  (click)="addDistritoTemp(D.value)" color="primary">Añadir Distrito</ion-button>
           </ion-col>  
           <ion-col>
-              <ion-button  (click)="guardarRuta()" color="primary">Guardar</ion-button>
+              <ion-button  (click)="guardarRuta(N.value)" color="primary">Guardar</ion-button>
           </ion-col>  
           <ion-label>Ruta actual: </ion-label>
           <ion-label *ngFor="let d of distritosRutas">{{d}}-></ion-label>       

@@ -123,5 +123,26 @@
     "StartDate": "2020-02-14",
     "SalaryHour": 3500.0,
     "SalaryMonth": 490000.0
+  },
+  {
+    "Username": "estalvgs@tecbox.com@tecbox.com",
+    "Password": "pollitofrito",
+    "Name": "Esteban Alvarado Vargas",
+    "Id": {
+      "Type": "CF",
+      "Number": "112-456-336"
+    },
+    "Role": "Repartidor",
+    "BranchOffice": {
+      "Id": 0,
+      "Name": "TECbox Porvenir",
+      "Admin": null,
+      "Phone": null,
+      "Address": null
+    },
+    "BirthDate": "1999-10-08",
+    "StartDate": "2019-05-02",
+    "SalaryHour": 5000.0,
+    "SalaryMonth": 700000.0
   }
 ]

@@ -34,8 +34,11 @@ namespace tecbox_API.Models
         }
 
         //
-        public void SetId()
+        public void SetId(int currentId)
         {
+            // ReSharper disable once RedundantCheckBeforeAssignment
+            if (currentId != _idCounter)
+                _idCounter = currentId+1;
             this.Id = _idCounter;
             _idCounter++;
         }

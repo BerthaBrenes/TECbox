@@ -61,7 +61,9 @@ namespace tecbox_API.Controllers
             if (routeList.Exists(route => route.Name.Equals(newRoute.Name)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
 
-            newRoute.SetId();
+            int lastId = routeList.Last().Id;
+            
+            newRoute.SetId(lastId);
             routeList.Add(newRoute);
 
             Util.WriteListInFile<Route>(routeList, filePath);

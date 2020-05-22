@@ -84,26 +84,106 @@ export class TableComponent implements OnInit {
    */
   updateData(data: any) {
     console.log('idComponent', this.id, 'id update', data);
+    let dataUpdate;
     if (this.id === 'sucursal') {
       console.log('sucursal');
+      dataUpdate = [{
+        title: 'Nombre',
+        value: 'Name'
+      },{
+        title: 'Encargado',
+        value: 'Admin'
+      },{
+        title: 'Telefono',
+        value: 'Phone'
+      },{
+        title: 'Provincia',
+        value: 'Address.Department'
+      },{
+        title: 'Canton',
+        value: 'Address.City'
+      },{
+        title: 'Distrito',
+        value: 'Address.District'
+      },{
+        title: 'Otras Señas',
+        value: 'Address.Others'
+      }]
       
     } else if (this.id === 'trabajadores') {
       console.log('trabajadores');
+      dataUpdate = [{
+        title: 'Rol',
+        value: 'Role'
+      },{
+        title: 'Sucursal',
+        value: 'BranchOffice.Name'
+      },{
+        title: 'Salario /hora',
+        value: 'Salary.Hour'
+      }]
 
     } else if (this.id === 'vendedores') {
       console.log('vendedores');
+      dataUpdate = [{
+        title: 'Nombre',
+        value: 'Name'
+      },{
+        title: 'Tipo de cedula',
+        value: 'Id.Type'
+      },{
+        title: 'Numero de cedula',
+        value: 'Id.Number'
+      }]
 
     } else if (this.id === 'producto') {
       console.log('producto');
+      dataUpdate = [{
+        title: 'Nombre',
+        value: 'Name'
+      },{
+        title: 'Descripcion',
+        value: 'Description'
+      },{
+        title: 'Codigo Barras',
+        value: 'BarCode'
+      },{
+        title: 'Vendedor',
+        value: 'Seller.Name'
+      },{
+        title: 'Precio',
+        value: 'Price'
+      },{
+        title: 'Descuento',
+        value: 'Discount'
+      },{
+        title: 'Impuesto',
+        value: 'Taxes'
+      }]
 
     } else if (this.id === 'rutas') {
       console.log('rutas');
+      dataUpdate =[{
+        title: 'Distrito',
+        value: 'Districts'
+      }]
 
     } else if (this.id === 'paquetes') {
+      dataUpdate = [{
+        title: 'Repartidor',
+        value: 'DeliveryMan'
+      },{
+        title: 'Estado',
+        value: 'Status'
+      }]
       console.log('paquetes');
 
     } else if (this.id === 'cliente') {
       console.log('cliente');
+      dataUpdate = [{
+        title: '',
+        value: ''
+      }]
 
     }
   }

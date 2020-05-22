@@ -54,7 +54,7 @@ export class AddDataComponent implements OnInit {
   /**
    * Data of the branch
    */
-  sucursales:any;
+  sucursales:any = [];
 
 
   NameSucursale: any;
@@ -98,6 +98,7 @@ export class AddDataComponent implements OnInit {
       this.officeService.getOfficesList()
       .subscribe(
         data =>{
+          console.log('sucs',data);
           this.sucursales = data;
         }
       );
@@ -109,6 +110,7 @@ export class AddDataComponent implements OnInit {
    */
   ngOnInit() {
     this.provincias = ubicaciones.provincias;
+    
   }
   
 
@@ -138,7 +140,6 @@ export class AddDataComponent implements OnInit {
   
     this.officeService.addNewOffice(office).subscribe(
       data =>{
-         console.log(data);
          this.presentToast("¡Una nueva sucursal Tecbox se ha creado!",'success');
       },
       (error: HttpErrorResponse) => {
@@ -159,7 +160,7 @@ export class AddDataComponent implements OnInit {
    * @param Sucursal Branch where the person work
    * @param SalarioH Salary per hour
    */
-  guardarTrabajador(Nombre: any, Apellido1: any, Apellido2: any, Cedula: any, FechaN: any, FechaI: any, Sucursal: any, SalarioH: any, Contraseña: any,  Usuario: any, Rol: any) {
+  guardarTrabajador(Nombre: any, Apellido1: any, Apellido2: any, Cedula: any, FechaN: any, FechaI: any, Sucursal:any, SalarioH: any, Contraseña: any,  Usuario: any, Rol: any) {
     
     const result = {
       "Username": `${Usuario}@tecbox.com`,
@@ -170,15 +171,15 @@ export class AddDataComponent implements OnInit {
         "Number": Cedula
       },
       "Role": Rol,
-      "BranchOffice": {Name:Sucursal},
+      "BranchOffice": {"Name":Sucursal},
       "BirthDate": FechaN,
       "StartDate": FechaI,
       "SalaryHour": SalarioH
     };
     
-    this.employeeService.addEmployee(result).subscribe(
+    this.employeeService.addEmployee(result)
+    .subscribe(
       data =>{
-         console.log(data);
          this.presentToast("El empleado se ha añadido con éxito",'success');
       },
       (error: HttpErrorResponse) => {
@@ -186,11 +187,29 @@ export class AddDataComponent implements OnInit {
       }
     );
   }
+
+
   /**
    * Save a seller
    */
-  guardarVendedor(Nombre: any, Apellido1: any, Apellido2: any) {
+  guardarVendedor(Nombre: any, TipoCedula: any, Cedula: any) {
+    const seller = {
+      "Name":Nombre,
+      "Id":{
+        "Type": TipoCedula,
+        "Number": Cedula
+      }
+    }
 
+    this.sellerService.registerSeller(seller)
+    .subscribe(
+      data =>{
+         this.presentToast("El vendedor se ha añadido con éxito",'success');
+      },
+      (error: HttpErrorResponse) => {
+        this.presentToast('¡El vendedor no se ha agregado!\nEl vendedor ya existe', 'danger');
+      }
+    );
   }
 
   
@@ -216,7 +235,8 @@ export class AddDataComponent implements OnInit {
       ImageUrl: ImgUri
     };
 
-    this.productService.addNewProduct(producto).subscribe(
+    this.productService.addNewProduct(producto)
+    .subscribe(
       data =>{
          console.log(data);
          this.presentToast("El producto se ha añadido con éxito",'success');
@@ -275,10 +295,26 @@ export class AddDataComponent implements OnInit {
   }
 
   /**
-   * Save the route
+   * 
    */
-  guardarRuta() {
-    console.log('Soy la ruta: ', this.distritosRutas);
+  guardarRuta(nombreRuta:any) {
+    const route = {
+      "Name": nombreRuta,
+      "Districts": this.distritosRutas
+    }
+
+    console.log('Soy la ruta: ', route);
+    
+    this.routeService.addNewRoute(route)
+    .subscribe(
+      data =>{
+         console.log(data);
+         this.presentToast(`La ruta ${nombreRuta} se ha añadido con éxito`,'success');
+      },
+      (error: HttpErrorResponse) => {
+        this.presentToast('¡La ruta no se ha agregado a la base de datos, ya existe o tiene información incompleta', 'danger');
+      }
+    );
   }
   
   /**
