@@ -131,7 +131,7 @@ export class TableComponent implements OnInit {
         value: 'BranchOffice.Name'
       },{
         title: 'Salario /hora',
-        default: data['Salary']['Hour'],
+        default: data['SalaryHour'],
         value: 'Salary.Hour'
       }]
       this.presentModal(dataUpdate, data);

@@ -6,7 +6,7 @@
     "RouteId": 0,
     "DeliveryMan": "David Alvarado",
     "DmId": "109-251-785",
-    "Status": "Entregado",
+    "Status": "Listo para Entrega",
     "DeliveryDate": "2020-08-01"
   },
   {
@@ -83,7 +83,7 @@
     "TrackId": "M-334",
     "Client": "Roberto Azofeifa",
     "Description": "Descripción de Producto",
-    "RouteId": 2 ,
+    "RouteId": 2,
     "DeliveryMan": "David Alvarado",
     "DmId": "109-251-785",
     "Status": "Entregado",

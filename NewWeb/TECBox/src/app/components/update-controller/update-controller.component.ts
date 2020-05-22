@@ -147,9 +147,9 @@ export class UpdateControllerComponent implements OnInit {
       console.log('data old', this.dataOrigin);
       this.dataOrigin['Role'] = this.jsonData['Role'];
       this.dataOrigin['BranchOffice']['Name'] = this.jsonData['BranchOffice.Name'];
-      this.dataOrigin['Salary']['Hour'] = this.jsonData['Salary.Hour'];
+      this.dataOrigin['SalaryHour'] = this.jsonData['Salary.Hour'];
       console.log('new data', this.dataOrigin);
-      this.employeeService.editEmployeeData(this.dataOrigin['Id']['Numer'], this.dataOrigin).subscribe(
+      this.employeeService.editEmployeeData(this.dataOrigin['Id']['Number'], this.dataOrigin).subscribe(
         data =>{
           this.presentToast("El trabajador se ha editado con éxito",'success');
         },
