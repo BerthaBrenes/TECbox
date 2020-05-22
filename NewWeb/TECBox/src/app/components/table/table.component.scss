@@ -1,0 +1,19 @@
+ion-grid{
+    padding-bottom: 20px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    ion-col{
+        font-size: small;
+        color: #919091;
+        &.header{
+            font-weight: bold;
+            font-size: medium;
+        }
+        &.accion{
+            ion-icon{
+                margin:2px;
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@ using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
-    [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class SellerController : ApiController
     {
         private static string filePath = "App_Data/_sellers.json";
@@ -39,12 +39,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/sellers/{id}
+        // GET api/v1/sellers/?sellerId={id}
         [HttpGet]
-        [Route("api/v1/sellers/{id}")]
-        public HttpResponseMessage GetSeller(string id)
+        [Route("api/v1/sellers/")]
+        public HttpResponseMessage GetSeller([FromUri] string sellerId)
         {
-            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(id));
+            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(sellerId));
 
             if (requestSeller == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -56,7 +56,7 @@ namespace tecbox_API.Controllers
         // POST api/v1/sellers
         [HttpPost]
         [Route("api/v1/sellers")]
-        public HttpResponseMessage AddSeller([FromBody]Seller newSeller)
+        public HttpResponseMessage AddSeller([FromBody] Seller newSeller)
         {
             if (sellerList.Exists(seller => seller.Name.Equals(newSeller.Name)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
@@ -67,12 +67,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/sellers/{id}
+        // PUT api/v1/sellers/?sellerId={id}
         [HttpPut]
-        [Route("api/v1/sellers/{id}")]
-        public HttpResponseMessage EditSeller(string id, [FromBody]Seller editedSeller)
+        [Route("api/v1/sellers/")]
+        public HttpResponseMessage EditSeller([FromUri] string sellerId, [FromBody]Seller editedSeller)
         {
-            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(id));
+            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(sellerId));
             if (requestSeller == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -85,12 +85,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // DELETE api/v1/sellers/{id}
+        // DELETE api/v1/sellers/?sellerId={id}
         [HttpDelete]
-        [Route("api/v1/sellers/{id}")]
-        public HttpResponseMessage RemoveSeller(string id)
+        [Route("api/v1/sellers/")]
+        public HttpResponseMessage RemoveSeller([FromUri] string sellerId)
         {
-            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(id));
+            Seller requestSeller = sellerList.Find(seller => seller.Id.Number.Equals(sellerId));
 
             if (requestSeller == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

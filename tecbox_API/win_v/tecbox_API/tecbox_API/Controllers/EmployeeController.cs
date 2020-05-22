@@ -23,7 +23,7 @@ using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
-    [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class EmployeeController : ApiController
     {
         private static string filePath = "App_Data/_employees.json";
@@ -48,12 +48,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/employees/{id}
+        // GET api/v1/employees/?empId={id}
         [HttpGet]
-        [Route("api/v1/employees/{id}")]
-        public HttpResponseMessage GetEmployee(string id)
+        [Route("api/v1/employees/")]
+        public HttpResponseMessage GetEmployee([FromUri] string empId)
         {
-            Employee requestEmployee = employeeList.Find(client => client.Id.Number == id);
+            Employee requestEmployee = employeeList.Find(client => client.Id.Number == empId);
 
             if (requestEmployee == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -98,12 +98,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/employees/{id}
+        // PUT api/v1/employees/?empId={id}
         [HttpPut]
-        [Route("api/v1/employees/{id}")]
-        public HttpResponseMessage EditEmployee(string id, [FromBody]Employee editedEmployee)
+        [Route("api/v1/employees/")]
+        public HttpResponseMessage EditEmployee([FromUri] string empId, [FromBody]Employee editedEmployee)
         {
-            Employee requestEmployee = employeeList.Find(client => client.Id.Number.Equals(id));
+            Employee requestEmployee = employeeList.Find(client => client.Id.Number.Equals(empId));
 
             if (requestEmployee == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -111,7 +111,7 @@ namespace tecbox_API.Controllers
             // If the edited object does not maintain the key attributes, it is verified that they are valid
             if (!requestEmployee.KeyConditions(editedEmployee) && !editedEmployee.IsNullKey())
             {
-                if (employeeList.Exists(client => client.Id.Number.Equals(id)))
+                if (employeeList.Exists(client => client.Id.Number.Equals(empId)))
                     return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingIDMessage);
 
                 else if (employeeList.Exists(client => client.Username.Equals(editedEmployee.Username)))
@@ -133,12 +133,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // DELETE api/v1/employees/{id}
+        // DELETE api/v1/employees/?empId={id}
         [HttpDelete]
-        [Route("api/v1/employees/{id}")]
-        public HttpResponseMessage RemoveEmployee(string id)
+        [Route("api/v1/employees/")]
+        public HttpResponseMessage RemoveEmployee([FromUri] string empId)
         {
-            Employee requestEmployee = employeeList.Find(client => client.Id.Number.Equals(id));
+            Employee requestEmployee = employeeList.Find(client => client.Id.Number.Equals(empId));
 
             if (requestEmployee == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

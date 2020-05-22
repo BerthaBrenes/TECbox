@@ -23,7 +23,7 @@ using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
-    [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class RouteController : ApiController
     {
         private static string filePath = "App_Data/_routes.json";
@@ -39,12 +39,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/routes/{id}
+        // GET api/v1/routes/?routeId={id}
         [HttpGet]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage GetRoute(int id)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage GetRoute([FromUri] int routeId)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
 
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -61,7 +61,9 @@ namespace tecbox_API.Controllers
             if (routeList.Exists(route => route.Name.Equals(newRoute.Name)))
                 return Request.CreateResponse(HttpStatusCode.BadRequest, Util.ExistingObjectMessage);
 
-            newRoute.SetID();
+            int lastId = routeList.Last().Id;
+            
+            newRoute.SetId(lastId);
             routeList.Add(newRoute);
 
             Util.WriteListInFile<Route>(routeList, filePath);
@@ -69,12 +71,13 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/routes/{id}
+        // PUT api/v1/routes/?routeId={id}
         [HttpPut]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage EditRoute(int id, [FromBody]Route editedRoute)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage EditRoute([FromUri] int routeId, [FromBody]Route editedRoute)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
+            
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -87,12 +90,12 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestRoute);
         }
 
-        // PUT api/v1/routes/{id}?district={district}
+        // PUT api/v1/routes/?routeId={id}&districtId={district}
         [HttpPut]
-        [Route("api/v1/routes/{id}/district={district}")]
-        public HttpResponseMessage AddDistrict(int id, string district)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage AddDistrict([FromUri] int routeId,[FromUri] string district)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -105,12 +108,12 @@ namespace tecbox_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requestRoute);
         }
 
-        // DELETE api/v1/routes/{id}
+        // DELETE api/v1/routes/?routeId={id}
         [HttpDelete]
-        [Route("api/v1/routes/{id}")]
-        public HttpResponseMessage RemoveRoute(int id)
+        [Route("api/v1/routes/")]
+        public HttpResponseMessage RemoveRoute([FromUri]int routeId)
         {
-            Route requestRoute = routeList.Find(route => route.Id.Equals(id));
+            Route requestRoute = routeList.Find(route => route.Id.Equals(routeId));
 
             if (requestRoute == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

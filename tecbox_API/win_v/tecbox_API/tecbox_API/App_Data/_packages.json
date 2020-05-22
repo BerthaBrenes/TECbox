@@ -1,74 +1,122 @@
 [
   {
-    "TrackID": "A-349",
-    "Client": {
-      "Username": null,
-      "Password": null,
-      "Name": "Ellon Musk",
-      "Id": {
-        "Type": "CF",
-        "Number": "123-345-567"
-      },
-      "Email": null,
-      "Phone": "+(99)(999) 9999-9999",
-      "Mobile": "8888-8888",
-      "Address": {
-        "Department": "Cartago",
-        "City": "Cartago",
-        "District": "San Nicolás",
-        "Others": "La Lima"
-      }
-    },
+    "TrackId": "A-349",
+    "Client": "Ellon Musk",
     "Description": "Memoria SD 1 Unit",
-    "Route": {
-      "Id": 0,
-      "Name": "GAM AM 2M2020",
-      "Districts": [
-        "Desamparados",
-        "Gravilias",
-        "San Antonio",
-        "Tres Ríos",
-        "San Nicolas"
-      ]
-    },
-    "Deliverer": "david@tecbox.com",
-    "Status": "Entregado",
-    "DeliveryDate": "01/08/2020"
+    "RouteId": 0,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Listo para Entrega",
+    "DeliveryDate": "2020-08-01"
   },
   {
-    "TrackID": "B-552",
-    "Client": {
-      "Username": "estalvgs1999",
-      "Password": null,
-      "Name": "Esteban Alvarado Vargas",
-      "Id": {
-        "Type": "CF",
-        "Number": "123-345-567"
-      },
-      "Email": "esteban@mail.com",
-      "Phone": "+(99)(999) 9999-9999",
-      "Mobile": "8888-8888",
-      "Address": {
-        "Department": "San José",
-        "City": "Desamparados",
-        "District": "Gravilias",
-        "Others": "El Porvenir, Urb Marianela Casa 8F"
-      }
-    },
+    "TrackId": "B-552",
+    "Client": "Esteban Alvarado Vargas",
     "Description": "Arduino UNO; Raspberry Pi 4",
-    "Route": {
-      "Id": 0,
-      "Name": "GAM AM 2M2020",
-      "Districts": [
-        "Desamparados",
-        "Gravilias",
-        "San Antonio",
-        "Tres Ríos",
-        "San Nicolas"
-      ]
-    },
-    "Deliverer": "ron@tecbox.com",
-    "Status": "Return",
-    "DeliveryDate": "01/04/2020"
+    "RouteId": 0,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Devuelto a Sucursal",
+    "DeliveryDate": "2020-04-01"
+  },
+  {
+    "TrackId": "B-553",
+    "Client": "Bertha Brenes",
+    "Description": "Descripción de Producto",
+    "RouteId": 1,
+    "DeliveryMan": "Juan Roberto",
+    "DmId": "100-789-142",
+    "Status": "Entregado",
+    "DeliveryDate": "2020-05-22"
+  },
+  {
+    "TrackId": "B-554",
+    "Client": "Enellia Vargas",
+    "Description": "Descripción de Producto",
+    "RouteId": 0,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Devuelto a Sucursal",
+    "DeliveryDate": "2020-05-21"
+  },
+  {
+    "TrackId": "B-555",
+    "Client": "Sahis Rojas",
+    "Description": "Descripción de Producto",
+    "RouteId": 0,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Listo para Entrega",
+    "DeliveryDate": "2020-04-01"
+  },
+  {
+    "TrackId": "C-012",
+    "Client": "Maron Arrieta",
+    "Description": "Descripción de Producto",
+    "RouteId": 1,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Entregado",
+    "DeliveryDate": "2020-04-28"
+  },
+  {
+    "TrackId": "D-502",
+    "Client": "Esteban Alvarado Vargas",
+    "Description": "Descripción de Producto",
+    "RouteId": 0,
+    "DeliveryMan": "Juan Roberto",
+    "DmId": "100-789-142",
+    "Status": "Entregado",
+    "DeliveryDate": "2020-05-10"
+  },
+  {
+    "TrackId": "D-511",
+    "Client": "Tim Cook",
+    "Description": "Descripción de Producto",
+    "RouteId": 2,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Intento de Entrega Fallido",
+    "DeliveryDate": "2020-04-01"
+  },
+  {
+    "TrackId": "M-334",
+    "Client": "Roberto Azofeifa",
+    "Description": "Descripción de Producto",
+    "RouteId": 2,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Entregado",
+    "DeliveryDate": "2020-02-16"
+  },
+  {
+    "TrackId": "N-221",
+    "Client": "Alejandro Ibarra",
+    "Description": "Descripción de Producto",
+    "RouteId": 1,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "En Sucursal",
+    "DeliveryDate": "2020-08-15"
+  },
+  {
+    "TrackId": "X-032",
+    "Client": "Isaac Ramírez",
+    "Description": "Descripción de Producto",
+    "RouteId": 0,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Listo para Entrega",
+    "DeliveryDate": "2020-05-16"
+  },
+  {
+    "TrackId": "A-501",
+    "Client": "Esteban Alvarado",
+    "Description": "Audífonos Chinos",
+    "RouteId": 1,
+    "DeliveryMan": "David Alvarado",
+    "DmId": "109-251-785",
+    "Status": "Listo para Entrega",
+    "DeliveryDate": "2020-05-29"
   }
 ]

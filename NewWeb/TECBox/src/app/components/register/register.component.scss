@@ -1,0 +1,19 @@
+ion-toolbar {
+    --background: #4b08d1;
+    color: white;
+    ion-buttons{
+        ion-icon{
+            font-size: 28px;
+        }
+    }
+}
+ion-content{
+    ion-list{
+        ion-item{
+            margin: 10px 5px 10px 15px;
+        }
+    }
+    ion-button{
+        --background: #4b08d1;
+    }
+}

@@ -1,26 +1,26 @@
 [
   {
     "Id": 0,
-    "Name": "TECbox Tres R�os",
+    "Name": "TECbox Tres Ríos",
     "Admin": "Bill Gates",
     "Phone": "2222-2222",
     "Address": {
       "Department": "Cartago",
-      "City": "La Uni�n",
-      "District": "Tres R�os",
+      "City": "La Unión",
+      "District": "Tres Ríos",
       "Others": "500 mts Oeste de la municipalidad"
     }
   },
   {
     "Id": 1,
-    "Name": "TECbox City Mall Alajuela",
-    "Admin": "Milton Villegas",
-    "Phone": "2222-4444",
+    "Name": "TECbox Tres Ríos Momentum",
+    "Admin": "Bill Gates",
+    "Phone": "5554-8899",
     "Address": {
-      "Department": "Alajuela",
-      "City": "Alajuela",
-      "District": "Alajuela",
-      "Others": "Ubicado en el City Mall"
+      "Department": "Cartago",
+      "City": "La Unión",
+      "District": "Tres Ríos",
+      "Others": "Ubicada en la planta baja del centro comercial Momentum Pinares, contiguo al local de BMW."
     }
   },
   {
@@ -33,6 +33,30 @@
       "City": "Heredia",
       "District": "Heredia",
       "Others": "Global Park, Mall Real Cariari, 600m Este"
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "TECbox Porvenir",
+    "Admin": "Michael Jordan",
+    "Phone": "(+506) 2255-5522",
+    "Address": {
+      "Department": "San José",
+      "City": "Desamparados",
+      "District": "Desamparados",
+      "Others": "Edificio Sardimar, 3er Piso."
+    }
+  },
+  {
+    "Id": 1,
+    "Name": "TECbox Tres Ríos Momentum",
+    "Admin": "MiltonVillegas",
+    "Phone": "5554-8899",
+    "Address": {
+      "Department": "Cartago",
+      "City": "La Unión",
+      "District": "Tres Ríos",
+      "Others": "Ubicada en la planta baja del centro comercial Momentum Pinares, contiguo al local de BMW."
     }
   }
 ]

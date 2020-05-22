@@ -23,7 +23,7 @@ using tecbox_API.Models;
 
 namespace tecbox_API.Controllers
 {
-    [EnableCors(origins: "http://localhost:8100", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, PUT, POST, DELETE, OPTIONS")]
     public class OfficeController : ApiController
     {
         private static string filePath = "App_Data/_offices.json";
@@ -39,12 +39,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // GET api/v1/offices/{id}
+        // GET api/v1/offices/?officeId{id}
         [HttpGet]
-        [Route("api/v1/offices/{id}")]
-        public HttpResponseMessage GetOffice(int id)
+        [Route("api/v1/offices/")]
+        public HttpResponseMessage GetOffice(int officeId)
         {
-            Office requestOffice = officeList.Find(office => office.Id.Equals(id));
+            Office requestOffice = officeList.Find(office => office.Id.Equals(officeId));
 
             if (requestOffice == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
@@ -68,12 +68,13 @@ namespace tecbox_API.Controllers
         }
 
 
-        // PUT api/v1/offices/{id}
+        // PUT api/v1/offices/?officeId={id}
         [HttpPut]
-        [Route("api/v1/offices/{id}")]
-        public HttpResponseMessage EditOffice(int id, [FromBody]Office editedOffice)
+        [Route("api/v1/offices/")]
+        public HttpResponseMessage EditOffice([FromUri] int officeId, [FromBody]Office editedOffice)
         {
-            Office requestOffice = officeList.Find(office => office.Id.Equals(id));
+            Office requestOffice = officeList.Find(office => office.Id.Equals(officeId));
+            
             if (requestOffice == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);
 
@@ -86,12 +87,12 @@ namespace tecbox_API.Controllers
         }
 
 
-        // DELETE api/v1/offices/{id}
+        // DELETE api/v1/offices/?officeId={id}
         [HttpDelete]
-        [Route("api/v1/offices/{id}")]
-        public HttpResponseMessage RemoveOffice(int id)
+        [Route("api/v1/offices/")]
+        public HttpResponseMessage RemoveOffice([FromUri] int officeId)
         {
-            Office requestOffice = officeList.Find(office => office.Id.Equals(id));
+            Office requestOffice = officeList.Find(office => office.Id.Equals(officeId));
 
             if (requestOffice == null)
                 return Request.CreateResponse(HttpStatusCode.NotFound, Util.NotFoundMessage);

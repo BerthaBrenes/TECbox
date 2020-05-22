@@ -1,0 +1,17 @@
+<ion-toolbar>
+  <ion-title>Tracking package</ion-title>
+  <ion-buttons slot="end" (click)="dismiss()">
+    <ion-icon name="close"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <ion-item>
+    <ion-input #ID placeholder="Ingrese el Id del paquete"></ion-input>
+    <ion-button shape="round" (click)="buscar(ID.value)">Buscar</ion-button>
+</ion-item>
+<div *ngIf="enablePaquete" >
+  <app-table [type]="id" [src]="dataPaquete"></app-table>
+</div>
+
+</ion-content>
+

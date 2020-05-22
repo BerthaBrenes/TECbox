@@ -97,3 +97,4 @@ C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_A
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csproj.CopyComplete
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.dll
 C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.pdb
+C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API\tecbox_API\obj\Debug\tecbox_API.csprojAssemblyReference.cache

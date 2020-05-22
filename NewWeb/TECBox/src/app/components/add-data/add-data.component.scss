@@ -1,0 +1,10 @@
+ion-grid{
+    margin: 20px;
+    border: 2px solid #919091;
+    border-radius: 10px;
+    ion-row{
+        ion-col{
+            border-right: 1px solid #e3e4e4;
+        }
+    }
+}

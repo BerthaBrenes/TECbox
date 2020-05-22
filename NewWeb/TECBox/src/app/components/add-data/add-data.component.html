@@ -1,0 +1,354 @@
+
+
+<!-- FORM SUCURSALES -->
+<div *ngIf='idEntity == "sucursal"'>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-label>Nombre:</ion-label>
+              <ion-item>
+                  <ion-input #N type=text [(ngModel)]="NameSucursale"></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>
+              <ion-label>Teléfono:</ion-label>
+              <ion-item>
+                  <ion-input #T type=text [(ngModel)]="phoneSucursales"></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>
+              <ion-label>Encargado:</ion-label>
+              <ion-item>
+                  <ion-input #E type=text [(ngModel)]="EncargadoSucursales"></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>     
+              <ion-label>Provincia</ion-label>           
+              <ion-item>
+                  <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Select One" [(ngModel)]="ProvinciaSucursales">
+                      <ion-select-option *ngFor="let p of provincias">{{p.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+              <ion-label *ngIf="cantones">Cantón</ion-label> 
+              <ion-item *ngIf="cantones">
+                  <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Select One" [(ngModel)]="CantonSucursales"> 
+                      <ion-select-option *ngFor="let c of cantones">{{c.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+              <ion-label *ngIf="distritos">Distrito</ion-label>
+              <ion-item *ngIf="distritos">
+                  <ion-select #D placeholder="Select One" [(ngModel)]="DistritoSucursales">
+                      <ion-select-option *ngFor="let d of distritos">{{d.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-label>Otras señas:</ion-label>
+            <ion-item>
+                <ion-input #S type=text [(ngModel)]="OtrasSucursales"></ion-input>
+            </ion-item>
+        </ion-col>   
+          <ion-col>
+              <ion-button  (click)="guardarSucursal($event)" color="primary">Guardar</ion-button>
+          </ion-col> 
+      </ion-row>  
+  </ion-grid>
+</div>
+
+
+
+<!-- FORM TRABAJADORES -->
+<div *ngIf='idEntity == "trabajadores"'>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-label>Nombre:</ion-label>
+              <ion-item>
+                  <ion-input #N type=text></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>
+              <ion-label>Apellido 1:</ion-label>
+              <ion-item>
+                  <ion-input #A1 type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Apellido 2:</ion-label>
+              <ion-item>
+                  <ion-input #A2 type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Cédula:</ion-label>
+              <ion-item>
+                  <ion-input #C type=text></ion-input>
+              </ion-item>
+          </ion-col>  
+          <ion-col>
+            <ion-label>Contraseña:</ion-label>
+            <ion-item>
+                <ion-input #CO type=text></ion-input>
+            </ion-item>
+        </ion-col> 
+        <ion-col>
+            <ion-label>Rol:</ion-label>
+            <ion-item>
+                <ion-select #RO placeholder="Select One">
+                  <ion-select-option value="Bodeguero">Bodeguer@</ion-select-option>
+                  <ion-select-option value="Administrador">Administrad@r</ion-select-option>
+                  <ion-select-option value="Repartidor">Repartid@r</ion-select-option>
+                </ion-select>
+              </ion-item>
+        </ion-col> 
+          <ion-row>
+            <ion-col>
+                <ion-label>Usuario:</ion-label>
+                <ion-item>
+                    <ion-input #US type=text></ion-input>
+                </ion-item>
+            </ion-col> 
+          <ion-col>
+              <ion-label>Fecha Nacimiento:</ion-label>
+              <ion-item>
+                  <ion-input #FN type=date></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Fecha Ingreso:</ion-label>
+              <ion-item>
+                  <ion-input #FI type=date></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>     
+              <ion-label>Sucursal</ion-label>           
+              <ion-item>
+                  <ion-select #S placeholder="Select One">
+                      <ion-select-option *ngFor="let s of sucursales" value={{s.Name}}>{{s?.Name}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+          </ion-col>  
+          <ion-col>
+              <ion-label>Salario Hora:</ion-label>
+              <ion-item>
+                  <ion-input #SH type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-button  (click)="guardarTrabajador(N.value, A1.value, A2.value, C.value, FN.value, FI.value,S.value, SH.value, CO.value, US.value, RO.value)" color="primary">Guardar</ion-button>
+          </ion-col> 
+      </ion-row>                    
+  </ion-row>
+  </ion-grid>
+</div>
+
+
+<!-- FORM VENDEDORES -->
+<div *ngIf='idEntity == "vendedores"'>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-label>Nombre:</ion-label>
+              <ion-item>
+                  <ion-input #N type=text></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>
+            <ion-label>Tipo de Cédula:</ion-label>
+            <ion-item>
+                <ion-select #CT placeholder="Select One">
+                  <ion-select-option value="CF">Física</ion-select-option>
+                  <ion-select-option value="CJ">Jurídica</ion-select-option>
+                </ion-select>
+              </ion-item>
+        </ion-col> 
+          <ion-col>
+              <ion-label>Cédula:</ion-label>
+              <ion-item>
+                  <ion-input #C type=text></ion-input>
+              </ion-item>
+          </ion-col>  
+          <ion-col>
+              <ion-button  (click)="guardarVendedor(N.value, CT.value, C.value)" color="primary">Guardar</ion-button>
+          </ion-col>
+      </ion-row>                    
+  </ion-grid>
+</div>
+
+
+<!-- FORM PRODUCTOS -->
+<div *ngIf='idEntity == "producto"'>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-label>Nombre:</ion-label>
+              <ion-item>
+                  <ion-input #N type=text></ion-input>
+              </ion-item>
+          </ion-col> 
+          <ion-col>
+              <ion-label>Descripción:</ion-label>
+              <ion-item>
+                  <ion-input #D type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Código Barras:</ion-label>
+              <ion-item>
+                  <ion-input #C type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Vendedor:</ion-label>
+              <ion-item>
+                  <ion-input #V type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Precio de compra:</ion-label>
+              <ion-item>
+                  <ion-input #PC type=number></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Impuesto:</ion-label>
+              <ion-item>
+                <ion-item>
+                    <ion-input #I type=number></ion-input>
+                </ion-item>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-label>Descuento:</ion-label>
+              <ion-item>
+                <ion-input #DES type=number></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-label>ImageUrl:</ion-label>
+            <ion-item>
+              <ion-input #IMG type=text></ion-input>
+          </ion-item>
+        </ion-col>
+          <ion-col>
+              <ion-button (click)="guardarProducto(N.value, D.value, C.value, V.value, PC.value, I.value, DES.value,IMG.value)" color="primary">Guardar</ion-button>
+          </ion-col>                     
+      </ion-row>
+  </ion-grid>
+</div>
+
+
+<!-- FORM RUTAS -->
+<div *ngIf='idEntity == "rutas"'>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+            <ion-label>Nombre:</ion-label>
+            <ion-item>
+                <ion-input #N type=text></ion-input>
+            </ion-item>
+        </ion-col>
+          <ion-col>
+              <ion-label>Provincia</ion-label>                
+              <ion-item>
+                  <ion-select #P (ionChange)="cargarCantones(P.value)" placeholder="Provincia">
+                      <ion-select-option *ngFor="let p of provincias">{{p.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+              <ion-label>Cantón</ion-label> 
+              <ion-item>
+                  <ion-select #C (ionChange)="cargarDistritos(C.value)" placeholder="Canton"> 
+                      <ion-select-option *ngFor="let c of cantones">{{c.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+              <ion-label>Distrito</ion-label>
+              <ion-item>
+                  <ion-select #D placeholder="Distrito">
+                      <ion-select-option *ngFor="let d of distritos">{{d.title}}</ion-select-option>
+                  </ion-select>
+              </ion-item>
+          </ion-col>  
+          <ion-col>
+              <ion-button  (click)="addDistritoTemp(D.value)" color="primary">Añadir Distrito</ion-button>
+          </ion-col>  
+          <ion-col>
+              <ion-button  (click)="guardarRuta(N.value)" color="primary">Guardar</ion-button>
+          </ion-col>  
+          <ion-label>Ruta actual: </ion-label>
+          <ion-label *ngFor="let d of distritosRutas">{{d}}-></ion-label>       
+                     
+      </ion-row>
+  </ion-grid>
+</div>
+
+<!-- FORM Paquete -->
+<div *ngIf='idEntity == "paquetes"'>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-label>TrackId:</ion-label>
+              <ion-item>
+                  <ion-input #TI type=text></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-label>Client:</ion-label>
+            <ion-item>
+                <ion-input #C type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-label>Descripción:</ion-label>
+            <ion-item>
+                <ion-input #D type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-label>IdRuta:</ion-label>
+            <ion-item>
+                <ion-input #IR type=text></ion-input>
+            </ion-item>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-label>Repartidor:</ion-label>
+                <ion-item>
+                    <ion-input #R type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Repartidor Id:</ion-label>
+                <ion-item>
+                    <ion-input #RI type=text></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-label>Estado:</ion-label>
+                <ion-item>
+                    <ion-select #E placeholder="Select One">
+                      <ion-select-option value="En Tránsito">En tránsito</ion-select-option>
+                      <ion-select-option value="En Aduanas">En aduanas</ion-select-option>
+                      <ion-select-option value="Listo para Entrega">Listo para Entrega</ion-select-option>
+                      <ion-select-option value="En Ruta">En Ruta de Entrega</ion-select-option>
+                      <ion-select-option value="En Sucursal">En Sucursal</ion-select-option>
+                      <ion-select-option value="Entregado">Entregado al Cliente</ion-select-option>
+                      <ion-select-option value="Intento de Entrega Fallido">Intento de entrega fallido</ion-select-option>
+                      <ion-select-option value="Devuelto a Sucursal">Devuelto a Sucursal</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+            </ion-col> 
+            <ion-col>
+                <ion-label>Fecha Entrega:</ion-label>
+                <ion-item>
+                    <ion-input #FE type=date></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-button  (click)="guardarPaquete(TI.value, C.value, D.value, IR.value, R.value, RI.value, E.value, FE.value)" color="primary">Guardar</ion-button>
+            </ion-col>  
+        </ion-row>
+    </ion-grid>
+  </div>
+  
+  

@@ -1,0 +1,33 @@
+<div class="ion-grid">
+  <div>
+    <div class="content">
+      <img src="{{data.ImageUrl}}" alt="">
+    </div>
+    <div class="content">
+      <p class="name">{{data.Name}} ({{data.BarCode}})</p>
+      <p>{{data.description}}</p>
+      <p>Precio <ion-label class="price">${{data.Price}}</ion-label></p>
+      <p *ngIf="data.Discount">Discount:  <ion-label class="discount"> {{data.Discount}}%</ion-label> </p>
+      <div *ngIf='userValidation'>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="text">
+              <ion-text class="number">{{ quantity }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" (click)="decrement()">
+                <ion-icon name="remove-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" (click)="increment()">
+                <ion-icon name="add-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-button (click)="agregarCarrito(data)" class="addCar">Agregar al carrito</ion-button>
+      </div>
+    </div>
+  </div>
+</div>

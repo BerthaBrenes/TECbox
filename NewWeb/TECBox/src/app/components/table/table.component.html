@@ -1,0 +1,420 @@
+
+<ion-grid *ngIf='id == "sucursal"'>
+  <ion-row >
+    <ion-col  class="header" size=1>
+      id
+    </ion-col>
+      <ion-col  class="header" size=1.5>
+        Nombre
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Telefono
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Encargado
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Provincia
+      </ion-col>
+      <ion-col class="header" size=1>
+        Canton
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Distrito
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Otras señas
+      </ion-col>
+      <ion-col class="header" size=1>
+        Acciones
+      </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+    <ion-col size=1>
+      {{item.Id}}
+    </ion-col>  
+    <ion-col size=1.5>
+        {{item.Name}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Phone}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Admin}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Address.Department}}
+      </ion-col>
+      <ion-col size=1>
+        {{item.Address.City}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Address.District}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Address.Others}}
+      </ion-col>
+      <ion-col size=1 class="accion">
+        <ion-icon name="close-circle" (click)="delete(item.Id)"></ion-icon>
+        <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid *ngIf='id == "trabajadores"'>
+  <ion-row >
+      <ion-col  class="header" size=1.5>
+        Nombre
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Cedula
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Fecha Nacimiento
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Fecha ingreso
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Sucursal
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Rol
+      </ion-col>
+      <ion-col class="header" size=1>
+        Salario/ hora
+      </ion-col>
+      <ion-col class="header" size=1>
+        Salario/ mes
+      </ion-col>
+      <ion-col class="header" size=1>
+        Acciones
+      </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+      <ion-col size=1.5>
+        {{item.Name}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Id.Number}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.BirthDate}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.StartDate}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.BranchOffice.Name}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Role}}
+      </ion-col>
+      <ion-col size=1>
+        {{item.SalaryHour}}
+      </ion-col>
+      <ion-col size=1>
+        {{item.SalaryMonth}}
+      </ion-col>
+      <ion-col class="accion" size=1>
+        <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
+        <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid *ngIf='id == "paquetes"'>
+  <ion-row >
+      <ion-col  class="header" size=1.5>
+        Track Id
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Cliente
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Descripcion
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Id ruta
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Repartidor
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Status
+      </ion-col>
+      <ion-col class="header" size=1>
+        Fecha entrega
+      </ion-col>
+      <ion-col class="header" size=1>
+        Acciones
+      </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+      <ion-col size=1.5>
+        {{item.TrackId}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Client}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Description}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.RouteId}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.DeliveryMan}}
+      </ion-col>
+      <ion-col size=1.5>
+        {{item.Status}}
+      </ion-col>
+      <ion-col size=1>
+        {{item.DeliveryDate}}
+      </ion-col>
+      <ion-col class="accion" size=1>
+        <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
+        <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid *ngIf='id == "vendedores"'>
+  <ion-row >
+      <ion-col  class="header" size=3>
+        Nombre
+      </ion-col>
+      <ion-col class="header" size=3>
+        Tipo de cedula
+      </ion-col>
+      <ion-col class="header" size=3>
+        Cedula
+      </ion-col>
+      <ion-col class="header" size=3>
+        Acciones
+      </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+      <ion-col size=3>
+        {{item.Name}}
+      </ion-col>
+      <ion-col size=3>
+        {{item.Id.Type}}
+      </ion-col>
+      <ion-col size=3>
+        {{item.Id.Number}}
+      </ion-col>
+      <ion-col size=3 class="accion">
+        <ion-icon name="close-circle" (click)="delete(item.Id.Number)"></ion-icon>
+        <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid *ngIf='id == "producto"'>
+  <ion-row >
+    <ion-col  class="header" size=1.5>
+        Nombre
+    </ion-col>
+    <ion-col class="header" size=2>
+      Descripcion
+    </ion-col>
+    <ion-col class="header" size=1>
+      BarCode
+    </ion-col>
+    <ion-col class="header" size=1.5>
+      Vendedor
+    </ion-col>
+    <ion-col class="header" size=1>
+      Precio
+    </ion-col>
+    <ion-col class="header" size=1.5>
+      Impuesto
+    </ion-col>
+    <ion-col class="header" size=1.5>
+      Descuento
+    </ion-col>
+    <ion-col class="header" size=1.5>
+      Acciones
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+    <ion-col size=1.5>
+        {{item.Name}}
+    </ion-col>
+    <ion-col size=2>
+      {{item.Description}}
+    </ion-col>
+    <ion-col size=1>
+      {{item.BarCode}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{item.Seller.Name}}
+    </ion-col>
+    <ion-col size=1>
+      ${{item.Price}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{item.Discount}}%
+    </ion-col>
+    <ion-col size=1.5>
+      {{item.Taxes}}
+    </ion-col>
+    <ion-col class="accion" size=1.5>
+      <ion-icon name="close-circle" (click)="delete(item.BarCode)"></ion-icon>
+      <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+    </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid *ngIf='id == "rutas"'>
+  <ion-row >
+    <ion-col  class="header" size=4>
+      Nombre
+    </ion-col>
+    <ion-col  class="header" size=2>
+      Id de ruta
+    </ion-col>
+    <ion-col class="header" size=5>
+      Distritos
+    </ion-col>
+    <ion-col class="header" size=1>
+      Acciones
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+    <ion-col size=4>
+        {{item.Name}}
+    </ion-col>
+    <ion-col size=2>
+      {{item.Id}}
+  </ion-col>
+    <ion-col size=5>
+      <p *ngFor="let district of item.Districts">{{district}}</p>
+    </ion-col>
+    <ion-col class="accion" size=1>
+      <ion-icon name="close-circle" (click)="delete(item.Id)"></ion-icon>
+      <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+    </ion-col>
+    </ion-row>
+</ion-grid>
+
+
+<ion-grid *ngIf='id == "cliente"'>
+  <ion-row >
+    <ion-col  class="header" size=1>
+      Nombre
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Cedula
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Num Casa
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Celular
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Provincia
+    </ion-col>
+    <ion-col class="header" size=1>
+      Canton
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Distrito
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Otras señas
+    </ion-col>
+    <ion-col class="header" size=1.2>
+      Email
+    </ion-col>
+    <ion-col class="header" size=1>
+      Locker
+    </ion-col>
+    <ion-col class="header" size=1>
+      Acciones
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of data">
+    <ion-col size=1.2>
+        {{item.Name}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Id.Name}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Phone}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Mobile}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Address.Department}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Address.City}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Address.District}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.Address.Others}}
+    </ion-col>
+    <ion-col size=1.2>
+      {{item.email}}
+    </ion-col>
+    <ion-col size=1.2>
+        {{item.locker}}
+     </ion-col>
+     <ion-col class="accion" size=1.5>
+      <ion-icon name="close-circle" (click)="delete(item.Id.Name)"></ion-icon>
+      <ion-icon name="create-outline" (click)="updateData(item)"></ion-icon>
+    </ion-col>
+    </ion-row>
+</ion-grid>
+
+
+<ion-grid *ngIf='id == "rastreo"'>
+  <ion-row >
+      <ion-col  class="header" size=1.5>
+        Track Id
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Cliente
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Descripcion
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Id ruta
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Repartidor
+      </ion-col>
+      <ion-col class="header" size=1.5>
+        Status
+      </ion-col>
+      <ion-col class="header" size=1>
+        Fecha entrega
+      </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col size=1.5>
+      {{data['TrackId']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['Client']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['Description']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['RouteId']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['DeliveryMan']}}
+    </ion-col>
+    <ion-col size=1.5>
+      {{data['Status']}}
+    </ion-col>
+    <ion-col size=1>
+      {{data['DeliveryDate']}}
+    </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="cube"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      TECbox.com
+    </ion-title>
+    <ion-buttons class="line" slot="end" *ngIf="!ClientUser">
+      <ion-button (click)="logIn($event)">Registrarme <br> Crear Cuenta</ion-button>
+    </ion-buttons>
+    <ion-buttons class="line" slot="end">
+      <ion-button (click)="SignUp($event)"  *ngIf="!ClientUser">
+        <ion-icon name="person-circle" ></ion-icon>
+        <span >Mi cuenta <br> Iniciar Sesión</span>
+      </ion-button>
+      <ion-button (click)="MyAccount($event)" *ngIf="ClientUser">
+        <ion-icon name="person-circle" ></ion-icon>
+        <span >{{userTest['Name']}}</span>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons class="line" slot="end" (click)="openCar($event)">
+      <ion-button >
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons class="line" slot="end" (click)="openHelp($event)">
+      <ion-button >
+        <ion-icon name="help"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="imageLogIn" *ngIf="!ClientUser">
+    <ion-button shape="round">Registrarme</ion-button>
+  </div>
+  <div class="imageSignUp" *ngIf="ClientUser">
+    <ion-button shape="round">Rastrea</ion-button>
+  </div>
+  <div class="image2" *ngIf="!ClientUser">
+    <img src="assets/imgs/Tecbox-features.png" alt="">
+  </div>
+  <div class="content" >
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let data of inputArticle">
+          <app-articulos [src]='data' [userValidate]='ClientUser' (onAnswered)="dataProduct($event)"></app-articulos>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-icon name="cube"></ion-icon>
+  <span>TECbox</span>
+</ion-footer>

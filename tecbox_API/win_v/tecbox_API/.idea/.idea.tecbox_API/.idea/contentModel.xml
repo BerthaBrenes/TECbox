@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\azofe\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\azofe\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_tecbox_API.-2011026323.00" t="ExcludeRecursive" />
-    <e p="D:\Universidad\Semestre_I_2020\DB\Tareas_Cortas\Tarea_Corta_1\TECbox\tecbox_API\win_v\tecbox_API" t="IncludeFlat">
+    <e p="C:\Users\Esteban Alvarado\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Esteban Alvarado\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_tecbox_API.-1966450833.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Esteban Alvarado\Documents\TEC\1S 2020\TECbox\tecbox_API\win_v\tecbox_API" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="tecbox_API" t="IncludeRecursive">
         <e p="App_Data" t="Include">
+          <e p="_bestSellers.json" t="Include" />
+          <e p="_clients.json" t="Include" />
+          <e p="_employees.json" t="Include" />
+          <e p="_offices.json" t="Include" />
+          <e p="_packages.json" t="Include" />
           <e p="_products.json" t="Include" />
+          <e p="_routes.json" t="Include" />
+          <e p="_sales.json" t="Include" />
+          <e p="_sellers.json" t="Include" />
         </e>
         <e p="App_Start" t="Include">
           <e p="BundleConfig.cs" t="Include" />
@@ -100,9 +108,14 @@
           <e p="Site.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="ClientController.cs" t="Include" />
+          <e p="EmployeeController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="OfficeController.cs" t="Include" />
+          <e p="PackageController.cs" t="Include" />
           <e p="ProductController.cs" t="Include" />
-          <e p="ValuesController.cs" t="Include" />
+          <e p="RouteController.cs" t="Include" />
+          <e p="SellerController.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
         <e p="fonts" t="Include">
@@ -115,7 +128,17 @@
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
+          <e p="Client.cs" t="Include" />
+          <e p="Employee.cs" t="Include" />
+          <e p="Identification.cs" t="Include" />
+          <e p="Office.cs" t="Include" />
+          <e p="Package.cs" t="Include" />
           <e p="Product.cs" t="Include" />
+          <e p="Route.cs" t="Include" />
+          <e p="Sale.cs" t="Include" />
+          <e p="Seller.cs" t="Include" />
+          <e p="Util.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -137,6 +160,7 @@
         <e p="tecbox_API.csproj" t="IncludeRecursive" />
         <e p="Views" t="Include">
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Employee" t="Include" />
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>

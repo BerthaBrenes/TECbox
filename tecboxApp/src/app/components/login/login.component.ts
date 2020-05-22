@@ -68,7 +68,6 @@ export class LoginComponent implements OnInit {
   summit(){
     
     // The credentials was valid so the value containt an object with the values 
-    console.log("success1");
     if(!this.ComponentLoginForm.valid){
       console.log('Invalid');
       if(!this.ComponentLoginForm.controls.email.valid){
@@ -82,25 +81,35 @@ export class LoginComponent implements OnInit {
 
     }
     else{
-      
-      // La validación del usuario se hace del lado del servidor
-      let userdata:any;
 
+      // Para ingresar el correo debe ser @tecbox.com
+      if(!this.ComponentLoginForm.value.email.includes("@tecbox.com")){
+        this.presentToastEmail();
+        return;
+      }
+      
       this.api.login(this.ComponentLoginForm.value.email, this.ComponentLoginForm.value.password)
         .subscribe(
           data => {
-            console.log("data: "+ JSON.stringify(userdata));
-            this.presentToast();
-            let deliverer = { user: this.ComponentLoginForm.value.email};
-            console.log(deliverer);
 
-            let navigationExtras = {
-              queryParams: {
-                // Enviar el repartidor a la siguiente página
-                special: JSON.stringify(deliverer)
+            // Checks if employee is DeliveryMan
+            if (data["Role"] == "Repartidor"){
+
+              this.presentToastSuccess(data['Name']);
+
+              let deliverer = { Name:data['Name'], Id:data['Id']['Number']};
+              
+              let navigationExtras = {
+                queryParams: {
+                  // Send deliveryMan info to next page
+                  special: JSON.stringify(deliverer)
+                }
               }
+              this.router.navigate(['/tracking'],navigationExtras);
             }
-            this.router.navigate(['/tracking'],navigationExtras);
+            else{
+              this.presentToastNotDM();
+            }
             
           },
 
@@ -119,7 +128,7 @@ export class LoginComponent implements OnInit {
    */
   async presentToastEmail() {
     const toast = await this.toastController.create({
-      message: 'Remember to enter a valid and lowercase email (ejem: username@gmail.com)',
+      message: 'Debes ingresar con tu cuenta @tecbox.com',
       color:"danger",
       duration: 4000
     });
@@ -129,10 +138,22 @@ export class LoginComponent implements OnInit {
   /**
    * Funtion that show Toast notification on the aplication when the credentials are correct and its going to summit the information
    */
-  async presentToast() {
+  async presentToastSuccess(name:string) {
     const toast = await this.toastController.create({
-      message: 'Valid Credentials',
+      message: `¡Bienvenido ${name}!`,
       color:"success",
+      duration: 2000
+    });
+    toast.present();
+  }
+
+   /**
+   * Funtion that show Toast notification on the aplication when the employee is not DeliveryMan
+   */
+  async presentToastNotDM() {
+    const toast = await this.toastController.create({
+      message: `Lo sentimos. Solo se permite el ingreso a repartidores.`,
+      color:"warning",
       duration: 2000
     });
     toast.present();
@@ -143,8 +164,8 @@ export class LoginComponent implements OnInit {
    */
   async presentToastInvalidCrendential() {
       const toast = await this.toastController.create({
-        message: 'Invalid Credentials, user or password not found',
-        color:"success",
+        message: '¡Usuario o contraseña incorrectos!',
+        color:"danger",
         duration: 2000
       });
       toast.present();

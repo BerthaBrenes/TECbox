@@ -20,7 +20,21 @@
       "Quebradilla",
       "San Nicolas",
       "Tierra Blanca",
-      "Oriental"
+      "Oriental",
+      "Caballo Blanco"
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": " Zona Sur 2020-05-21",
+    "Districts": [
+      "Puntarenas",
+      "Paquera",
+      "Roble",
+      "San Rafael",
+      "Buenos Aires",
+      "Palmar",
+      "Sierpe"
     ]
   }
 ]

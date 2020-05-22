@@ -20,7 +20,7 @@ namespace tecbox_API.Models
     public class Route
     {
 
-        private static int IdCounter = 1;
+        private static int _idCounter = 1;
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -34,10 +34,13 @@ namespace tecbox_API.Models
         }
 
         //
-        public void SetID()
+        public void SetId(int currentId)
         {
-            this.Id = IdCounter;
-            IdCounter++;
+            // ReSharper disable once RedundantCheckBeforeAssignment
+            if (currentId != _idCounter)
+                _idCounter = currentId+1;
+            this.Id = _idCounter;
+            _idCounter++;
         }
 
         //
